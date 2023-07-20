@@ -18,14 +18,6 @@
      - ...
 
 
-# 목표
-홈 화면
-![image](https://github.com/animalwook/youtube_clone_simple/assets/31812111/90398d6f-5681-45cf-80cc-8d8e3413ca2f){: width="50" height="50"}
-채널 화면
-![image](https://github.com/animalwook/youtube_clone_simple/assets/31812111/66d44e46-43e4-408c-9adb-1e63f0433a7a){: width="50" height="50"}
-재생 화면
-![image](https://github.com/animalwook/youtube_clone_simple/assets/31812111/bc4274a0-f2db-4150-9b02-159b7c68b95e){: width="50" height="50"}
-
 
 # 프로젝트 일정
 
