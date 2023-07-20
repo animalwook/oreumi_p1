@@ -1,4 +1,5 @@
 # 유튜브 클론 페이지 만들기 (심플조)
+https://www.notion.so/Oruemi_2-Simple_RelayCoding-1d05c88cbcce461c843bc1598504c9e0
 김성우
 심현준
 이지환
