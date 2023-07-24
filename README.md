@@ -11,13 +11,13 @@ https://www.notion.so/Oruemi_2-Simple_RelayCoding-1d05c88cbcce461c843bc1598504c9
 - html
     - html 코드 전체
 - css_1
-    - ...
+    - Header.css
 - css_2
-    - ...
+    - Navbar.css
 - js_1
-     - ...
+    - Video.js
 - js_2
-     - ...
+    - __.js
 
 
 
