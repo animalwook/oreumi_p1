@@ -6,28 +6,31 @@ class VideoInfo {
     }
 
     loadVideoInfo() {
+        let obj = this;
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
-            if (xhr.status === 200) {
-                let data = JSON.parse(xhr.responseText);
-                if (data.Response === 'False') {
-                    console.log('Fail to fetch video info. Response is \'False\'');
+            if (xhr.readyState === xhr.DONE) {
+                if (xhr.status === 200) {
+                    let data = JSON.parse(xhr.responseText);
+                    if (data.Response === 'False') {
+                        console.log('Fail to fetch video info. Response is \'False\'');
+                    } else {
+                        console.log('Success to fetch video info.');
+                        obj.imageLink = data.image_link;
+                        obj.uploadDate = data.upload_date;
+                        obj.videoChannel = data.video_channel;
+                        obj.videoDetail = data.video_detail;
+                        obj.videoLink = data.video_link;
+                        obj.videoTag = data.video_tag;
+                        obj.videoTitle = data.video_title;
+                        obj.views = data.views;
+                    }
                 } else {
-                    console.log('Success to fetch video info.');
-                    this.imageLink = data.image_link;
-                    this.uploadDate = data.upload_date;
-                    this.videoChannel = data.video_channel;
-                    this.videoDetail = data.video_detail;
-                    this.videoLink = data.video_link;
-                    this.videoTag = data.video_tag;
-                    this.videoTitle = data.video_title;
-                    this.views = data.views;
+                    console.log('Fail to fetch video info.');
                 }
-            } else {
-                console.log('Fail to fetch video info.');
             }
         };
-        xhr.open('GET', 'https://oreumi.appspot.com/video/getVideoInfo?video_id=' + encodeURIComponent(this.videoId), true);
+        xhr.open('GET', 'https://oreumi.appspot.com/video/getVideoInfo?video_id=' + this.videoId, true);
         xhr.send();
     }
 
