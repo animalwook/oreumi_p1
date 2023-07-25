@@ -1,6 +1,6 @@
 // header
 
-// hamburger 버튼으로 navbar 요소의 display 값 변환 (none <--> block)
+// hamburger 버튼으로 navbar 요소의 display 값 변환 (none <----> block)
 
 function hamburgerFunc() {
   const navbarFunc = document.querySelector(".navbar");
@@ -18,7 +18,8 @@ function hamburgerFunc() {
 
 document.querySelector(".hamburger").onclick = hamburgerFunc;
 
-// active notification
+// notification 창 활성화 (미완성입니다)
+//active_notifications.svg 생성 필요
 
 function notificationFunc() {
   const notificationIcon = document.querySelector(".notifications");
