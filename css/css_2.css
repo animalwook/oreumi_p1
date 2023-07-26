@@ -112,3 +112,59 @@
     align-items: flex-start;
     gap: 12px;
 }
+
+
+
+
+
+
+/* -------------상단 메뉴 바 ----------- */
+
+
+.button {
+    background-color: #212121;
+    width: 1193px;
+    height: 56px;
+    padding: 0px 0px 0px 150px;
+    font-family: Roboto;
+    display: flex;
+    align-items: center; /* 세로 방향 가운데 정렬 */
+    justify-content: center; /* 가로 방향 가운데 정렬 */
+  }
+
+  .buttonAll+.buttonItem, .buttonItem+.buttonItem {
+  margin-left: 5px; /*버튼 간 간격 조절*/
+}
+  
+  .buttonAll {
+    width: 40px;
+    height: 32px;
+    gap: 10px;
+    display: flex;
+    align-items: center; /* 가로 방향 가운데 정렬 */
+    justify-content: center; /* 세로 방향 가운데 정렬 */
+  }
+  
+  .buttonItem {
+    width: 53px;
+    height: 32px;
+    gap: 10px;
+    display: flex;
+    align-items: center; /* 가로 방향 가운데 정렬 */
+    justify-content: center; /* 세로 방향 가운데 정렬 */
+  }
+  
+  .buttonAll, .buttonItem {
+    background-color: #303030;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 32px;
+    cursor: pointer;
+  }
+  
+  .buttonAll:hover, .buttonItem:hover {
+    color: #030303;
+    background-color: #FFFFFF; /* 호버링시 배경색상 */
+  }
+
