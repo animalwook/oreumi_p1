@@ -2,7 +2,7 @@
 
 // hamburger 버튼으로 navbar 요소의 display 값 변환 (none <----> block)
 
-function hamburgerFunc() {
+function hamburgerMobileFunc() {
   const navbarFunc = document.querySelector(".navbar");
 
   // 현재 요소의 display 상태를 가져옵니다.
@@ -13,6 +13,23 @@ function hamburgerFunc() {
     navbarFunc.style.display = "block";
   } else {
     navbarFunc.style.display = "none";
+  }
+}
+
+function hamburgerFunc() {
+  const navbarFunc = document.querySelector(".navbar");
+  const navbarSmallFunc = document.querySelector(".navbar-small");
+
+  // 현재 요소의 display 상태를 가져옵니다.
+  const currentDisplay = window.getComputedStyle(navbarFunc).display;
+
+  // display 속성을 토글합니다.
+  if (currentDisplay === "none") {
+    navbarFunc.style.display = "block";
+    navbarSmallFunc.style.display = "none";
+  } else {
+    navbarFunc.style.display = "none";
+    navbarSmallFunc.style.display = "block";
   }
 }
 
