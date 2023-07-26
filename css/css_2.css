@@ -1,9 +1,4 @@
 /* css_2.css */
-.body{
-    display: flex;
-    flex-direction: row;
-}
-
 .navbar {
     display: flex;
     width: 240px;
@@ -124,18 +119,20 @@
 
 
 /* -------------상단 메뉴 바 ----------- */
+
+
 .button {
     background-color: #212121;
     width: 1193px;
     height: 56px;
-    padding: 0px 0px 0px 243px;
+    padding: 0px 0px 0px 150px;
     font-family: Roboto;
     display: flex;
     align-items: center; /* 세로 방향 가운데 정렬 */
     justify-content: center; /* 가로 방향 가운데 정렬 */
   }
 
-  .buttonAll+.buttonAll, .buttonItem+.buttonItem {
+  .buttonAll+.buttonItem, .buttonItem+.buttonItem {
   margin-left: 5px; /*버튼 간 간격 조절*/
 }
   
