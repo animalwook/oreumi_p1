@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/css_1.css" />
     <link rel="stylesheet" type="text/css" href="css/css_2.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .video-card {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      .video-card img {
+        width: 100%;
+      }
+      .video-card p {
+        margin: 5px 0;
+      }
+      .channel-logo {
+        width: 30px;
+        height: 30px;
+        border-radius: 70%;
+        overflow: hidden;
+      }
+      .channel-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #videoList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    </style>
     <title>Document</title>
   </head>
   <body>
@@ -18,9 +53,10 @@
         </a>
         <div id="search-box">
           <input type="text" id="search" placeholder="Search" />
-          <button id="search-btn">
+          <button id="search-btn" onclick="searchVideos()">
             <img src="./img/home/header/search.svg" alt="Search" class="icon" id="search-icon" />
           </button>
+          <div id="searchResults"></div>
         </div>
 
         <a href="mic">
@@ -33,10 +69,36 @@
           <img src="./img/home/header/notifications.svg" alt="notifications" class="notifications" />
         </a>
         <a href="profile">
-          <img src="./img/home/header/User-Avatar.png" alt="User-Avatar" id="User-Avatar" />
+          <img src="./img/home/header/User-Avatar.svg" alt="User-Avatar" id="User-Avatar" />
         </a>
       </div>
     </header>
+
+    <nav>
+      <div class="button">
+        <button class="buttonAll" id="" onclick="">All</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+        <button class="buttonItem" id="" onclick="">Item</button>
+      </div>
+      <div class="Top-Menu">
+        <img src="./img/home/nav/Top-Menu.svg" alt="top-Menu" id="top-Menu" />
+      </div>
+    </nav>
 
     <navbar>
       <div class="navbar">
@@ -135,7 +197,7 @@
           <div class="Menu">
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/avatar/User-Avatar1.png" alt="USER1" class="Menu-Item" />
+                <img src="./img/home/avatar/User-Avatar1.svg" alt="USER1" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">USER1</div>
@@ -143,7 +205,7 @@
             </div>
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/avatar/User-Avatar2.png" alt="USER2" class="Menu-Item" />
+                <img src="./img/home/avatar/User-Avatar2.svg" alt="USER2" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">USER2</div>
@@ -151,7 +213,7 @@
             </div>
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/avatar/User-Avatar3.png" alt="USER3" class="Menu-Item" />
+                <img src="./img/home/avatar/User-Avatar3.svg" alt="USER3" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">USER3</div>
@@ -159,7 +221,7 @@
             </div>
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/avatar/User-Avatar3.png" alt="USER4" class="Menu-Item" />
+                <img src="./img/home/avatar/User-Avatar3.svg" alt="USER4" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">USER4</div>
@@ -167,7 +229,7 @@
             </div>
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/avatar/User-Avatar3.png" alt="USER5" class="Menu-Item" />
+                <img src="./img/home/avatar/User-Avatar3.svg" alt="USER5" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">USER5</div>
@@ -175,7 +237,7 @@
             </div>
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/avatar/User-Avatar3.png" alt="USER6" class="Menu-Item" />
+                <img src="./img/home/avatar/User-Avatar3.svg" alt="USER6" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">USER6</div>
@@ -183,7 +245,7 @@
             </div>
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/avatar/User-Avatar3.png" alt="USER7" class="Menu-Item" />
+                <img src="./img/home/avatar/User-Avatar3.svg" alt="USER7" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">USER7</div>
@@ -191,7 +253,7 @@
             </div>
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/avatar/User-Avatar3.png" alt="USER8" class="Menu-Item" />
+                <img src="./img/home/avatar/User-Avatar3.svg" alt="USER8" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">USER8</div>
@@ -240,81 +302,12 @@
       </div>
     </navbar>
 
-    <!-- 가운데 큰 영상 -->
-    <main>
-      <div class="channel-cover">
-        <img src="img/channel/Channel-Cover.svg" alt="Channel-Cover" class="channel-cover" />
-      </div>
-      <div class="channel-title">
-        <img src="img/channel/User-Avatar.svg" alt="User-Avatar" />
-        <span class="channel-title-name">Marcus Levin</span>
-        <span class="channel-title-subscribers">1.2M subscribers</span>
-        <button class="subscribes-btn" onclick="">SUBSCRIBES</button>
-      </div>
-      <div class="channel-toolbar">
-        <button class="channel-toolbar-home">HOME</button>
-        <button class="channel-toolbar-videos">VIDEOS</button>
-        <button class="channel-toolbar-playlists">PLAYLISTS</button>
-        <button class="channel-toolbar-community">COMMUNITY</button>
-        <button class="channel-toolbar-channels">CHANNELS</button>
-        <button class="channel-toolbar-about">ABOUT</button>
-        <button class="channel-toolbar-search">
-          <img src="img/home/header/search.svg" alt="search" />
-        </button>
-      </div>
-      <div class="youtube-player">
-        <img src="img/channel/Player.svg" alt="Player" class="youtube-player" />
-        <span class="youtube-player-title">Blind Woodturner: Turning passion into fine art</span>
-        <span class="youtube-player-views">576,969 views . 3 weeks ago</span>
-        <span class="youtube-player-desc">
-          Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to hundreds of hours of YouTube videos and experimenting in his workshop. Now he’s a YouTube creator himself,
-          sells his products worldwide, and does demonstrations all around the country.
-        </span>
-      </div>
-    </main>
-
-    <hr />
-    <!-- 작은 영상 -->
     <section>
-      <div class="play-btn">
-        <span class="play-info">Search On ‘21</span>
-        <div class="play-arrow-btn">
-          <img src="img/channel/play.svg" alt="play" />
-        </div>
-        <span class="play-all">PLAY ALL</span>
-      </div>
-      <div class="play-list">
-        <div class="Video1">
-          <img src="img/channel/Video1.svg" alt="Video1" class="Video1" />
-          <span class="video-title">Lorem ipsum dolor sit amet, consecte...</span>
-          <span class="video-uploader">Marcus Levin</span>
-          <span class="video-views">329K views . 1 month ago</span>
-        </div>
-        <div class="Video2">
-          <img src="img/channel/Video2.svg" alt="Video2" class="Video2" />
-          <span class="video-title">Lorem ipsum dolor sit amet, consecte...</span>
-          <span class="video-uploader">Marcus Levin</span>
-          <span class="video-views">329K views . 1 month ago</span>
-        </div>
-        <div class="Video3">
-          <img src="img/channel/Video3.svg" alt="Video3" class="Video3" />
-          <span class="video-title">Lorem ipsum dolor sit amet, consecte...</span>
-          <span class="video-uploader">Marcus Levin</span>
-          <span class="video-views">329K views . 1 month ago</span>
-        </div>
-        <div class="Video4">
-          <img src="img/channel/Video4.svg" alt="Video4" class="Video4" />
-          <span class="video-title">Lorem ipsum dolor sit amet, consecte...</span>
-          <span class="video-uploader">Marcus Levin</span>
-          <span class="video-views">329K views . 1 month ago</span>
-        </div>
-        <div class="Video5">
-          <img src="img/channel/Video5.svg" alt="Video5" class="Video5" />
-          <span class="video-title">Lorem ipsum dolor sit amet, consecte...</span>
-          <span class="video-uploader">Marcus Levin</span>
-          <span class="video-views">329K views . 1 month ago</span>
-        </div>
+      <div id="mainContainer">
+        <section id="videoList"></section>
       </div>
     </section>
   </body>
+  <script src="js/js_1.js"></script>
+  <script src="js/js_2.js"></script>
 </html>
