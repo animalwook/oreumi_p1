@@ -1,0 +1,170 @@
+/* css_2.css */
+.navbar {
+    display: flex;
+    width: 240px;
+    height: 968px;
+    padding-right: 0px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background: #212121;
+}
+
+.navbarTop, .navbarTop-2 {
+    display: flex;
+    padding: 12px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Menu {
+    display: flex;
+    padding: 8px 8px 8px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Title {
+    display: flex;
+    width: 144px;
+    padding: 4px 0px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.navIcon{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.Menu-Item {    
+    display: flex;
+    width: 192px;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.Menu-Item-img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.border {
+    width: 224px;
+    height: 1px;
+    background: var(--border-color, #303030);
+}
+
+.typo {
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap; /* add this line */
+}
+
+.NavbarSubscriptions{
+    display: flex;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.Menu-Title{
+    display: flex;
+    width: 224px;
+    height: 32px;
+    padding-right: 0px;
+    align-items: center;
+}
+
+.SUBSCRIPTIONS {
+    display: flex;
+    padding: 8px 24px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.typo2 {
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.NavbarMoreform {
+    display: flex;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+
+
+
+
+
+/* -------------상단 메뉴 바 ----------- */
+
+
+.button {
+    background-color: #212121;
+    width: 1193px;
+    height: 56px;
+    padding: 0px 0px 0px 150px;
+    font-family: Roboto;
+    display: flex;
+    align-items: center; /* 세로 방향 가운데 정렬 */
+    justify-content: center; /* 가로 방향 가운데 정렬 */
+  }
+
+  .buttonAll+.buttonItem, .buttonItem+.buttonItem {
+  margin-left: 5px; /*버튼 간 간격 조절*/
+}
+  
+  .buttonAll {
+    width: 40px;
+    height: 32px;
+    gap: 10px;
+    display: flex;
+    align-items: center; /* 가로 방향 가운데 정렬 */
+    justify-content: center; /* 세로 방향 가운데 정렬 */
+  }
+  
+  .buttonItem {
+    width: 53px;
+    height: 32px;
+    gap: 10px;
+    display: flex;
+    align-items: center; /* 가로 방향 가운데 정렬 */
+    justify-content: center; /* 세로 방향 가운데 정렬 */
+  }
+  
+  .buttonAll, .buttonItem {
+    background-color: #303030;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 32px;
+    cursor: pointer;
+  }
+  
+  .buttonAll:hover, .buttonItem:hover {
+    color: #030303;
+    background-color: #FFFFFF; /* 호버링시 배경색상 */
+  }
+
