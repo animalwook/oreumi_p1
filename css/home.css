@@ -15,7 +15,6 @@ a {
 
 
 /* ---------header------------- */
-<<<<<<< HEAD
 header {
     position: fixed;
     background-color: #212121;
@@ -63,51 +62,6 @@ header input::placeholder {
 
 
 header #search-btn{
-=======
-.header{
-    display: flex;
-    position: fixed;
-    background-color: #212121;
-    top: 0;
-    height: 56px;
-    width: 100%;    
-    flex-shrink: 0;
-}
-
-.hamburger{
-    width: 24px;
-    height: 24px;
-    padding: 5px 3px 6px 3px;
-    margin: 11px 0px 10px 21px;
-}
-
-.Youtube-Logo{
-    width: 90px;
-    height: 20px;
-    margin: 18px 14px 18px 16px;
-}
-
-#search-box{
-    display: flex;
-}
-
-#search{
-    background: #121212;
-    color: var(--gray-color, #AAA);
-    width: 362px;
-    height: 40px;
-    margin: 8px 0px 8px 363px;
-    border-radius: 2px 0px 0px 2px;
-    border: none;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-}
-
-#search-btn{
->>>>>>> 0a546a2 (Revert "Add: channel.css")
     width: 64px;
     height: 40px;
     padding: 2px 7px;
@@ -119,7 +73,6 @@ header #search-btn{
     background: var(--border-color, #303030);
 }
 
-<<<<<<< HEAD
 header .user-api {
     display: flex;
     align-items: center;
@@ -138,26 +91,6 @@ header .mic{
 
 
 header .User-Avatar{
-=======
-.icon{
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.mic{
-    display: flex;    
-    width: 24px;
-    height: 24px;
-    margin: 16px 0px 16px 10px;
-    align-items: flex-start;
-    gap: 10px;
-    border-radius: 40px;
-    background: var(--black, #000);
-}
-
-
-.User-Avatar{
->>>>>>> 0a546a2 (Revert "Add: channel.css")
     width: 32px;
     flex-shrink: 0;
     align-self: stretch;
@@ -166,14 +99,9 @@ header .User-Avatar{
 /* ---------header------------- */
 /* ---------------navbar------------- */
 .navbar {
-<<<<<<< HEAD
     position: fixed;
     top: 0;
     left: -100%;
-=======
-    display: flex;
-    position: fixed;
->>>>>>> 0a546a2 (Revert "Add: channel.css")
     margin-top: 56px;
     width: 240px;
     height: 968px;
@@ -352,27 +280,23 @@ nav {
     position: fixed;
     height:30px;
     margin-top: 56px;
-<<<<<<< HEAD
-=======
-    padding-top: 10px;
->>>>>>> 0a546a2 (Revert "Add: channel.css")
     padding-left: auto;
 }
-/* -------------상단 메뉴 바 ----------- */
+/* -------------?곷떒 硫붾돱 諛?----------- */
 
 
 nav .button {
-	background-color:rgba(0, 0, 0, 0.2);/*까만색(0,0,0) 20% 불투명도*/
+	background-color:rgba(0, 0, 0, 0.2);/*源뚮쭔??0,0,0) 20% 遺덊닾紐낅룄*/
     width: 100%;    
     padding: 0px 0px 0px 150px;
     font-family: Roboto;
     display: flex;
-    align-items: center; /* 세로 방향 가운데 정렬 */
-    justify-content: center; /* 가로 방향 가운데 정렬 */
+    align-items: center; /* ?몃줈 諛⑺뼢 媛?대뜲 ?뺣젹 */
+    justify-content: center; /* 媛濡?諛⑺뼢 媛?대뜲 ?뺣젹 */
   }
 
   .buttonAll+.buttonItem, .buttonItem+.buttonItem {
-  margin-left: 5px; /*버튼 간 간격 조절*/
+  margin-left: 5px; /*踰꾪듉 媛?媛꾧꺽 議곗젅*/
 }
   
   .buttonAll {
@@ -380,8 +304,8 @@ nav .button {
     height: 32px;
     gap: 10px;
     display: flex;
-    align-items: center; /* 가로 방향 가운데 정렬 */
-    justify-content: center; /* 세로 방향 가운데 정렬 */
+    align-items: center; /* 媛濡?諛⑺뼢 媛?대뜲 ?뺣젹 */
+    justify-content: center; /* ?몃줈 諛⑺뼢 媛?대뜲 ?뺣젹 */
   }
   
   .buttonItem {
@@ -389,8 +313,8 @@ nav .button {
     height: 32px;
     gap: 10px;
     display: flex;
-    align-items: center; /* 가로 방향 가운데 정렬 */
-    justify-content: center; /* 세로 방향 가운데 정렬 */
+    align-items: center; /* 媛濡?諛⑺뼢 媛?대뜲 ?뺣젹 */
+    justify-content: center; /* ?몃줈 諛⑺뼢 媛?대뜲 ?뺣젹 */
   }
   
   .buttonAll, .buttonItem {
@@ -404,9 +328,8 @@ nav .button {
   
   .buttonAll:hover, .buttonItem:hover {
     color: #030303;
-    background-color: #FFFFFF; /* 호버링시 배경색상 */
+    background-color: #FFFFFF; /* ?몃쾭留곸떆 諛곌꼍?됱긽 */
   }
-
 
 
 
@@ -414,11 +337,7 @@ nav .button {
 /* -----------------section--------------- */
 section {
     padding-top: 56px;
-<<<<<<< HEAD
     padding-left: 0px;
-=======
-    padding-left: 240px;
->>>>>>> 0a546a2 (Revert "Add: channel.css")
 }
 /* -----------tob-menu-------------- */
 
@@ -426,48 +345,13 @@ section {
 /* -----------thumbnail-------------- */
 
 .thumbnail {
-<<<<<<< HEAD
-=======
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    background-color: #181818;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    border-top: 0.2px solid grey;
-
-}
-.thumbnail-item {
-    flex-basis: 22%;
-    height: fit-content;
-    background-color: #181818;
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.thumbnailDetail {
-    display: flex;
-    background-color: #181818;
-    padding-top: 10px;
-}
-.ThumbnailDescTitle {
-    width: 100%;
->>>>>>> 0a546a2 (Revert "Add: channel.css")
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     color: white;
-<<<<<<< HEAD
 
-=======
-}
-.ThumbnailDescInfo {
-    margin-top: -3px;
-    color: #aaaaaa;
-    white-space: nowrap;
->>>>>>> 0a546a2 (Revert "Add: channel.css")
 }
 
 .video-card {
@@ -508,8 +392,7 @@ section {
 /*----------- */
 
 
-<<<<<<< HEAD
-/* 화면을 크게 키울경우 */
+/* ?붾㈃???ш쾶 ?ㅼ슱寃쎌슦 */
 @media screen and (min-width:768px) {
     body {
         padding: 16px 48px 0 240px;
@@ -548,8 +431,3 @@ section {
         
     }
 }
-=======
-
-
-
->>>>>>> 0a546a2 (Revert "Add: channel.css")
