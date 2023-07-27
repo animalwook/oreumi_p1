@@ -1,7 +1,8 @@
 body {
   font-family: Roboto;
-  /* background-color: #212121; */
+  background-color: #000000;
   font-size: 16px;
+  color: #fff;
 }
 /* 
   main {
@@ -149,32 +150,46 @@ body {
 /* 큰 영상 */
 
 .youtube-player {
-  width: 1200px;
+  width: 800px;
   height: 286px;
   margin: 24px 0px 24px 0px;
   padding-left: 65px;
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.youtube-player-info {
+  flex-direction: column;
+  margin: 24px 0px 24px 0px;
+  width: 400px;
+  height: 238px;
 }
 
 .youtube-player-title {
   display: block;
-  margin-right: auto;
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 20px;
 }
 
 .youtube-player-views {
   display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #aaa;
+  padding-bottom: 19px;
 }
 
 .youtube-player-desc {
   display: block;
+  font-size: 14px;
+  word-break: break-word;
 }
 
 /* 구분선 */
 
 .division-line {
-  border-top: 1px solid #aaaaaa;
+  border-top: 1px solid #aaa;
 }
 
 /* 작은 영상 */
@@ -185,9 +200,7 @@ body {
   display: flex;
 }
 
-.Video1 .Video2 .Video3 .Video4 .Video5 {
+.Video-image1.Video-image2.Video-image3.Video-image4.Video-image5 {
   width: 210px;
   height: 118px;
 }
-
-/* 살려주세요 */
