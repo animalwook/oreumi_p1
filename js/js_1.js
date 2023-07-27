@@ -145,3 +145,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 // // }, "5000");
 
 // export default VideoInfo;
+
+function goToChannel() {
+    window.location.href = 'channel.html';
+  }
+
+  const typoElements = document.querySelectorAll('.typo');
+  const navIconElements = document.querySelectorAll('.navIcon');
+
+  typoElements.forEach((element) => {
+    element.addEventListener('click', goToChannel);
+  });
+
+  navIconElements.forEach((element) => {
+    element.addEventListener('click', goToChannel);
+  });
