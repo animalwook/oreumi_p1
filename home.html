@@ -18,7 +18,7 @@
         </a>
         <div id="search-box">
           <input type="text" id="search" placeholder="Search" />
-          <button id="search-btn">
+          <button id="search-btn" onclick="searchVideos()">
             <img src="./img/home/header/search.svg" alt="Search" class="icon" id="search-icon" />
           </button>
         </div>
@@ -309,7 +309,11 @@
 
     <section>
       <div id="mainContainer">
-        <section id="videoList"></section>
+        <div id="videoList"></div>
+      </div>
+      <div id="mainContainer2">
+        <div id="searchResults">
+        </div>
       </div>
     </section>
   </body>
