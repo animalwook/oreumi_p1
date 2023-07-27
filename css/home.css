@@ -15,49 +15,53 @@ a {
 
 
 /* ---------header------------- */
-.header{
-    display: flex;
+header {
     position: fixed;
     background-color: #212121;
     top: 0;
-    height: 56px;
+    left:0;
     width: 100%;    
-    flex-shrink: 0;
 }
 
-.hamburger{
-    width: 24px;
-    height: 24px;
-    padding: 5px 3px 6px 3px;
-    margin: 11px 0px 10px 21px;
-}
-
-.Youtube-Logo{
-    width: 90px;
-    height: 20px;
-    margin: 18px 14px 18px 16px;
-}
-
-#search-box{
+.header {
     display: flex;
+    align-items: center;
+    height: 56px;
+}
+header.hamburger{
+    display: none;
 }
 
-#search{
-    background: #121212;
-    color: var(--gray-color, #AAA);
-    width: 362px;
+header.Youtube-Logo{
+    display: flex;
+    align-items: center;
+    width: auto; 
+    height: auto;
+}
+
+header #search-box{
+    display: flex;
+    padding: 7px 12px;
+    background-color: #212121;
+    border-radius: 4px;
+}
+
+header input {
+    width: 100%;
     height: 40px;
-    margin: 8px 0px 8px 363px;
     border-radius: 2px 0px 0px 2px;
     border: none;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
+    outline: none;
+    background-color: #FFFFFF;
+    color:#303030
 }
 
-#search-btn{
+header input::placeholder {
+    color:#303030
+}
+
+
+header #search-btn{
     width: 64px;
     height: 40px;
     padding: 2px 7px;
@@ -69,13 +73,12 @@ a {
     background: var(--border-color, #303030);
 }
 
-.icon{
-    flex-direction: column;
-    align-items: flex-start;
+header .user-api {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
-
-.mic{
-    display: flex;    
+header .mic{
     width: 24px;
     height: 24px;
     margin: 16px 0px 16px 10px;
@@ -83,10 +86,11 @@ a {
     gap: 10px;
     border-radius: 40px;
     background: var(--black, #000);
+    
 }
 
 
-.User-Avatar{
+header .User-Avatar{
     width: 32px;
     flex-shrink: 0;
     align-self: stretch;
@@ -95,8 +99,9 @@ a {
 /* ---------header------------- */
 /* ---------------navbar------------- */
 .navbar {
-    display: flex;
     position: fixed;
+    top: 0;
+    left: -100%;
     margin-top: 56px;
     width: 240px;
     height: 968px;
@@ -209,6 +214,8 @@ a {
     align-items: flex-start;
     gap: 12px;
 }
+/* ---------------nav-hover------------- */
+/* ---------------nav-On/Off------------- */
 
 /* ---------------navbar------------- */
 /* ---------------nav------------- */
@@ -220,13 +227,63 @@ nav {
     padding-top: 10px;
     padding-left: auto;
 }
+/* -------------상단 메뉴 바 ----------- */
+
+
+.button {
+    background-color: #212121;
+    width: 1193px;
+    height: 56px;
+    padding: 0px 0px 0px 150px;
+    font-family: Roboto;
+    display: flex;
+    align-items: center; /* 세로 방향 가운데 정렬 */
+    justify-content: center; /* 가로 방향 가운데 정렬 */
+  }
+
+  .buttonAll+.buttonItem, .buttonItem+.buttonItem {
+  margin-left: 5px; /*버튼 간 간격 조절*/
+}
+  
+  .buttonAll {
+    width: 40px;
+    height: 32px;
+    gap: 10px;
+    display: flex;
+    align-items: center; /* 가로 방향 가운데 정렬 */
+    justify-content: center; /* 세로 방향 가운데 정렬 */
+  }
+  
+  .buttonItem {
+    width: 53px;
+    height: 32px;
+    gap: 10px;
+    display: flex;
+    align-items: center; /* 가로 방향 가운데 정렬 */
+    justify-content: center; /* 세로 방향 가운데 정렬 */
+  }
+  
+  .buttonAll, .buttonItem {
+    background-color: #303030;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 32px;
+    cursor: pointer;
+  }
+  
+  .buttonAll:hover, .buttonItem:hover {
+    color: #030303;
+    background-color: #FFFFFF; /* 호버링시 배경색상 */
+  }
+
 
 
 /* ---------------nav------------- */
 /* -----------------section--------------- */
 section {
     padding-top: 56px;
-    padding-left: 240px;
+    padding-left: 0px;
 }
 /* -----------tob-menu-------------- */
 
@@ -278,6 +335,42 @@ section {
 /*----------- */
 
 
+/* 화면을 크게 키울경우 */
+@media screen and (min-width:768px) {
+    body {
+        padding: 16px 48px 0 240px;
+      }
+
+    .navbar {
+        left: 0;
+        padding: 19px 24px 0;
+        width: 88px;
+        float: left;
+
+    }
+
+    main {
+        padding-top: 20px;
+        padding-left: 0;
+      }
+
+    header {
+    }
+    
+    header .header {
+        height: 56px;
+    }
 
 
 
+    header .hamburger {
+        display: block;
+        width: 24px;
+        height: 24px;
+        padding: 5px 3px 6px 3px;
+        margin: 11px 0px 10px 21px;
+    }
+    header .Youtube-Logo {
+        
+    }
+}
