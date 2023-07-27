@@ -1,0 +1,193 @@
+body {
+  font-family: Roboto;
+  /* background-color: #212121; */
+  font-size: 16px;
+}
+/* 
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } */
+
+/* 채널 상단 */
+.channel-cover {
+  display: block;
+  width: 1200px;
+  height: 192px;
+  float: inline-start;
+}
+
+.channel-title {
+  /* width: 1200px; */
+  width: auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #212121;
+  color: #aaa;
+}
+
+/* 구독 정보 */
+
+.channel-avatar {
+  margin: 16px 24px 4px 65px;
+  border-radius: 50px;
+  justify-content: flex-start;
+}
+
+.channel-title-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.channel-title-name {
+  font-size: 24px;
+  color: #ffffff;
+  margin-left: 24px;
+}
+
+.channel-title-subscribers {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-left: 24px;
+}
+
+.subscribes-btn {
+  width: 116px;
+  height: 36px;
+  background-color: #cc0000;
+  color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: 65px;
+}
+
+/* 구독중 버튼 전환 임시코드 */
+
+/* .subscribes-btn.clicked {
+    width: 116px;
+    height: 36px;
+    background-color: #aaaaaa;
+    color: #ffffff;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 700;
+    line-height: normal;
+  } */
+
+/* 툴바 */
+
+.channel-toolbar {
+  background-color: #212121;
+  width: auto;
+  height: 48px;
+  display: flex;
+  padding-left: 65px;
+}
+
+.toolbar-btn {
+  border: 0;
+  background-color: #212121;
+  color: #aaa;
+}
+
+.toolbar-btn:hover {
+  border: 0;
+  background-color: #aaa;
+  color: #fff;
+}
+
+#channel-toolbar-home {
+  width: 104px;
+  height: 47px;
+}
+
+#channel-toolbar-videos {
+  width: 113px;
+  height: 47px;
+}
+
+#channel-toolbar-playlists {
+  width: 136px;
+  height: 47px;
+}
+
+#channel-toolbar-community {
+  width: 148px;
+  height: 47px;
+}
+
+#channel-toolbar-channels {
+  width: 137px;
+  height: 47px;
+}
+
+#channel-toolbar-about {
+  width: 110px;
+  height: 47px;
+}
+
+#channel-toolbar-search {
+  width: 322px;
+  height: 48px;
+  border: 0;
+  background-color: #212121;
+  color: #aaaaaa;
+}
+
+#channel-toolbar-search:hover {
+  background-color: #aaaaaa;
+  color: #212121;
+}
+
+/* 큰 영상 */
+
+.youtube-player {
+  width: 1200px;
+  height: 286px;
+  margin: 24px 0px 24px 0px;
+  padding-left: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-player-title {
+  display: block;
+  margin-right: auto;
+}
+
+.youtube-player-views {
+  display: block;
+}
+
+.youtube-player-desc {
+  display: block;
+}
+
+/* 구분선 */
+
+.division-line {
+  border-top: 1px solid #aaaaaa;
+}
+
+/* 작은 영상 */
+
+.play-list {
+  width: 1200px;
+  height: 288px;
+  display: flex;
+}
+
+.Video1 .Video2 .Video3 .Video4 .Video5 {
+  width: 210px;
+  height: 118px;
+}
+
+/* 살려주세요 */
