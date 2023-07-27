@@ -28,8 +28,8 @@ async function searchVideos() {
         const infoHTML = generateVideoHTML(videoInfo);
         searchResults.innerHTML += infoHTML;
     }
-    searchResults.style.display = 'block';
-}
+    searchResults.style.display = 'flex';
+    searchResults.style.flexWrap = 'wrap';}
 
 // VideoList Data Pull 함수
 async function getVideoList() {
