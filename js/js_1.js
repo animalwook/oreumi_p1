@@ -1,8 +1,18 @@
+
+
+// ① await 키워드는 async 함수 안에서만 사용할 수 있다.
+// ② async 함수는 Promise 를 리턴한다.
+// ③ async 함수를 만드는 방법 : 함수 앞에 async 를 붙인다.
+// ④ async함수 내부의 코드실행은 비동기적으로 된다. 내부에서 await 키워드가 쓰이지 않았으면 Promise.resolve()로 처리된다.
+// ⑤ await키워드는 프로미스를 리턴하지 않는 함수라도 사용할 수 있다. Promise.resolve()로 처리된다.
+/**************************home.html에서 list**********************************/ 
 // 검색 함수
 // 1. 검색 단어 가져오기
 // 2. 단어 조건에 맞는 영상 항목을 relatedVideos에 넣기
 // 3. 메인 화면 비디오 리스트들 display:none
 // 4. relatedVideos에 있는 영상 항목을 generateVideoHTML 함수를 통해 display
+
+
 async function searchVideos() {
     const searchInput = document.getElementById('search').value.toLowerCase();
     const searchResults = document.getElementById('searchResults');
@@ -48,19 +58,26 @@ async function getVideoInfo(videoId) {
 
 // videoInfo에 맞는 HTML 구조 구성 함수
 function generateVideoHTML(videoInfo) {
+    console.log(videoInfo.title);
     return `
         <div class="thumbnail">
+            <a href="javascript:;" id="goToVideo">
             <img src="${videoInfo.image_link}" style="width:320px;cursor:pointer;"/>
+            </a>
             <div style="display:flex;">
                 <div style="width:30px; height: 30px; border-radius: 50%; overflow:hidden;">
                 </div>
                 <div style="margin-left: 10px;">
+                    <a href="javascript:;" id="goToVideo" onclick="goToVideo('${videoInfo.video_id}')">
                     <p>${videoInfo.video_title}</p>
+                    </a>
+                    <a href="javascript:;" id="goToChannel" onclick="goToChannel('${videoInfo.video_channel}')">
                     <p>${videoInfo.video_channel}</p>
+                    </a>
                     <p>${videoInfo.views} views</p>
                     <p>${videoInfo.upload_date}</p>
                 </div>
-            </div>
+            </div>var innerText = document.getElementById(elementId).innerText
         </div>
     `;
 }
@@ -74,7 +91,6 @@ async function displayHome() {
         const videoInfo = await getVideoInfo(video.video_id);
 
         const infoHTML = generateVideoHTML(videoInfo);
-
         infoContainer.innerHTML += infoHTML;
     }
 }
@@ -87,7 +103,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error:', error);
     }
 });
-
+/**************************home.html에서 list**********************************/ 
 
 // import { XMLHttpRequest } from "xmlhttprequest";
 
@@ -146,17 +162,65 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // export default VideoInfo;
 
-function goToChannel() {
-    window.location.href = 'channel.html';
-  }
 
-  const typoElements = document.querySelectorAll('.typo');
-  const navIconElements = document.querySelectorAll('.navIcon');
+//////////////////////////////////////////////////////
+// function goToChannel() {
+//     window.location.href = 'channel.html';
+//   }
 
-  typoElements.forEach((element) => {
-    element.addEventListener('click', goToChannel);
-  });
+//   const typoElements = document.querySelectorAll('.typo');
+//   const navIconElements = document.querySelectorAll('.navIcon');
 
-  navIconElements.forEach((element) => {
-    element.addEventListener('click', goToChannel);
-  });
+//   typoElements.forEach((element) => {
+//     element.addEventListener('click', goToChannel);
+//   });
+
+//   navIconElements.forEach((element) => {
+//     element.addEventListener('click', goToChannel);
+//   });
+
+////////////////////////////////////////////////////
+//user 객체를 본문에 실어 보내
+
+async function getChannerInfo(Channer) {
+    const apiCUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channer}`;
+    const response = await fetch(apiCUrl);
+    const ChannerInfoData = await response.json();
+    return ChannerInfoData;
+}
+
+async function postChannerInfo(Channer) {
+    console.log(Channer);
+    const postResponse = await fetch(
+        `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channer}`, {
+            method: "POST",    
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify(getChannerInfo(Channer)),
+        }).then((response) => console.log(response));
+    console.log(postResponse)
+}
+
+// fetchAuthorName(1).then((name) => console.log("name:", name));
+
+async function postChannerList() {
+    const response = await fetch('http://oreumi.appspot.com/video/getVideoList');
+    const VideoListData = await response.json();
+    return VideoListData;
+}
+
+///////////////////////channel.html에서 영상 리스트////////////////////////////
+//home.html에서 채널 프로필을 누르면 채널 페이지로 이동
+function goToChannel(info) {
+    link = 'channel.html';
+	location.href = link;
+    // postChannerInfo(info)
+}
+
+function goToVideo(info) {
+    link = 'video.html';
+	location.href = link;
+}
+    
+///////////////////////channel.html에서 영상 리스트////////////////////////////
