@@ -67,3 +67,41 @@ function toggleNavbar() {
   navbar.classList.toggle("displayNone");
   expandNavbar.classList.toggle("display");
 }
+
+
+function isMiddlePage() {
+  return window.location.pathname.includes("/middle-page");
+}
+
+function showExpandNavbar() {
+  const expandNavbar = document.querySelector(".expand-navbar");
+  expandNavbar.style.display = "block";
+}
+
+function hideExpandNavbar() {
+  const expandNavbar = document.querySelector(".expand-navbar");
+  expandNavbar.style.display = "none";
+}
+
+// 페이지 사이즈별 구분
+function controlScreen() {
+  const navbar = document.querySelector(".navbar");
+  const hamburger = document.querySelector(".hamburger");
+  const screenWidth = window.innerWidth;
+
+  // 모든 페이지에서 햄버거 버튼은 보여짐 // 최소화면에서 햄버거가 계속 사라져서 강제시켰습니다.
+  hamburger.style.display = "block";
+
+  if (isMiddlePage() && screenWidth > 768) {
+    showExpandNavbar();
+    navbar.style.display = "none";
+  } else {
+    hideExpandNavbar();
+    navbar.style.display = "block";
+  }
+}
+
+window.addEventListener("load", controlScreen);
+window.addEventListener("resize", controlScreen);
+
+controlScreen();
