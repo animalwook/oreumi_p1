@@ -1,3 +1,8 @@
+
+
+
+
+/**************************home.html에서 list**********************************/ 
 // 검색 함수
 // 1. 검색 단어 가져오기
 // 2. 단어 조건에 맞는 영상 항목을 relatedVideos에 넣기
@@ -56,7 +61,7 @@ function generateVideoHTML(videoInfo) {
                 </div>
                 <div style="margin-left: 10px;">
                     <p>${videoInfo.video_title}</p>
-                    <p>${videoInfo.video_channel}</p>
+                    <p id="video_channel" onclick="click_video_channel()">${videoInfo.video_channel}</p>
                     <p>${videoInfo.views} views</p>
                     <p>${videoInfo.upload_date}</p>
                 </div>
@@ -87,7 +92,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error:', error);
     }
 });
-
+/**************************home.html에서 list**********************************/ 
 
 // import { XMLHttpRequest } from "xmlhttprequest";
 
@@ -146,6 +151,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // export default VideoInfo;
 
+
+//////////////////////////////////////////////////////
 function goToChannel() {
     window.location.href = 'channel.html';
   }
@@ -160,3 +167,14 @@ function goToChannel() {
   navIconElements.forEach((element) => {
     element.addEventListener('click', goToChannel);
   });
+
+////////////////////////////////////////////////////
+
+
+///////////////////////channel.html에서 영상 리스트////////////////////////////
+//home.html에서 채널 프로필을 누르면 채널 페이지로 이동
+function click_video_channel() {
+    alert("Hello World");
+}
+ 
+///////////////////////channel.html에서 영상 리스트////////////////////////////
