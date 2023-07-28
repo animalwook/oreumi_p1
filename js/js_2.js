@@ -105,3 +105,16 @@ window.addEventListener("load", controlScreen);
 window.addEventListener("resize", controlScreen);
 
 controlScreen();
+
+// Top-Menu 스크롤 버튼 구현
+const slideLeft = document.getElementById("slide-left");
+
+slideLeft.onclick = () => {
+  document.getElementsByClassName("button")[0].scrollLeft -= 300;
+};
+
+const slideRight = document.getElementById("slide-right");
+
+slideRight.onclick = () => {
+  document.getElementsByClassName("button")[0].scrollLeft += 300;
+};
