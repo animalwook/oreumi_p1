@@ -96,24 +96,32 @@ header .User-Avatar{
     align-self: stretch;
 }
 
-/* ---------header------------- */
+/* ---------------NAVBAR CSS--------------- */
+/* ---------------navbar-hover--------------- */
+/* ---------------navbar-On/Off------------- */
+.expand-navbar.display {
+    display: flex;
+}
+
+.navbar.displayNone {
+    display: none;
+}
+
 /* ---------------navbar------------- */
 .navbar {
+    display: flex;
     position: fixed;
-    top: 0;
-    left: -100%;
-    margin-top: 56px;
-    width: 240px;
+    top: 58px;
+    width: 72px;
     height: 968px;
-    padding-right: 0px;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     flex-shrink: 0;
     background: #212121;
 }
 
-.navbarTop, .navbarTop-2 {
+.navbarTop {
     display: flex;
     padding: 12px 0px;
     flex-direction: column;
@@ -122,19 +130,22 @@ header .User-Avatar{
 
 .Menu {
     display: flex;
-    padding: 8px 8px 8px 24px;
+    padding: 8px 8px 8px 0px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 10px;
 }
 
-.Title {
-    display: flex;
-    width: 144px;
-    padding: 4px 0px;
-    align-items: flex-start;
-    gap: 10px;
-    flex-shrink: 0;
+.Menu-Item {    
+    display: block;
+    width: 72px;
+    align-items: center;
+    gap: 24px;
+}
+
+.Menu-Item-img {
+    width: 20px;
+    height: 20px;
 }
 
 .navIcon{
@@ -144,43 +155,91 @@ header .User-Avatar{
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    padding-left: 24px;
 }
 
-.Menu-Item {    
+.Title {
+    display: flex;
+    width: 72px;
+    padding: 4px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* ---------------expand navbar--------------- */
+.expand-navbar.display {
+    display: flex;
+}
+
+.navbar.displayNone {
+    display: none;
+}
+.expand-navbar {
+    display: none;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 240px;
+    height: 968px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    background: #212121;
+}
+
+.expand-navbarTop, .expand-navbarTop-2 {
+    display: flex;
+    padding: 12px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.expand-menu {
+    display: flex;
+    padding: 8px 8px 8px 0px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.expand-menu-item {    
     display: flex;
     width: 192px;
-    align-items: flex-start;
+    align-items: center;
     gap: 24px;
 }
 
-.Menu-Item-img {
-    width: 20px;
-    height: 20px;
+.expand-navIcon{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding-left: 24px;
 }
 
+.expand-title {
+    display: flex;
+    width: 144px;
+    padding: 4px 0px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.expand-menuItemImg {
+    width: 24px;
+    height: 24px;
+}
 
 .border {
     width: 224px;
     height: 1px;
     background: var(--border-color, #303030);
-}
-
-.typo {
-    color: var(--white-color, #FFF);
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    white-space: nowrap; /* add this line */
-}
-
-.NavbarSubscriptions{
-    display: flex;
-    padding-top: 12px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
 }
 
 .Menu-Title{
@@ -191,11 +250,14 @@ header .User-Avatar{
     align-items: center;
 }
 
-.SUBSCRIPTIONS {
-    display: flex;
-    padding: 8px 24px;
-    align-items: flex-start;
-    gap: 10px;
+.typo {
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
 }
 
 .typo2 {
@@ -214,6 +276,22 @@ header .User-Avatar{
     align-items: flex-start;
     gap: 12px;
 }
+
+.SUBSCRIPTIONS {
+    display: flex;
+    padding: 8px 24px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.NavbarSubscriptions{
+    display: flex;
+    padding-top: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
 /* --------navbar-small -----*/
 .navbar-small {
     display: none;
@@ -287,12 +365,14 @@ nav {
 
 nav .button {
 	background-color:rgba(0, 0, 0, 0.2);/*源뚮쭔??0,0,0) 20% 遺덊닾紐낅룄*/
-    width: 100%;    
-    padding: 0px 0px 0px 150px;
+    width: 62vw;
+    height: 32px;
     font-family: Roboto;
     display: flex;
     align-items: center; /* ?몃줈 諛⑺뼢 媛?대뜲 ?뺣젹 */
     justify-content: center; /* 媛濡?諛⑺뼢 媛?대뜲 ?뺣젹 */
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .buttonAll+.buttonItem, .buttonItem+.buttonItem {
@@ -325,13 +405,17 @@ nav .button {
     border-radius: 32px;
     cursor: pointer;
   }
-  
+
   .buttonAll:hover, .buttonItem:hover {
-    color: #030303;
-    background-color: #FFFFFF; /* ?몃쾭留곸떆 諛곌꼍?됱긽 */
+      color: #303030;
+      background-color: #FFFFFF;
+      /* ?몃쾭留곸떆 諛곌꼍?됱긽 */
   }
 
-
+  .buttonAll:active, .buttonItem:active {
+      color: #FFFFFF;
+      background-color: #303030;
+  }
 
 /* ---------------nav------------- */
 /* -----------------section--------------- */
@@ -339,9 +423,44 @@ section {
     padding-top: 56px;
     padding-left: 0px;
 }
-/* -----------tob-menu-------------- */
+/* -----------top-menu-------------- */
 
-/* -----------tob-menu-------------- */
+#slide-left {
+    background-color: #303030;
+    color: #FFFFFF;
+    border: none;
+    width: 24px;
+    height: 32px;
+    gap: 10px;
+    border-radius: 10px;
+    z-index: 1;
+    left: 0;
+}
+
+#slide-right {
+    background-color: #303030;
+    color: #FFFFFF;
+    border: none;
+    width: 24px;
+    height: 32px;
+    gap: 10px;
+    border-radius: 10px;
+    z-index: 1;
+    position: fixed;
+    right: 0;
+}
+
+#slide-left:hover, #slide-right:hover {
+    background-color: #FFFFFF;
+    color: #303030;
+}
+
+#slide-left:active, #slide-right:active {
+    background-color: #303030;
+    color: #FFFFFF;
+}
+
+/* -----------top-menu-------------- */
 /* -----------thumbnail-------------- */
 
 .thumbnail {
