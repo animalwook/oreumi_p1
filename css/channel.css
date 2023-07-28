@@ -239,12 +239,12 @@ body {
 /* 구분선 */
 
 .division-line {
-  display: flex;
+  /* display: flex;
   box-sizing: border-box;
-  justify-content: flex-start;
+  justify-content: flex-start; */
   width: 1070px;
   border-top: 1px solid #303030;
-  padding-left: 65px;
+  margin-left: 65px;
 }
 
 /* 작은 영상 */
