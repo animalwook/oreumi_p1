@@ -58,7 +58,6 @@ async function getVideoInfo(videoId) {
 
 // videoInfo에 맞는 HTML 구조 구성 함수
 function generateVideoHTML(videoInfo) {
-    console.log(videoInfo.title);
     return `
         <div class="thumbnail">
             <a href="javascript:;" id="goToVideo">
@@ -77,7 +76,7 @@ function generateVideoHTML(videoInfo) {
                     <p>${videoInfo.views} views</p>
                     <p>${videoInfo.upload_date}</p>
                 </div>
-            </div>var innerText = document.getElementById(elementId).innerText
+            </div>
         </div>
     `;
 }
@@ -182,26 +181,70 @@ document.addEventListener('DOMContentLoaded', async () => {
 ////////////////////////////////////////////////////
 //user 객체를 본문에 실어 보내
 
+
 async function getChannerInfo(Channer) {
     const apiCUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channer}`;
     const response = await fetch(apiCUrl);
     const ChannerInfoData = await response.json();
+    console.log(ChannerInfoData);
     return ChannerInfoData;
 }
 
 async function postChannerInfo(Channer) {
-    console.log(Channer);
-    const postResponse = await fetch(
-        `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channer}`, {
-            method: "POST",    
-            headers: {
-            "Content-Type": "application/json",
-            },
-            body: JSON.stringify(getChannerInfo(Channer)),
-        }).then((response) => console.log(response));
-    console.log(postResponse)
+    let apiUrl = 'http://oreumi.appspot.com/channel/getChannelInfo';  // 요청을 보낼 URL입니다.
+
+    let jsonData = {"video_channel": Channer}  // 요청에 포함할 데이터를 정의합니다.
+    
+    fetch(apiUrl, {
+      method: 'POST',  // 요청 방식을 POST로 설정합니다.
+      headers: {
+        'Content-Type': 'application/json',  // 요청의 헤더를 설정합니다.
+      },
+      body: JSON.stringify(jsonData),  // 요청 본문에 데이터를 JSON 형식으로 포함합니다.
+    })
+    .then(response => response.json())  // 응답을 JSON 형식으로 파싱합니다.
+    .then(response => {
+      // 데이터가 존재하는지 확인합니다.
+      if (response && response.channel_name !== undefined) {
+        // 각 데이터를 콘솔에 출력합니다.
+        console.log(response.channel_name);
+        console.log(response.banner);
+        console.log(response.profile);
+        console.log(response.subscribers);
+      }
+    })
+    .catch(error => console.error('Error:', error));  // 에러를 콘솔에 출력합니다.
 }
 
+
+
+
+
+async function postChannerInfos() {
+    let apiUrl = 'http://oreumi.appspot.com/channel/getChannelInfo';  // 요청을 보낼 URL입니다.
+
+    let jsonData = {"video_channel": "개조"}  // 요청에 포함할 데이터를 정의합니다.
+    
+    fetch(apiUrl, {
+      method: 'POST',  // 요청 방식을 POST로 설정합니다.
+      headers: {
+        'Content-Type': 'application/json',  // 요청의 헤더를 설정합니다.
+      },
+      body: JSON.stringify(jsonData),  // 요청 본문에 데이터를 JSON 형식으로 포함합니다.
+    })
+    .then(response => response.json())  // 응답을 JSON 형식으로 파싱합니다.
+    .then(response => {
+      // 데이터가 존재하는지 확인합니다.
+      if (response && response.channel_name !== undefined) {
+        // 각 데이터를 콘솔에 출력합니다.
+        console.log(response.channel_name);
+        console.log(response.channel_banner);
+        console.log(response.channel_profile);
+        console.log(response.subscribers);
+      }
+    })
+    .catch(error => console.error('Error:', error));  // 에러를 콘솔에 출력합니다.
+}
 // fetchAuthorName(1).then((name) => console.log("name:", name));
 
 async function postChannerList() {
@@ -215,7 +258,9 @@ async function postChannerList() {
 function goToChannel(info) {
     link = 'channel.html';
 	location.href = link;
-    // postChannerInfo(info)
+    // getChannerInfo(info);
+    postChannerInfos();
+
 }
 
 function goToVideo(info) {
