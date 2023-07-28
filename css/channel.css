@@ -5,6 +5,7 @@ body {
   background-color: #000000;
   font-size: 16px;
   color: #fff;
+  line-height: 1.2;
 }
 /* 
   main {
@@ -26,6 +27,8 @@ body {
   height: 192px;
   object-fit: cover;
 }
+
+/* navbar 활성화시 채널 상단 */
 
 /* .channel-cover-margin {
   display: none;
@@ -84,16 +87,16 @@ body {
 
 /* 구독중 버튼 전환 임시코드 */
 
-/* .subscribes-btn.clicked {
-    width: 116px;
-    height: 36px;
-    background-color: #aaaaaa;
-    color: #ffffff;
-    border: 0;
-    border-radius: 2px;
-    font-weight: 700;
-    line-height: normal;
-  } */
+.subscribes-btn:hover {
+  width: 116px;
+  height: 36px;
+  background-color: #aaaaaa;
+  color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  font-weight: 700;
+  line-height: normal;
+}
 
 /* 툴바 */
 
@@ -147,17 +150,49 @@ body {
   height: 47px;
 }
 
-#channel-toolbar-search {
-  width: 322px;
+/* 우측 search-box 부분 */
+
+.channel-toolbar-search {
+  background-color: #212121;
+  width: 296px;
   height: 48px;
+  display: flex;
+}
+
+.toolbar-search-btn {
   border: 0;
   background-color: #212121;
   color: #aaaaaa;
+  padding-right: 24px;
 }
 
-#channel-toolbar-search:hover {
+.toolbar-search:hover {
+  border: 0;
   background-color: #aaaaaa;
   color: #212121;
+}
+
+#channel-toolbar-search-icon {
+  border: 0;
+  width: 48px;
+  height: 47px;
+}
+
+#channel-toolbar-search-box {
+  border: 0;
+  background-color: #212121;
+  color: #fff;
+  outline: none;
+  width: 210px;
+  height: 45px;
+  font-size: 17px;
+}
+
+#channel-toolbar-left-arrow {
+  border: 0;
+  background-color: #212121;
+  width: 47px;
+  height: 47px;
 }
 
 /* 큰 영상 */
@@ -204,6 +239,9 @@ body {
 /* 구분선 */
 
 .division-line {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-start;
   width: 1070px;
   border-top: 1px solid #303030;
   padding-left: 65px;
@@ -239,7 +277,7 @@ body {
 }
 
 .play-list {
-  width: 1200px;
+  width: 1070px;
   height: 288px;
   display: flex;
   margin: 16px 0px 24px 0px;
