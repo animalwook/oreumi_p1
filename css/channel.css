@@ -254,6 +254,7 @@ body {
   height: 44px;
   padding-left: 65px;
   display: flex;
+  align-items: center;
   justify-content: flex-start;
   align-items: center;
 }
@@ -278,7 +279,7 @@ body {
 
 .play-list {
   width: 1070px;
-  height: 288px;
+  height: 194px;
   display: flex;
   margin: 16px 0px 24px 0px;
   padding-left: 65px;
