@@ -60,7 +60,7 @@ async function getVideoInfo(videoId) {
 function generateVideoHTML(videoInfo) {
     return `
         <div class="thumbnail">
-            <a href="javascript:;" id="goToVideo">
+            <a href="javascript:;" id="goToVideo" onclick="goToVideo('${videoInfo.video_id}')">
             <img src="${videoInfo.image_link}" style="width:320px;cursor:pointer;"/>
             </a>
             <div style="display:flex;">
