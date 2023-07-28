@@ -1,4 +1,6 @@
 body {
+  width: 1920px;
+  height: 1080px;
   font-family: Roboto;
   background-color: #000000;
   font-size: 16px;
@@ -12,16 +14,27 @@ body {
     align-items: center;
   } */
 
+/* navbar 활성화 시 컨텐츠 옆으로 */
+.margin-add {
+  margin-left: 240px;
+}
+
 /* 채널 상단 */
 .channel-cover {
   display: block;
-  width: 1200px;
+  width: 1920px;
   height: 192px;
-  float: inline-start;
+  object-fit: cover;
 }
 
+/* .channel-cover-margin {
+  display: none;
+  width: 1680px;
+  height: 192px;
+  object-fit: cover;
+} */
+
 .channel-title {
-  /* width: 1200px; */
   width: auto;
   height: 100px;
   display: flex;
@@ -154,22 +167,24 @@ body {
   height: 286px;
   margin: 24px 0px 24px 0px;
   padding-left: 65px;
+  /* padding-bottom: 16px; */
   display: flex;
   justify-content: center;
 }
 
 .youtube-player-info {
   flex-direction: column;
-  margin: 24px 0px 24px 0px;
+  margin: 16px 0px 24px 0px;
   width: 400px;
   height: 238px;
 }
 
 .youtube-player-title {
-  display: block;
+  display: flex;
   font-size: 14px;
   font-weight: 700;
   padding-bottom: 20px;
+  /* word-break: break-word; */
 }
 
 .youtube-player-views {
@@ -189,7 +204,9 @@ body {
 /* 구분선 */
 
 .division-line {
-  border-top: 1px solid #aaa;
+  width: 1070px;
+  border-top: 1px solid #303030;
+  padding-left: 65px;
 }
 
 /* 작은 영상 */
@@ -197,6 +214,7 @@ body {
 .play-btn {
   width: 1070px;
   height: 44px;
+  padding-left: 65px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -207,7 +225,7 @@ body {
   font-weight: 700;
 }
 
-.play-arrrow-btn {
+.play-arrow-btn {
   width: 24px;
   height: 24px;
   justify-content: center;
@@ -224,9 +242,32 @@ body {
   width: 1200px;
   height: 288px;
   display: flex;
+  margin: 16px 0px 24px 0px;
+  padding-left: 65px;
+  padding-bottom: 24px;
 }
 
 .Video-image1.Video-image2.Video-image3.Video-image4.Video-image5 {
   width: 210px;
   height: 118px;
+}
+
+.video-title {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.video-uploader {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.video-views {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
 }
