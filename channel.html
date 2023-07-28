@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/css_1.css" />
     <link rel="stylesheet" type="text/css" href="css/css_2.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/channel.css" />
     <title>Document</title>
   </head>
   <body>
@@ -23,21 +25,21 @@
           </button>
         </div>
 
-        <div class="user-api">
-          <a href="mic">
-            <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
-          </a>
-          <a href="create">
-            <img src="./img/home/header/create.svg" alt="create" class="create" />
-          </a>
-          <a href="notifications">
-            <img src="./img/home/header/notifications.svg" alt="notifications" class="notifications" />
-          </a>
-          <a href="profile">
-            <img src="./img/home/header/User-Avatar.png" alt="User-Avatar" id="User-Avatar" />
-          </a>
-        </div>
+        <!-- <div class="user-api"> -->
+        <a href="mic">
+          <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
+        </a>
+        <a href="create">
+          <img src="./img/home/header/create.svg" alt="create" class="create" />
+        </a>
+        <a href="notifications">
+          <img src="./img/home/header/notifications.svg" alt="notifications" class="notifications" />
+        </a>
+        <a href="profile">
+          <img src="./img/home/header/User-Avatar.png" alt="User-Avatar" id="User-Avatar" />
+        </a>
       </div>
+      <!-- </div> -->
     </header>
 
     <navbar>
@@ -241,7 +243,7 @@
         </div>
       </div>
 
-      <div class="navbar-small">
+      <!-- <div class="navbar-small">
         <div class="navbarTop-small">
           <div class="Menu-small">
             <div class="Menu-Item-small">
@@ -278,45 +280,62 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </navbar>
 
     <!-- 가운데 큰 영상 -->
-    <main>
+    <main id="mainContent">
       <div class="channel-cover">
         <img src="img/channel/Channel-Cover.svg" alt="Channel-Cover" class="channel-cover" />
       </div>
+      <!-- <div class="channel-cover-margin">
+        <img src="img/channel/Channel-Cover.svg" alt="Channel-Cover" class="channel-cover" />
+      </div> -->
       <div class="channel-title">
-        <img src="img/channel/User-Avatar.svg" alt="User-Avatar" />
-        <span class="channel-title-name">Marcus Levin</span>
-        <span class="channel-title-subscribers">1.2M subscribers</span>
+        <img src="img/channel/User-Avatar.svg" alt="User-Avatar" class="channel-avatar" />
+        <div class="channel-title-info">
+          <span class="channel-title-name">Marcus Levin</span>
+          <span class="channel-title-subscribers">1.2M subscribers</span>
+        </div>
         <button class="subscribes-btn" onclick="">SUBSCRIBES</button>
       </div>
       <div class="channel-toolbar">
-        <button id="channel-toolbar-home" class= "toolbar-btn">HOME</button>
-        <button id="channel-toolbar-videos" class= "toolbar-btn">VIDEOS</button>
-        <button id="channel-toolbar-playlists" class= "toolbar-btn">PLAYLISTS</button>
-        <button id="channel-toolbar-community" class= "toolbar-btn">COMMUNITY</button>
-        <button id="channel-toolbar-channels" class= "toolbar-btn">CHANNELS</button>
-        <button id="channel-toolbar-about" class= "toolbar-btn">ABOUT</button>
-        <button id="channel-toolbar-search">
-          <img src="img/home/header/search.svg" alt="search" />
-        </button>
+        <button id="channel-toolbar-home" class="toolbar-btn">HOME</button>
+        <button id="channel-toolbar-videos" class="toolbar-btn">VIDEOS</button>
+        <button id="channel-toolbar-playlists" class="toolbar-btn">PLAYLISTS</button>
+        <button id="channel-toolbar-community" class="toolbar-btn">COMMUNITY</button>
+        <button id="channel-toolbar-channels" class="toolbar-btn">CHANNELS</button>
+        <button id="channel-toolbar-about" class="toolbar-btn">ABOUT</button>
+        <div class="channel-toolbar-search">
+          <button id="channel-toolbar-search-icon" class="toolbar-search-btn">
+            <img src="img/home/header/search.svg" alt="search" class="toolbar-search-btn" />
+          </button>
+          <input type="text" id="channel-toolbar-search-box" />
+          <button id="channel-toolbar-left-arrow">
+            <img src="img/channel/leftArrow.svg" alt="leftArrow" class="toolbar-search-btn" />
+          </button>
+        </div>
       </div>
       <div class="youtube-player">
-        <img src="img/channel/Player.svg" alt="Player" class="youtube-player" />
-        <span class="youtube-player-title">Blind Woodturner: Turning passion into fine art</span>
-        <span class="youtube-player-views">576,969 views . 3 weeks ago</span>
-        <span class="youtube-player-desc">
-          Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to hundreds of hours of YouTube videos and experimenting in his workshop. Now he’s a YouTube creator himself,
-          sells his products worldwide, and does demonstrations all around the country.
-        </span>
+        <img src="img/channel/Player.svg" alt="Player" class="youtube-player-image" />
+        <div class="youtube-player-info">
+          <span class="youtube-player-title">Blind Woodturner: Turning passion into fine art</span>
+          <span class="youtube-player-views">576,969 views . 3 weeks ago</span>
+          <span class="youtube-player-desc">
+            Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to hundreds of hours of YouTube videos and experimenting in his workshop. Now he’s a YouTube creator
+            himself, sells his products worldwide, and does demonstrations all around the country.
+          </span>
+        </div>
       </div>
+      <!-- <div class="division-line" id="divLine"></div> -->
     </main>
 
-    <hr />
+    <!-- <div class="division-line" id="divLine"></div> -->
+
+    <!-- <hr /> -->
     <!-- 작은 영상 -->
-    <section>
+    <section id="sectionContent">
+      <div class="division-line" id="divLine"></div>
       <div class="play-btn">
         <span class="play-info">Search On ‘21</span>
         <div class="play-arrow-btn">
@@ -358,4 +377,7 @@
       </div>
     </section>
   </body>
+  <script src="js/js_1.js"></script>
+  <script src="js/js_2.js"></script>
+  <script src="js/margin.js"></script>
 </html>
