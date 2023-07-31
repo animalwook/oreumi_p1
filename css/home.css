@@ -1,12 +1,26 @@
+/* ------ modify-hamguger ------ */
+.hambuger-btn {
+    cursor: pointer;
+    background-color: #212121;
+    border: none;
+    background: none;
+}
+
+.hamburger-img {
+    width: 30px;
+    height: 30px;
+}
+
+.hambuger-btn:hover {
+    background: rgba(253, 249, 249, 0.493);
+    border-radius: 50%;
+}
+
+
 body {
     font-family: Roboto;
     background-color: #212121;
     font-size: 16px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 a {
@@ -15,101 +29,131 @@ a {
 
 
 /* ---------header------------- */
-header {
-    position: fixed;
-    background-color: #212121;
-    top: 0;
-    left:0;
-    width: 100%;    
-}
-
 .header {
+    padding: 0 16px;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     height: 56px;
-}
-header .hamburger{
-    display: none;
-}
-
-header .Youtube-Logo{
-    display: flex;
-    align-items: center;
-    width: auto; 
-    height: auto;
-}
-
-header #search-box{
-    display: flex;
-    padding: 7px 12px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     background-color: #212121;
-    border-radius: 4px;
 }
 
-header input {
-    width: 100%;
-    height: 40px;
-    border-radius: 2px 0px 0px 2px;
-    border: none;
-    outline: none;
-    background-color: #FFFFFF;
-    color:#303030
+.header_logo,
+.header_search-box,
+.header_user-api {
+  display: flex;
+  align-items: center;
+  background-color: #212121;
 }
 
-header input::placeholder {
-    color:#303030
+.header_logo img {
+    margin-left:5px;
 }
 
+.header_logo svg {
+    height: 24px;
+  }
 
-header #search-btn{
-    width: 64px;
-    height: 40px;
-    padding: 2px 7px;
-    margin: 8px 0px 8px 0px;
-    gap: 10px;
-    flex-shrink: 0;
-    border-radius: 0px 2px 2px 0px;
-    border: 1px solid var(--border-color, #303030);
-    background: var(--border-color, #303030);
+
+.header_search-box img{
+    border: 1px solid #303030;
+    background-color: #303030;
+    border-left: none;
+    height: 32px;
+    width: 65px;
 }
 
-header .user-api {
-    display: flex;
+.header_search-box #search-icon {
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
+    background-color: black; 
+    display: flex; 
+    justify-content: center; 
     align-items: center;
-    margin-left: auto;
 }
-header .mic{
+.header_search-box input {
+    width: 360px;
+    height: 32px;
+    border: 1px solid #303030;
+    background-color: #121212;
+    font-size: 16px;
+    padding: 3px 8px;
+}
+
+.header_search-box input::placeholder {
+    color:#303030
+}
+
+.header_user-api {
+    display: flex;
+}
+
+
+
+.header_user-api img {
     width: 24px;
     height: 24px;
-    margin: 16px 0px 16px 10px;
-    align-items: flex-start;
-    gap: 10px;
-    border-radius: 40px;
-    background: var(--black, #000);
-    
 }
 
-
-header .User-Avatar{
+.header_user-api User-Avatar{
     width: 32px;
-    flex-shrink: 0;
-    align-self: stretch;
+    height: 32px;
+    border-radius: 50%;
+    background-color: grey;
 }
-
 /* ---------------NAVBAR CSS--------------- */
+/* -------------- overlay -------------*/
+.overlay {
+    display: none;
+    position: fixed;
+    width: calc(100% - 240px);
+    height: 100%;
+    background: rgba(61, 61, 63, 0.5);
+    top: 0;
+    left: 240px;
+  }
+  .overlay.visible {
+    display: block;
+  }
+  
+  @media (min-width: 900px) {
+    #navBarA {
+      display: block;
+    }
+  
+    #navBarB.active {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 899px) {
+    #navBarA.active {
+      display: none;
+    }
+  
+    #navBarC.active {
+      display: block;
+    }
+  }
+
 /* ---------------navbar-hover--------------- */
-/* ---------------navbar-On/Off------------- */
-.expand-navbar.display {
-    display: flex;
+.Menu-Item:hover {
+    background-color: #494848;
 }
 
-.navbar.displayNone {
-    display: none;
+/* ---------------navbar-On/Off------------- */
+#navBarA.active,
+#navBarC.active {
+  display: flex;
 }
 
 /* ---------------navbar------------- */
-.navbar {
-    display: flex;
+.navBar {
+    display: none;
     position: fixed;
     top: 58px;
     width: 72px;
@@ -125,14 +169,12 @@ header .User-Avatar{
     display: flex;
     padding: 12px 0px;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .Menu {
     display: flex;
     padding: 8px 8px 8px 0px;
     flex-direction: column;
-    align-items: flex-end;
     gap: 10px;
 }
 
@@ -141,6 +183,7 @@ header .User-Avatar{
     width: 72px;
     align-items: center;
     gap: 24px;
+    padding: 8px 8px 8px 8px;
 }
 
 .Menu-Item-img {
@@ -292,66 +335,6 @@ header .User-Avatar{
     gap: 12px;
 }
 
-/* --------navbar-small -----*/
-.navbar-small {
-    display: none;
-    width: 72px;
-    height: 968px;
-    padding-right: 0px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-shrink: 0;
-    background: #212121;
-}
-
-.navbarTop-small {
-    display: flex;
-    padding: 12px 0px;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.Menu-small {
-    display: flex;
-    padding: 8px 8px 8px 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.Title-small {
-    display: flex;
-    width: 72px;
-    padding: 4px 0px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-}
-
-.navIcon-small{
-    display: flex;
-    width: 24px;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    padding-left: 24px;
-}
-
-.Menu-Item-small {   
-    display: block;
-    width: 192px;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-/* --------navbar-small----- */
-/* ---------------navbar-hover------------- */
-/* ---------------navbar-On/Off------------- */
-
-/* ---------------navbar------------- */
 /* ---------------nav------------- */
 nav {
     display: flex;
@@ -419,10 +402,11 @@ nav .button {
 
 /* ---------------nav------------- */
 /* -----------------section--------------- */
-section {
+.section {
     padding-top: 56px;
-    padding-left: 0px;
+    padding-left: 70px;
 }
+
 /* -----------top-menu-------------- */
 
 #slide-left {
@@ -512,7 +496,7 @@ section {
 
 
 /* ?붾㈃???ш쾶 ?ㅼ슱寃쎌슦 */
-@media screen and (min-width:768px) {
+/* @media screen and (min-width:768px) {
     body {
         padding: 16px 48px 0 240px;
       }
@@ -549,4 +533,4 @@ section {
     header .Youtube-Logo {
         
     }
-}
+} */
