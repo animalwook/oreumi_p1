@@ -1,108 +1,104 @@
-
-
 // ① await 키워드는 async 함수 안에서만 사용할 수 있다.
 // ② async 함수는 Promise 를 리턴한다.
 // ③ async 함수를 만드는 방법 : 함수 앞에 async 를 붙인다.
 // ④ async함수 내부의 코드실행은 비동기적으로 된다. 내부에서 await 키워드가 쓰이지 않았으면 Promise.resolve()로 처리된다.
 // ⑤ await키워드는 프로미스를 리턴하지 않는 함수라도 사용할 수 있다. Promise.resolve()로 처리된다.
-/**************************home.html에서 list**********************************/ 
+/**************************home.html에서 list**********************************/
 // 검색 함수
 // 1. 검색 단어 가져오기
 // 2. 단어 조건에 맞는 영상 항목을 relatedVideos에 넣기
 // 3. 메인 화면 비디오 리스트들 display:none
 // 4. relatedVideos에 있는 영상 항목을 generateVideoHTML 함수를 통해 display
 
-
 async function searchVideos() {
-    const searchInput = document.getElementById('search').value.toLowerCase();
-    const searchResults = document.getElementById('searchResults');
-    const mainContainer = document.getElementById('mainContainer');
-    const videoList = await getVideoList();
-    let relatedVideos = [];
+  const searchInput = document.getElementById("search").value.toLowerCase();
+  const searchResults = document.getElementById("searchResults");
+  const mainContainer = document.getElementById("mainContainer");
+  const videoList = await getVideoList();
+  let relatedVideos = [];
 
-    videoList.forEach(video => {
-        const { video_title, video_detail, video_tag } = video;
+  videoList.forEach((video) => {
+    const { video_title, video_detail, video_tag } = video;
 
-        if (video_title.toLowerCase().includes(searchInput) || 
-            video_detail.toLowerCase().includes(searchInput) || 
-            video_tag.some(tag => tag.toLowerCase().includes(searchInput))) {
-            relatedVideos.push(video);
-        }
-    });
-    
-    mainContainer.style.display = 'none';
-    searchResults.innerHTML = '';
-
-    for (let video of relatedVideos) {
-        let videoInfo = await getVideoInfo(video.video_id);
-        const infoHTML = generateVideoHTML(videoInfo);
-        searchResults.innerHTML += infoHTML;
+    if (video_title.toLowerCase().includes(searchInput) || video_detail.toLowerCase().includes(searchInput) || video_tag.some((tag) => tag.toLowerCase().includes(searchInput))) {
+      relatedVideos.push(video);
     }
-    searchResults.style.display = 'flex';
-    searchResults.style.flexWrap = 'wrap';}
+  });
+
+  mainContainer.style.display = "none";
+  searchResults.innerHTML = "";
+
+  for (let video of relatedVideos) {
+    let videoInfo = await getVideoInfo(video.video_id);
+    const infoHTML = generateVideoHTML(videoInfo);
+    searchResults.innerHTML += infoHTML;
+  }
+  searchResults.style.display = "flex";
+  searchResults.style.flexWrap = "wrap";
+}
 
 // VideoList Data Pull 함수
 async function getVideoList() {
-    const response = await fetch('http://oreumi.appspot.com/video/getVideoList');
-    const VideoListData = await response.json();
-    return VideoListData;
+  const response = await fetch("http://oreumi.appspot.com/video/getVideoList");
+  const VideoListData = await response.json();
+  return VideoListData;
 }
 
 // VideoInfo Data Pull 함수
 async function getVideoInfo(videoId) {
-    const apiUrl = `http://oreumi.appspot.com/video/getVideoInfo?video_id=${videoId}`;
-    const response = await fetch(apiUrl);
-    const VideoInfoData = await response.json();
-    return VideoInfoData;
+  const apiUrl = `http://oreumi.appspot.com/video/getVideoInfo?video_id=${videoId}`;
+  const response = await fetch(apiUrl);
+  const VideoInfoData = await response.json();
+  return VideoInfoData;
 }
 
 // videoInfo에 맞는 HTML 구조 구성 함수
 function generateVideoHTML(videoInfo) {
-    return `
-        <div class="thumbnail">
-            <a href="javascript:;" id="goToVideo" onclick="goToVideo('${videoInfo.video_id}')">
-            <img src="${videoInfo.image_link}" style="width:320px;cursor:pointer;"/>
-            </a>
-            <div style="display:flex;">
-                <div style="width:30px; height: 30px; border-radius: 50%; overflow:hidden;">
-                </div>
-                <div style="margin-left: 10px;">
-                    <a href="javascript:;" id="goToVideo" onclick="goToVideo('${videoInfo.video_id}')">
-                    <p>${videoInfo.video_title}</p>
-                    </a>
-                    <a href="javascript:;" id="goToChannel" onclick="goToChannel('${videoInfo.video_channel}')">
-                    <p>${videoInfo.video_channel}</p>
-                    </a>
-                    <p>${videoInfo.views} views</p>
-                    <p>${videoInfo.upload_date}</p>
-                </div>
-            </div>
-        </div>
-    `;
+  return `
+          <div class="thumbnail">
+              <a href="javascript:;" id="goToVideo" onclick="goToVideo('${videoInfo.video_id}')">
+              <img src="${videoInfo.image_link}" style="width:320px;cursor:pointer;"/>
+              </a>
+              <div style="display:flex;">
+                  <div style="width:30px; height: 30px; border-radius: 50%; overflow:hidden;">
+                  </div>
+                  <div style="margin-left: 10px;">
+                      <a href="javascript:;" id="goToVideo" onclick="goToVideo('${videoInfo.video_id}')">
+                      <p>${videoInfo.video_title}</p>
+                      </a>
+                      <a href="javascript:;" id="goToChannel" onclick="goToChannel('${videoInfo.video_channel}')">
+                      <p>${videoInfo.video_channel}</p>
+                      </a>
+                      <p>${videoInfo.views} views</p>
+                      <p>${videoInfo.upload_date}</p>
+                  </div>
+              </div>
+          </div>
+      `;
 }
 
 // 화면에 띄워주는 함수
 async function displayHome() {
-    const videoList = await getVideoList();
-    const infoContainer = document.getElementById('videoList');
+  const videoList = await getVideoList();
+  const infoContainer = document.getElementById("videoList");
 
-    for (let video of videoList) {
-        const videoInfo = await getVideoInfo(video.video_id);
+  for (let video of videoList) {
+    const videoInfo = await getVideoInfo(video.video_id);
 
-        const infoHTML = generateVideoHTML(videoInfo);
-        infoContainer.innerHTML += infoHTML;
-    }
+    const infoHTML = generateVideoHTML(videoInfo);
+    infoContainer.innerHTML += infoHTML;
+  }
 }
 
 // 오류 시 안내
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        await displayHome();
-    } catch (error) {
-        console.error('Error:', error);
-    }
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    await displayHome();
+  } catch (error) {
+    console.error("Error:", error);
+  }
 });
-/**************************home.html에서 list**********************************/ 
+/**************************home.html에서 list**********************************/
 
 // import { XMLHttpRequest } from "xmlhttprequest";
 
@@ -161,7 +157,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // export default VideoInfo;
 
-
 //////////////////////////////////////////////////////
 // function goToChannel() {
 //     window.location.href = 'channel.html';
@@ -181,59 +176,122 @@ document.addEventListener('DOMContentLoaded', async () => {
 ////////////////////////////////////////////////////
 //user 객체를 본문에 실어 보내
 
-
-async function getChannerInfo(Channer) {
-    const apiCUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channer}`;
-    const response = await fetch(apiCUrl);
-    const ChannerInfoData = await response.json();
-    console.log(ChannerInfoData);
-    return ChannerInfoData;
+async function getChannelInfo(Channel) {
+  const apiCUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channel}`;
+  const response = await fetch(apiCUrl);
+  const ChannelInfoData = await response.json();
+  console.log(ChannelInfoData);
+  return ChannelInfoData;
 }
 
-async function postChannerInfo(Channer) {
-    let apiUrl = 'http://oreumi.appspot.com/channel/getChannelInfo';  // 요청을 보낼 URL입니다.
+async function getChannelInfo(Channel) {
+  const apiUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channel}`;
 
-    let jsonData = {"video_channel": Channer}  // 요청에 포함할 데이터를 정의합니다.
-    
-    fetch(apiUrl, {
-      method: 'POST',  // 요청 방식을 POST로 설정합니다.
+  try {
+    const response = await fetch(apiUrl, {
+      method: "GET", // 요청 방식을 GET으로 설정합니다.
       headers: {
-        'Content-Type': 'application/json',  // 요청의 헤더를 설정합니다.
+        "Content-Type": "application/json", // 요청의 헤더를 설정합니다.
       },
-      body: JSON.stringify(jsonData),  // 요청 본문에 데이터를 JSON 형식으로 포함합니다.
-    })
-    .then(response => response.json())  // 응답을 JSON 형식으로 파싱합니다.
-    .then(response => {
-      // 데이터가 존재하는지 확인합니다.
-      if (response && response.channel_name !== undefined) {
-        // 각 데이터를 콘솔에 출력합니다.
-        console.log(response.channel_name);
-        console.log(response.banner);
-        console.log(response.profile);
-        console.log(response.subscribers);
-      }
-    })
-    .catch(error => console.error('Error:', error));  // 에러를 콘솔에 출력합니다.
+    });
+
+    const channelInfo = await response.json(); // 응답을 JSON 형식으로 파싱합니다.
+
+    // 채널 정보가 존재하는 경우, 해당 정보를 화면에 표시합니다.
+    if (channelInfo && channelInfo.channel_name !== undefined) {
+      console.log(channelInfo.channel_name);
+      console.log(channelInfo.banner);
+      console.log(channelInfo.profile);
+      console.log(channelInfo.subscribers);
+      return channelInfo;
+    } else {
+      console.log("Channel information not found.");
+      return null;
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return null;
+  }
 }
 
+// async function postChannelInfo(Channel) {
+//   let apiUrl = "http://oreumi.appspot.com/channel/getChannelInfo"; // 요청을 보낼 URL입니다.
 
+//   let jsonData = { video_channel: Channel }; // 요청에 포함할 데이터를 정의합니다.
 
+//   fetch(apiUrl, {
+//     method: "POST", // 요청 방식을 POST로 설정합니다.
+//     headers: {
+//       "Content-Type": "application/json", // 요청의 헤더를 설정합니다.
+//     },
+//     body: JSON.stringify(jsonData), // 요청 본문에 데이터를 JSON 형식으로 포함합니다.
+//   })
+//     .then((response) => response.json()) // 응답을 JSON 형식으로 파싱합니다.
+//     .then((response) => {
+//       // 데이터가 존재하는지 확인합니다.
+//       if (response && response.channel_name !== undefined) {
+//         // 각 데이터를 콘솔에 출력합니다.
+//         console.log(response.channel_name);
+//         console.log(response.banner);
+//         console.log(response.profile);
+//         console.log(response.subscribers);
+//       }
+//     })
+//     .catch((error) => console.error("Error:", error)); // 에러를 콘솔에 출력합니다.
+// }
 
+async function postChannelInfo(Channel) {
+  let apiUrl = "http://oreumi.appspot.com/channel/getChannelInfo"; // 요청을 보낼 URL입니다.
 
-async function postChannerInfos() {
-    let apiUrl = 'http://oreumi.appspot.com/channel/getChannelInfo';  // 요청을 보낼 URL입니다.
+  let jsonData = { video_channel: Channel }; // 요청에 포함할 데이터를 정의합니다.
 
-    let jsonData = {"video_channel": "개조"}  // 요청에 포함할 데이터를 정의합니다.
-    
-    fetch(apiUrl, {
-      method: 'POST',  // 요청 방식을 POST로 설정합니다.
+  try {
+    const response = await fetch(apiUrl, {
+      method: "POST", // 요청 방식을 POST로 설정합니다.
       headers: {
-        'Content-Type': 'application/json',  // 요청의 헤더를 설정합니다.
+        "Content-Type": "application/json", // 요청의 헤더를 설정합니다.
       },
-      body: JSON.stringify(jsonData),  // 요청 본문에 데이터를 JSON 형식으로 포함합니다.
-    })
-    .then(response => response.json())  // 응답을 JSON 형식으로 파싱합니다.
-    .then(response => {
+      body: JSON.stringify(jsonData), // 요청 본문에 데이터를 JSON 형식으로 포함합니다.
+    });
+
+    const channelInfo = await response.json(); // 응답을 JSON 형식으로 파싱합니다.
+
+    // 채널 정보가 존재하는 경우, 해당 정보를 화면에 표시합니다.
+    if (channelInfo && channelInfo.channel_name !== undefined) {
+      const channelNameElement = document.getElementById("channelName");
+      const channelBannerElement = document.getElementById("channelBanner");
+      const channelProfileElement = document.getElementById("channelProfile");
+      const subscribersElement = document.getElementById("subscribers");
+
+      channelNameElement.textContent = channelInfo.channel_name;
+      channelBannerElement.src = channelInfo.banner;
+      channelProfileElement.src = channelInfo.profile;
+      subscribersElement.textContent = channelInfo.subscribers;
+
+      console.log(channelInfo.channel_name);
+      console.log(channelInfo.banner);
+      console.log(channelInfo.profile);
+      console.log(channelInfo.subscribers);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+async function postChannelInfos() {
+  let apiUrl = "http://oreumi.appspot.com/channel/getChannelInfo"; // 요청을 보낼 URL입니다.
+
+  let jsonData = { video_channel: "개조" }; // 요청에 포함할 데이터를 정의합니다.
+
+  fetch(apiUrl, {
+    method: "POST", // 요청 방식을 POST로 설정합니다.
+    headers: {
+      "Content-Type": "application/json", // 요청의 헤더를 설정합니다.
+    },
+    body: JSON.stringify(jsonData), // 요청 본문에 데이터를 JSON 형식으로 포함합니다.
+  })
+    .then((response) => response.json()) // 응답을 JSON 형식으로 파싱합니다.
+    .then((response) => {
       // 데이터가 존재하는지 확인합니다.
       if (response && response.channel_name !== undefined) {
         // 각 데이터를 콘솔에 출력합니다.
@@ -243,29 +301,28 @@ async function postChannerInfos() {
         console.log(response.subscribers);
       }
     })
-    .catch(error => console.error('Error:', error));  // 에러를 콘솔에 출력합니다.
+    .catch((error) => console.error("Error:", error)); // 에러를 콘솔에 출력합니다.
 }
 // fetchAuthorName(1).then((name) => console.log("name:", name));
 
-async function postChannerList() {
-    const response = await fetch('http://oreumi.appspot.com/video/getVideoList');
-    const VideoListData = await response.json();
-    return VideoListData;
+async function postChannelList() {
+  const response = await fetch("http://oreumi.appspot.com/video/getVideoList");
+  const VideoListData = await response.json();
+  return VideoListData;
 }
 
 ///////////////////////channel.html에서 영상 리스트////////////////////////////
 //home.html에서 채널 프로필을 누르면 채널 페이지로 이동
 function goToChannel(info) {
-    link = 'channel.html';
-	location.href = link;
-    // getChannerInfo(info);
-    postChannerInfos();
-
+  link = "channel.html";
+  location.href = link;
+  // getChannelInfo(info);
+  postChannelInfos();
 }
 
 function goToVideo(info) {
-    link = 'video.html';
-	location.href = link;
+  link = "video.html";
+  location.href = link;
 }
-    
+
 ///////////////////////channel.html에서 영상 리스트////////////////////////////
