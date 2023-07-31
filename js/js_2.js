@@ -118,3 +118,8 @@ const slideRight = document.getElementById("slide-right");
 slideRight.onclick = () => {
   document.getElementsByClassName("button")[0].scrollLeft += 300;
 };
+
+
+
+
+
