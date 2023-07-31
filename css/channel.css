@@ -22,9 +22,8 @@ body {
 
 /* 채널 상단 */
 .channel-cover {
-  display: block;
-  width: 1920px;
-  height: 192px;
+  display: flex;
+  width: 87vw;
   object-fit: cover;
 }
 
@@ -100,18 +99,26 @@ body {
 
 /* 툴바 */
 
-.channel-toolbar {
+.channel-toolbar-wrapper {
   background-color: #212121;
   width: auto;
   height: 48px;
   display: flex;
-  padding-left: 65px;
+}
+
+.channel-toolbar {
+  background-color: #212121;
+  width: 87vw;
+  height: 48px;
+  display: flex;
+  overflow-x: hidden;
 }
 
 .toolbar-btn {
   border: 0;
   background-color: #212121;
   color: #aaa;
+  flex-shrink: 0;
 }
 
 .toolbar-btn:hover {
@@ -157,6 +164,7 @@ body {
   width: 296px;
   height: 48px;
   display: flex;
+  margin-right: 248px;
 }
 
 .toolbar-search-btn {
@@ -189,10 +197,19 @@ body {
 }
 
 #channel-toolbar-left-arrow {
-  border: 0;
-  background-color: #212121;
-  width: 47px;
-  height: 47px;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  left: 0;
+  z-index: 1;
+}
+
+#channel-toolbar-right-arrow {
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  right: 0;
+  z-index: 1;
 }
 
 /* 큰 영상 */
