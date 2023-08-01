@@ -431,4 +431,114 @@
     display: flex;
   }
   
+  /* ---------------nav------------- */
+/* -----------------section--------------- */
+.section {
+    padding-top: 56px;
+    padding-left: 80px;
+}
+/* -----------top-menu-------------- */
+.top_menu {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    left: 80px;
+    background-color: #212121;
+}
+
+.top_menu .button {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* justify-content: space-between; */
+}
+
+#slide-left {
+    background-color: #303030;
+    color: #FFFFFF;
+    border: none;
+    width: 24px;
+    height: 32px;
+    gap: 10px;
+    border-radius: 10px;
+    z-index: 1;
+    left: 0;
+}
+
+#slide-right {
+    background-color: #303030;
+    color: #FFFFFF;
+    border: none;
+    width: 24px;
+    height: 32px;
+    gap: 10px;
+    border-radius: 10px;
+    z-index: 1;
+    right: 0;
+}
+
+#slide-left:hover, #slide-right:hover {
+    background-color: #FFFFFF;
+    color: #303030;
+}
+
+#slide-left:active, #slide-right:active {
+    background-color: #303030;
+    color: #FFFFFF;
+}
+
+/* -----------top-menu-------------- */
+/* -----------thumbnail-------------- */
+
+.thumbnail {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: white;
+
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .video-card img {
+    width: 100%;
+  }
+  .video-card p {
+    margin: 5px 0;
+  }
+  .channel-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+    overflow: hidden;
+  }
+  .channel-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #videoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
   
+/* -----------thumbnail-------------- */
+/* -----------------section--------------- */
+
+
+
+/*----------- */
