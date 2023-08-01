@@ -4,22 +4,19 @@
     background-color: #212121;
     border: none;
     background: none;
-  }
-  
-  .hamburger-img {
-    width: 30px;
-    height: 30px;
+    padding: 9px 9px 9px 9px;
   }
   
   .hambuger-btn:hover {
-    background: rgba(253, 249, 249, 0.493);
-    border-radius: 50%;
+    background: #494848;
+    border-radius: 100px;
   }
   
   
   body {
     font-family: Roboto;
     background-color: #212121;
+    color: white;
     font-size: 16px;
   }
   
@@ -41,7 +38,7 @@
     background-color: #212121;
   }
   
-  .header_lhamburger_logo,
+  .header_hamburger_logo,
   .header_search-box,
   .header_user-api {
   display: flex;
@@ -49,6 +46,11 @@
   background-color: #212121;
   }
   
+  .header_hamburger_logo {
+    gap:15px;
+    padding-left: 9px
+  }
+
   .header_logo img {
     margin-left:5px;
   }
@@ -106,27 +108,30 @@
     background-color: grey;
   }
   /* ---------------NAVBAR CSS--------------- */
-  /* -------------- overlay -------------*/
-  .overlay {
-    display: none;
-    position: fixed;
-    width: calc(100% - 240px);
-    height: 100%;
-    background: rgba(61, 61, 63, 0.5);
-    top: 0;
-    left: 240px;
-  }
-  .overlay.visible {
-    display: block;
+  .navBar::-webkit-scrollbar {
+    width: 8px;
   }
   
-  @media (min-width: 900px) {
+  .navBar::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  .navBar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6); 
+    border-radius: 4px;
+  }
+  
+  .navBar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 1.0);
+  }
+  /* -------------- overlay -------------*/
+  /* @media (min-width: 900px) {
     #navBarA {
-      display: block;
+      display: flex;
     }
   
     #navBarB.active {
-      display: block;
+      display: flex;
     }
   }
   
@@ -135,124 +140,122 @@
       display: none;
     }
   
-    #navBarC.active {
-      display: block;
+    #navBarB.active {
+      display: none;
     }
+  } */
+
+  /* ---------------navBar-hover--------------- */
+.Menu-Item:hover {
+  background-color: #494848;
+  border-radius: 10px
+}
+
+.expand-menu-item:hover {
+  background-color: #494848;
+  border-radius: 10px
+}
+  /* ---------------navBar-On/Off------------- */
+  .navBar.active {
+    display: flex;
   }
   
-  /* ---------------navbar-hover--------------- */
-  .Menu-Item:hover {
-    background-color: #494848;
-  }
-  
-  /* ---------------navbar-On/Off------------- */
-  #navBarA.active,
-  #navBarC.active {
+  /* ---------------navBar------------- */
+.navBar {
+  display: none;
+  position: fixed;
+  top: 58px;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #212121;
+  overflow-y: auto;
+  padding-right: 10;
+
+}
+
+.navBar-wide {
+  width: 240px;
+}
+
+.navBar-narrow {
+  width: 80px;
+}
+
+.navbarTop {
   display: flex;
-  }
+  padding: 12px 4px;
+  flex-direction: column;
+}
+
+.Menu {
+  display: flex;
+  padding: 8px 0px 8px 0px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Menu-Item {    
+  display: block;
+  width: 72px;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 0px 8px 0px;
+}
+
+.Menu-Item-img {
+  width: 20px;
+  height: 20px;
+}
+
+.navIcon{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 24px;
+}
+
+.Title {
+  display: flex;
+  width: 72px;
+  padding: 4px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
   
-  /* ---------------navbar------------- */
-  .navBar {
-    display: none;
-    position: fixed;
-    top: 58px;
-    width: 72px;
-    height: 968px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    background: #212121;
-  }
-  
-  .navbarTop {
+  /* ---------------expand navBar--------------- */
+.expand-navbarTop, .expand-navbarTop-2 {
     display: flex;
-    padding: 12px 0px;
-    flex-direction: column;
-  }
-  
-  .Menu {
-    display: flex;
-    padding: 8px 8px 8px 0px;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .Menu-Item {    
-    display: block;
-    width: 72px;
-    align-items: center;
-    gap: 24px;
-    padding: 8px 8px 8px 8px;
-  }
-  
-  .Menu-Item-img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .navIcon{
-    display: flex;
-    width: 24px;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    padding-left: 24px;
-  }
-  
-  .Title {
-    display: flex;
-    width: 72px;
-    padding: 4px 0px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-  }
-  
-  /* ---------------expand navbar--------------- */
-  .expand-navbar.display {
-    display: flex;
-  }
-  
-  .navbar.displayNone {
-    display: none;
-  }
-  .expand-navbar {
-    display: none;
-    position: fixed;
-    top: 75px;
-    left: 0;
-    width: 240px;
-    height: 968px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    background: #212121;
-  }
-  
-  .expand-navbarTop, .expand-navbarTop-2 {
-    display: flex;
-    padding: 12px 0px;
+    padding: 11px 0px;
     flex-direction: column;
     align-items: flex-start;
   }
   
-  .expand-menu {
-    display: flex;
-    padding: 8px 8px 8px 0px;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-  }
+.expand-menu {
+  display: flex;
+  padding: 8px 0px 8px 0px;
+  flex-direction: column;
+  align-items: flex-end;
+}
   
-  .expand-menu-item {    
-    display: flex;
-    width: 192px;
+.expand-menu-item {    
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 0px 8px 0px;
+}
+
+  .expandMenuItem {
+    display: block;
     align-items: center;
     gap: 24px;
+    padding: 8px 8px 8px 8px;
   }
   
   .expand-navIcon{
@@ -401,41 +404,12 @@
   }
   
   
-  
-  .flexContainer {
-    display: flex;
-  }
-  
-  .sideBarHome, .sideBarExplore,
-  .sideBarSubscription, .sideBarLibrary,
-  .sideBarHistory, .sideBarYourVideo,
-  .sideBarWatchLater, .sideBarLikedVideos,
-  .sideBarShowMore, .sideBarYoutubePremium,
-  .sideBarGaming, .sideBarLive{
-    display: flex;
-  }
-  
-  #sideUser{
-    display: flex;
-  }
-  
-  .videoPlayer {
-    flex: 1;
-  }
-  
-  .videoDescFramel {
-    display: flex;
-  }
-  
-  .secondaryVideo{
-    display: flex;
-  }
-  
-  /* ---------------nav------------- */
+/* ---------------nav------------- */
 /* -----------------section--------------- */
 .section {
     padding-top: 56px;
     padding-left: 80px;
+    margin-left: 20px
 }
 /* -----------top-menu-------------- */
 .top_menu {
@@ -443,7 +417,6 @@
     display: flex;
     justify-content: space-between;
     height: 56px;
-    position: fixed;
     top: 56px;
     right: 0;
     left: 80px;
