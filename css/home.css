@@ -404,37 +404,7 @@
   }
   
   
-  
-  .flexContainer {
-    display: flex;
-  }
-  
-  .sideBarHome, .sideBarExplore,
-  .sideBarSubscription, .sideBarLibrary,
-  .sideBarHistory, .sideBarYourVideo,
-  .sideBarWatchLater, .sideBarLikedVideos,
-  .sideBarShowMore, .sideBarYoutubePremium,
-  .sideBarGaming, .sideBarLive{
-    display: flex;
-  }
-  
-  #sideUser{
-    display: flex;
-  }
-  
-  .videoPlayer {
-    flex: 1;
-  }
-  
-  .videoDescFramel {
-    display: flex;
-  }
-  
-  .secondaryVideo{
-    display: flex;
-  }
-  
-  /* ---------------nav------------- */
+/* ---------------nav------------- */
 /* -----------------section--------------- */
 .section {
     padding-top: 56px;
