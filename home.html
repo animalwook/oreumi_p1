@@ -8,9 +8,10 @@
     <title>home</title>
   </head>
   <body>
+    <!------- 헤더 시작------->
     <header>
       <div class="header">
-        <div class="header_hamburger_logo">
+        <div class="header_lhamburger_logo">
             <button id="hamburger" class="hambuger-btn">
               <img src="./img/home/header/hamburger.svg" alt="hambuger-img" class="hambuger-img"/>
             </button>
@@ -43,7 +44,9 @@
         </div>
       </div>
     </header>
+    <!------- 헤더 끝------->
 
+    <!------- 네비게이션바 시작------->
     <navbar>
       <!-- 기본 버전 -->
       <div id="navBarA" class="navBar active">
@@ -70,7 +73,7 @@
                 <img src="./img/home/navbar/subscriptions.svg" alt="Small-Subscription" class="Menu-Item" />
               </div>
               <div class="Title">
-                <div class="typo">Subscription</div>
+                <div class="typo">Subs...</div>
               </div>
             </div>
             <div class="Menu-Item">
@@ -91,7 +94,7 @@
           <div class="expand-menu">
             <div class="expand-menu-item">
               <div class="expand-navIcon">
-                <img src="./img/home/navbar/home-fill.svg" alt="Home" class="Menu-Item" />
+                <img src="./img/home/navbar/home-fill.svg" alt="Home" class="expandMenuItem" />
               </div>
               <div class="expand-title">
                 <div class="typo">Home</div>
@@ -99,7 +102,7 @@
             </div>
             <div class="expand-menu-item">
               <div class="navIcon">
-                <img src="./img/home/navbar/explore.svg" alt="Explore" class="Menu-Item" />
+                <img src="./img/home/navbar/explore.svg" alt="Explore" class="expandMenuItem" />
               </div>
               <div class="expand-title">
                 <div class="typo">Explore</div>
@@ -107,7 +110,7 @@
             </div>
             <div class="expand-menu-item">
               <div class="navIcon">
-                <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="Menu-Item" />
+                <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="expandMenuItem" />
               </div>
               <div class="expand-title">
                 <div class="typo">Subscription</div>
@@ -122,7 +125,7 @@
           <div class="expand-menu">
             <div class="expand-menu-item">
               <div class="expand-navIcon">
-                <img src="./img/home/navbar/library.svg" alt="Library" class="Menu-Item" />
+                <img src="./img/home/navbar/library.svg" alt="Library" class="expandMenuItem" />
               </div>
               <div class="expand-title">
                 <div class="typo">Library</div>
@@ -130,7 +133,7 @@
             </div>
             <div class="expand-menu-item">
               <div class="expand-navIcon">
-                <img src="./img/home/navbar/history.svg" alt="History" class="Menu-Item" />
+                <img src="./img/home/navbar/history.svg" alt="History" class="expandMenuItem" />
               </div>
               <div class="expand-title">
                 <div class="typo">History</div>
@@ -138,7 +141,7 @@
             </div>
             <div class="expand-menu-item">
               <div class="expand-navIcon">
-                <img src="./img/home/navbar/yourVideos.svg" alt="Your Video" class="Menu-Item" />
+                <img src="./img/home/navbar/yourVideos.svg" alt="Your Video" class="expandMenuItem" />
               </div>
               <div class="expand-title">
                 <div class="typo">Your Video</div>
@@ -146,7 +149,7 @@
             </div>
             <div class="expand-menu-item">
               <div class="expand-navIcon">
-                <img src="./img/home/navbar/watchLater.svg" alt="Watch Later" class="Menu-Item" />
+                <img src="./img/home/navbar/watchLater.svg" alt="Watch Later" class="expandMenuItem" />
               </div>
               <div class="expand-title">
                 <div class="typo">Watch Later</div>
@@ -154,7 +157,7 @@
             </div>
             <div class="expand-menu-item">
               <div class="expand-navIcon">
-                <img src="./img/home/navbar/liked.svg" alt="Liked Videos" class="Menu-Item" />
+                <img src="./img/home/navbar/liked.svg" alt="Liked Videos" class="expandMenuItem" />
               </div>
               <div class="expand-title">
                 <div class="typo">Liked Videos</div>
@@ -162,7 +165,7 @@
             </div>
             <div class="expand-menu-item">
               <div class="expand-navIcon">
-                <img src="./img/home/navbar/arrowBottom.svg" alt="Show More" class="Menu-Item" />
+                <img src="./img/home/navbar/arrowBottom.svg" alt="Show More" class="expandMenuItem" />
               </div>
               <div class="expand-title">
                 <div class="typo">Show More</div>
@@ -285,9 +288,12 @@
         </div>
       </div>
     </navbar>
-
+<!------- 네비게이션바 끝------->
+<!----------- 섹션 시작(탑메뉴+썸네일) ----------------->
     <section>
-      <div class="section">
+      <!-- js : class로 가져오면 배열형식으로 가져와서 id로 가져옴 -->
+      <div id="section" class="section"> 
+        <!-------탑메뉴 시작------->  
         <topMenu>
           <div class="top_menu">
             <button id="slide-left" type="button"><</button>
@@ -314,7 +320,8 @@
             <button id="slide-right" type="button">></button>
           </div>
         </topMenu>
-
+      <!-------탑메뉴 끝------->  
+      <!-------썸네일 시작------->
         <div id="mainContainer">
           <div id="videoList"></div>
         </div>
@@ -322,8 +329,9 @@
           <div id="searchResults"></div>
         </div>
       </div>
-
+      <!-------썸네일 끝------->
     </section>
+    <!----------- 섹션 끝(탑메뉴+썸네일) ----------------->
   </body>
   <script src="js/js_1.js"></script>
   <script src="js/js_2.js"></script>

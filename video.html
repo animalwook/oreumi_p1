@@ -7,7 +7,7 @@
 <body>
   <header>
     <div class="header">
-      <div class="header_hamburger_logo">
+      <div class="header_lhamburger_logo">
           <button id="hamburger" class="hambuger-btn">
             <img src="./img/home/header/hamburger.svg" alt="hambuger-img" class="hambuger-img"/>
           </button>
@@ -40,7 +40,9 @@
       </div>
     </div>
   </header>
+  <!------- 헤더 끝------->
 
+  <!------- 네비게이션바 시작------->
   <navbar>
     <!-- 기본 버전 -->
     <div id="navBarA" class="navBar active">
@@ -67,7 +69,7 @@
               <img src="./img/home/navbar/subscriptions.svg" alt="Small-Subscription" class="Menu-Item" />
             </div>
             <div class="Title">
-              <div class="typo">Subscription</div>
+              <div class="typo">Subs...</div>
             </div>
           </div>
           <div class="Menu-Item">
@@ -88,7 +90,7 @@
         <div class="expand-menu">
           <div class="expand-menu-item">
             <div class="expand-navIcon">
-              <img src="./img/home/navbar/home-fill.svg" alt="Home" class="Menu-Item" />
+              <img src="./img/home/navbar/home-fill.svg" alt="Home" class="expandMenuItem" />
             </div>
             <div class="expand-title">
               <div class="typo">Home</div>
@@ -96,7 +98,7 @@
           </div>
           <div class="expand-menu-item">
             <div class="navIcon">
-              <img src="./img/home/navbar/explore.svg" alt="Explore" class="Menu-Item" />
+              <img src="./img/home/navbar/explore.svg" alt="Explore" class="expandMenuItem" />
             </div>
             <div class="expand-title">
               <div class="typo">Explore</div>
@@ -104,7 +106,7 @@
           </div>
           <div class="expand-menu-item">
             <div class="navIcon">
-              <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="Menu-Item" />
+              <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="expandMenuItem" />
             </div>
             <div class="expand-title">
               <div class="typo">Subscription</div>
@@ -119,7 +121,7 @@
         <div class="expand-menu">
           <div class="expand-menu-item">
             <div class="expand-navIcon">
-              <img src="./img/home/navbar/library.svg" alt="Library" class="Menu-Item" />
+              <img src="./img/home/navbar/library.svg" alt="Library" class="expandMenuItem" />
             </div>
             <div class="expand-title">
               <div class="typo">Library</div>
@@ -127,7 +129,7 @@
           </div>
           <div class="expand-menu-item">
             <div class="expand-navIcon">
-              <img src="./img/home/navbar/history.svg" alt="History" class="Menu-Item" />
+              <img src="./img/home/navbar/history.svg" alt="History" class="expandMenuItem" />
             </div>
             <div class="expand-title">
               <div class="typo">History</div>
@@ -135,7 +137,7 @@
           </div>
           <div class="expand-menu-item">
             <div class="expand-navIcon">
-              <img src="./img/home/navbar/yourVideos.svg" alt="Your Video" class="Menu-Item" />
+              <img src="./img/home/navbar/yourVideos.svg" alt="Your Video" class="expandMenuItem" />
             </div>
             <div class="expand-title">
               <div class="typo">Your Video</div>
@@ -143,7 +145,7 @@
           </div>
           <div class="expand-menu-item">
             <div class="expand-navIcon">
-              <img src="./img/home/navbar/watchLater.svg" alt="Watch Later" class="Menu-Item" />
+              <img src="./img/home/navbar/watchLater.svg" alt="Watch Later" class="expandMenuItem" />
             </div>
             <div class="expand-title">
               <div class="typo">Watch Later</div>
@@ -151,7 +153,7 @@
           </div>
           <div class="expand-menu-item">
             <div class="expand-navIcon">
-              <img src="./img/home/navbar/liked.svg" alt="Liked Videos" class="Menu-Item" />
+              <img src="./img/home/navbar/liked.svg" alt="Liked Videos" class="expandMenuItem" />
             </div>
             <div class="expand-title">
               <div class="typo">Liked Videos</div>
@@ -159,7 +161,7 @@
           </div>
           <div class="expand-menu-item">
             <div class="expand-navIcon">
-              <img src="./img/home/navbar/arrowBottom.svg" alt="Show More" class="Menu-Item" />
+              <img src="./img/home/navbar/arrowBottom.svg" alt="Show More" class="expandMenuItem" />
             </div>
             <div class="expand-title">
               <div class="typo">Show More</div>
@@ -282,8 +284,12 @@
       </div>
     </div>
   </navbar>
+<!------- 네비게이션바 끝------->
+<!----------- 메인 시작(섹션+어사이드) ----------------->
   <main>
-    <section>
+    <!----------- 섹션 시작 ----------------->
+    <div class="main">
+     <section>
       <div class = "section">
         <div class="videoPlayer">
           <div class="video">
@@ -316,7 +322,7 @@
             </div>
           </div>
           <div class="videoDescFrame2">
-            <div class="videoChannelText">AAAA</div>
+            <div class="videoChannelText">오르미</div>
             <div class="videoChannelShowMore">
               <button id="videoChannelShowMoreBtn">SHOW MORE</button>
             </div>
@@ -330,30 +336,23 @@
                 </button>
               </span>
             </div>
-            <div class="videoCommentFrame2">
-              <span class="videoCommentUserCommnetIcon"><img src="./img/home/header/User-Avatar.svg" alt="videoCommentUserAvatar"></span>
-              <span class="videoCommentUserComment"><input type="text" placeholder="Add a public comment..."></span>
-            </div>
-            <div class="videoCommentFrame3">
-              <span><img src="" alt="videoCommentAnotherUserIcon1"></span>
-              <span>
-                <span class="videoCommentAnotherUserCommnet">James Gouse</span>
-                <span class="videoCommentAnotherUserCommnetTime">8 hours ago</span>
-              </span>
-              <div>
-                <button class="videoCommentAnotherUserCommentLike"></button>
-                <span class="videoCommentAnotherUserCommentLikeCount">3</span>
-                <button class="videoCommentAnotherUserCommentDisiike"></button>
-                <span class="videoCommentAnotherUserCommentDisikeCount">3</span>
-                <button class="videoCommentAnotherUserCommentReply"></button>
-                <span class="videoCommentAnotherUserCommentReplyCount">3</span>
+            <!------------댓글------------>
+            <form onsubmit="addComment(event)">
+              <div class="form-group">
+                <span class="videoCommentUserCommnetIcon"><img src="./img/home/header/User-Avatar.svg" alt="videoCommentUserAvatar"></span>
+                <span class="videoCommentUserComment"><input type="text" class="form-control" placeholder="Add a public comment..." required></span>
+                <button style="cursor:pointer" type="submit" class="btn btn-primary">작성</button>
               </div>
+            </form>
+            <div class="commentsList">
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <aside>
+     </section>
+    <!----------- 섹션 끝 ----------------->
+    <!----------- 어사이드 시작 ----------------->
+     <aside>
       <div class="secondary">
         <div class="topMenu">
           <span><button id="secondaryTopMenuBtn">All</button></span>
@@ -434,9 +433,13 @@
             </div>
         </div>
       </div>
-    </aside>
+     </aside>
+    <!----------- 어사이드 끝 ----------------->
+   </div>
+  <!----------- 메인 끝(섹션+어사이드) ----------------->
   </main>
 </body>
 <script src="js/js_1.js"></script>
 <script src="js/js_2.js"></script>
+<script src="js/comments.js"></script>
 </html>
