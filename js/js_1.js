@@ -176,102 +176,89 @@ document.addEventListener("DOMContentLoaded", async () => {
 ////////////////////////////////////////////////////
 //user 객체를 본문에 실어 보내
 
+// 채널정보를 받아와 channel.html에 띄워주는 함수
 async function getChannelInfo(Channel) {
-  const apiCUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channel}`;
-  const response = await fetch(apiCUrl);
-  const ChannelInfoData = await response.json();
-  console.log(ChannelInfoData);
-  return ChannelInfoData;
-}
-
-async function getChannelInfo(Channel) {
-  const apiUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channel}`;
-
-  try {
-    const response = await fetch(apiUrl, {
-      method: "GET", // 요청 방식을 GET으로 설정합니다.
-      headers: {
-        "Content-Type": "application/json", // 요청의 헤더를 설정합니다.
-      },
-    });
-
-    const channelInfo = await response.json(); // 응답을 JSON 형식으로 파싱합니다.
-
-    // 채널 정보가 존재하는 경우, 해당 정보를 화면에 표시합니다.
-    if (channelInfo && channelInfo.channel_name !== undefined) {
-      console.log(channelInfo.channel_name);
-      console.log(channelInfo.banner);
-      console.log(channelInfo.profile);
-      console.log(channelInfo.subscribers);
-      return channelInfo;
-    } else {
-      console.log("Channel information not found.");
-      return null;
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return null;
-  }
-}
-
-// async function postChannelInfo(Channel) {
-//   let apiUrl = "http://oreumi.appspot.com/channel/getChannelInfo"; // 요청을 보낼 URL입니다.
-
-//   let jsonData = { video_channel: Channel }; // 요청에 포함할 데이터를 정의합니다.
-
-//   fetch(apiUrl, {
-//     method: "POST", // 요청 방식을 POST로 설정합니다.
-//     headers: {
-//       "Content-Type": "application/json", // 요청의 헤더를 설정합니다.
-//     },
-//     body: JSON.stringify(jsonData), // 요청 본문에 데이터를 JSON 형식으로 포함합니다.
-//   })
-//     .then((response) => response.json()) // 응답을 JSON 형식으로 파싱합니다.
-//     .then((response) => {
-//       // 데이터가 존재하는지 확인합니다.
-//       if (response && response.channel_name !== undefined) {
-//         // 각 데이터를 콘솔에 출력합니다.
-//         console.log(response.channel_name);
-//         console.log(response.banner);
-//         console.log(response.profile);
-//         console.log(response.subscribers);
-//       }
-//     })
-//     .catch((error) => console.error("Error:", error)); // 에러를 콘솔에 출력합니다.
-// }
-
-async function postChannelInfo(Channel) {
-  let apiUrl = "http://oreumi.appspot.com/channel/getChannelInfo"; // 요청을 보낼 URL입니다.
-
-  let jsonData = { video_channel: Channel }; // 요청에 포함할 데이터를 정의합니다.
+  let apiUrl = `http://oreumi.appspot.com/channel/getChannelInfo?video_channel=${Channel}`; // 요청을 보낼 URL입니다.
 
   try {
     const response = await fetch(apiUrl, {
       method: "POST", // 요청 방식을 POST로 설정합니다.
       headers: {
         "Content-Type": "application/json", // 요청의 헤더를 설정합니다.
-      },
-      body: JSON.stringify(jsonData), // 요청 본문에 데이터를 JSON 형식으로 포함합니다.
+      }
     });
 
     const channelInfo = await response.json(); // 응답을 JSON 형식으로 파싱합니다.
 
     // 채널 정보가 존재하는 경우, 해당 정보를 화면에 표시합니다.
     if (channelInfo && channelInfo.channel_name !== undefined) {
-      const channelNameElement = document.getElementById("channelName");
-      const channelBannerElement = document.getElementById("channelBanner");
-      const channelProfileElement = document.getElementById("channelProfile");
-      const subscribersElement = document.getElementById("subscribers");
+      const channelTitleName = document.getElementsByClassName("channel-title-name")[0];
+      const channelCover = document.getElementById("channel-cover");
+      const channelAvatar = document.getElementById("channel-avatar");
+      const channelTitleSubscribers = document.getElementById("channel-title-subscribers");
 
-      channelNameElement.textContent = channelInfo.channel_name;
-      channelBannerElement.src = channelInfo.banner;
-      channelProfileElement.src = channelInfo.profile;
-      subscribersElement.textContent = channelInfo.subscribers;
+      channelTitleName.innerHTML = channelInfo.channel_name;
+      channelCover.src = channelInfo.channel_banner;
+      channelAvatar.src = channelInfo.channel_profile;
+      channelTitleSubscribers.innerHTML = channelInfo.subscribers;
 
       console.log(channelInfo.channel_name);
-      console.log(channelInfo.banner);
-      console.log(channelInfo.profile);
+      console.log(channelInfo.channel_banner);
+      console.log(channelInfo.channel_profile);
       console.log(channelInfo.subscribers);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+// 채널의 비디오 리스트를 받아와 띄워주는 함수. 테스트 요망
+async function getChannelVideo(Channel) {
+  let apiUrl = `https://oreumi.appspot.com/channel/getChannelVideo?video_channel=${Channel}`; // 요청을 보낼 URL입니다.
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: "POST", // 요청 방식을 POST로 설정합니다.
+      headers: {
+        "Content-Type": "application/json", // 요청의 헤더를 설정합니다.
+      }
+    });
+
+    const channelVideo = await response.json(); // 응답을 JSON 형식으로 파싱합니다.
+
+    // 채널 비디오 정보가 존재하는 경우, 해당 정보를 화면에 표시합니다.
+    if (channelVideo && !channelVideo.hasOwnProperty("error")) {
+      const playList = document.getElementsByClassName("play-list")[0];
+      lengthOfVideo = Object.keys(channelVideo).length;
+      for(let i = 0; i < lengthOfVideo; i++){
+          let videoInList=channelVideo[i];
+
+          let video = document.createElement("div");
+          video.className = "video";
+
+          let thumbnail = document.createElement("img");
+          thumbnail.src = `https://storage.googleapis.com/oreumi.appspot.com/img_${videoInList.video_id}.jpg`;
+          thumbnail.alt = `video${i}`;
+          thumbnail.className = `video_thumbnail`;
+          let videoTitle = document.createElement("span");
+          videoTitle.className = "video-title";
+          videoUploader.innerHTML = videoInList.video_title;
+          let videoUploader = document.createElement("span");
+          videoUploader.className = "video-uploader";
+          videoUploader.innerHTML = videoInList.video_channel;
+          let videoViews = document.createElement("span");
+          videoViews.className = "video-views";
+          videoUploader.innerHTML = `${videoInList.views/1000>>0}K views. ${videoInList.upload_date}`;
+
+          video.appendChild(thumbnail);
+          video.appendChild(videoTitle);
+          video.appendChild(videoUploader);
+          video.appendChild(videoViews);
+          playList.appendChild(video);
+      }
+      console.log(channelVideo);
+    }else{
+      console.log("No videos found for this channel");
     }
   } catch (error) {
     console.error("Error:", error);
