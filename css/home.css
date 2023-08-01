@@ -4,32 +4,32 @@
     background-color: #212121;
     border: none;
     background: none;
-}
-
-.hamburger-img {
+  }
+  
+  .hamburger-img {
     width: 30px;
     height: 30px;
-}
-
-.hambuger-btn:hover {
+  }
+  
+  .hambuger-btn:hover {
     background: rgba(253, 249, 249, 0.493);
     border-radius: 50%;
-}
-
-
-body {
+  }
+  
+  
+  body {
     font-family: Roboto;
     background-color: #212121;
     font-size: 16px;
-}
-
-a {
+  }
+  
+  a {
     text-decoration: none;
-}
-
-
-/* ---------header------------- */
-.header {
+  }
+  
+  
+  /* ---------header------------- */
+  .header {
     padding: 0 16px;
     display: flex;
     justify-content: space-between;
@@ -39,41 +39,41 @@ a {
     right: 0;
     left: 0;
     background-color: #212121;
-}
-
-.header_lhamburger_logo,
-.header_search-box,
-.header_user-api {
+  }
+  
+  .header_lhamburger_logo,
+  .header_search-box,
+  .header_user-api {
   display: flex;
   align-items: center;
   background-color: #212121;
-}
-
-.header_logo img {
+  }
+  
+  .header_logo img {
     margin-left:5px;
-}
-
-.header_logo svg {
+  }
+  
+  .header_logo svg {
     height: 24px;
   }
-
-
-.header_search-box button{
+  
+  
+  .header_search-box button{
     border: 1px solid #303030;
     background-color: #212121;
     border-left: none;
     height: 36px;
     width: 50px;
-}
-
-.header_search-box #search-icon {
+  }
+  
+  .header_search-box #search-icon {
     width: 32px; 
     height: 32px; 
     display: flex; 
     justify-content: center; 
     align-items: center;
-}
-.header_search-box input {
+  }
+  .header_search-box input {
     width: 360px;
     height: 32px;
     border: 1px solid #303030;
@@ -81,33 +81,33 @@ a {
     font-size: 16px;
     padding: 3px 8px;
     border-radius: 50px;
-
-}
-
-.header_search-box input::placeholder {
+  
+  }
+  
+  .header_search-box input::placeholder {
     color:#303030
-}
-
-.header_user-api {
+  }
+  
+  .header_user-api {
     display: flex;
-}
-
-
-
-.header_user-api img {
+  }
+  
+  
+  
+  .header_user-api img {
     width: 24px;
     height: 24px;
-}
-
-.header_user-api User-Avatar{
+  }
+  
+  .header_user-api User-Avatar{
     width: 32px;
     height: 32px;
     border-radius: 50%;
     background-color: grey;
-}
-/* ---------------NAVBAR CSS--------------- */
-/* -------------- overlay -------------*/
-.overlay {
+  }
+  /* ---------------NAVBAR CSS--------------- */
+  /* -------------- overlay -------------*/
+  .overlay {
     display: none;
     position: fixed;
     width: calc(100% - 240px);
@@ -139,20 +139,20 @@ a {
       display: block;
     }
   }
-
-/* ---------------navbar-hover--------------- */
-.Menu-Item:hover {
+  
+  /* ---------------navbar-hover--------------- */
+  .Menu-Item:hover {
     background-color: #494848;
-}
-
-/* ---------------navbar-On/Off------------- */
-#navBarA.active,
-#navBarC.active {
+  }
+  
+  /* ---------------navbar-On/Off------------- */
+  #navBarA.active,
+  #navBarC.active {
   display: flex;
-}
-
-/* ---------------navbar------------- */
-.navBar {
+  }
+  
+  /* ---------------navbar------------- */
+  .navBar {
     display: none;
     position: fixed;
     top: 58px;
@@ -163,35 +163,35 @@ a {
     align-items: center;
     flex-shrink: 0;
     background: #212121;
-}
-
-.navbarTop {
+  }
+  
+  .navbarTop {
     display: flex;
     padding: 12px 0px;
     flex-direction: column;
-}
-
-.Menu {
+  }
+  
+  .Menu {
     display: flex;
     padding: 8px 8px 8px 0px;
     flex-direction: column;
     gap: 10px;
-}
-
-.Menu-Item {    
+  }
+  
+  .Menu-Item {    
     display: block;
     width: 72px;
     align-items: center;
     gap: 24px;
     padding: 8px 8px 8px 8px;
-}
-
-.Menu-Item-img {
+  }
+  
+  .Menu-Item-img {
     width: 20px;
     height: 20px;
-}
-
-.navIcon{
+  }
+  
+  .navIcon{
     display: flex;
     width: 24px;
     height: 24px;
@@ -199,9 +199,9 @@ a {
     align-items: center;
     flex-shrink: 0;
     padding-left: 24px;
-}
-
-.Title {
+  }
+  
+  .Title {
     display: flex;
     width: 72px;
     padding: 4px 0px;
@@ -209,17 +209,17 @@ a {
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
-}
-
-/* ---------------expand navbar--------------- */
-.expand-navbar.display {
+  }
+  
+  /* ---------------expand navbar--------------- */
+  .expand-navbar.display {
     display: flex;
-}
-
-.navbar.displayNone {
+  }
+  
+  .navbar.displayNone {
     display: none;
-}
-.expand-navbar {
+  }
+  .expand-navbar {
     display: none;
     position: fixed;
     top: 75px;
@@ -231,31 +231,31 @@ a {
     align-items: center;
     flex-shrink: 0;
     background: #212121;
-}
-
-.expand-navbarTop, .expand-navbarTop-2 {
+  }
+  
+  .expand-navbarTop, .expand-navbarTop-2 {
     display: flex;
     padding: 12px 0px;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.expand-menu {
+  }
+  
+  .expand-menu {
     display: flex;
     padding: 8px 8px 8px 0px;
     flex-direction: column;
     align-items: flex-end;
     gap: 10px;
-}
-
-.expand-menu-item {    
+  }
+  
+  .expand-menu-item {    
     display: flex;
     width: 192px;
     align-items: center;
     gap: 24px;
-}
-
-.expand-navIcon{
+  }
+  
+  .expand-navIcon{
     display: flex;
     width: 24px;
     height: 24px;
@@ -263,37 +263,37 @@ a {
     align-items: center;
     flex-shrink: 0;
     padding-left: 24px;
-}
-
-.expand-title {
+  }
+  
+  .expand-title {
     display: flex;
     width: 144px;
     padding: 4px 0px;
     align-items: flex-start;
     gap: 10px;
     flex-shrink: 0;
-}
-
-.expand-menuItemImg {
+  }
+  
+  .expand-menuItemImg {
     width: 24px;
     height: 24px;
-}
-
-.border {
+  }
+  
+  .border {
     width: 224px;
     height: 1px;
     background: var(--border-color, #303030);
-}
-
-.Menu-Title{
+  }
+  
+  .Menu-Title{
     display: flex;
     width: 224px;
     height: 32px;
     padding-right: 0px;
     align-items: center;
-}
-
-.typo {
+  }
+  
+  .typo {
     color: var(--white-color, #FFF);
     font-family: Roboto;
     font-size: 14px;
@@ -301,53 +301,53 @@ a {
     font-weight: 400;
     line-height: normal;
     white-space: nowrap;
-}
-
-.typo2 {
+  }
+  
+  .typo2 {
     color: var(--gray-color, #AAA);
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-}
-
-.NavbarMoreform {
+  }
+  
+  .NavbarMoreform {
     display: flex;
     padding-top: 12px;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-}
-
-.SUBSCRIPTIONS {
+  }
+  
+  .SUBSCRIPTIONS {
     display: flex;
     padding: 8px 24px;
     align-items: flex-start;
     gap: 10px;
-}
-
-.NavbarSubscriptions{
+  }
+  
+  .NavbarSubscriptions{
     display: flex;
     padding-top: 12px;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-}
-
-/* ---------------nav------------- */
-nav {
+  }
+  
+  /* ---------------nav------------- */
+  nav {
     display: flex;
     position: fixed;
     height:30px;
     margin-top: 56px;
     padding-left: auto;
-}
-
-
-
-nav .button {
-	background-color:rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  
+  nav .button {
+  background-color:rgba(0, 0, 0, 0.2);
     width: 62vw;
     height: 32px;
     font-family: Roboto;
@@ -357,10 +357,10 @@ nav .button {
     overflow-x: hidden;
     overflow-y: hidden;
   }
-
+  
   .buttonAll+.buttonItem, .buttonItem+.buttonItem {
   margin-left: 5px; 
-}
+  }
   
   .buttonAll {
     width: 40px;
@@ -388,108 +388,47 @@ nav .button {
     border-radius: 32px;
     cursor: pointer;
   }
-
+  
   .buttonAll:hover, .buttonItem:hover {
       color: #303030;
       background-color: #FFFFFF;
-
+  
   }
-
+  
   .buttonAll:active, .buttonItem:active {
       color: #FFFFFF;
       background-color: #303030;
   }
-
-/* ---------------nav------------- */
-/* -----------------section--------------- */
-.section {
-    padding-top: 56px;
-    padding-left: 70px;
-}
-
-/* -----------top-menu-------------- */
-
-.top_menu {
-    top: auto;
-}
-#slide-left {
-    background-color: #303030;
-    color: #FFFFFF;
-    border: none;
-    width: 24px;
-    height: 32px;
-    gap: 10px;
-    border-radius: 10px;
-    z-index: 1;
-    left: 0;
-}
-
-#slide-right {
-    background-color: #303030;
-    color: #FFFFFF;
-    border: none;
-    width: 24px;
-    height: 32px;
-    gap: 10px;
-    border-radius: 10px;
-    z-index: 1;
-    position: fixed;
-    right: 0;
-}
-
-#slide-left:hover, #slide-right:hover {
-    background-color: #FFFFFF;
-    color: #303030;
-}
-
-#slide-left:active, #slide-right:active {
-    background-color: #303030;
-    color: #FFFFFF;
-}
-
-/* -----------top-menu-------------- */
-/* -----------thumbnail-------------- */
-
-.thumbnail {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    color: white;
-
-}
-
-.video-card {
+  
+  
+  
+  .flexContainer {
     display: flex;
-    flex-direction: column;
-    width: 320px;
-    margin: 10px;
-    cursor: pointer;
-  }
-  .video-card img {
-    width: 100%;
-  }
-  .video-card p {
-    margin: 5px 0;
-  }
-  .channel-logo {
-    width: 30px;
-    height: 30px;
-    border-radius: 70%;
-    overflow: hidden;
-  }
-  .channel-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  #videoList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
   }
   
-/* -----------thumbnail-------------- */
-/* -----------------section--------------- */
-
+  .sideBarHome, .sideBarExplore,
+  .sideBarSubscription, .sideBarLibrary,
+  .sideBarHistory, .sideBarYourVideo,
+  .sideBarWatchLater, .sideBarLikedVideos,
+  .sideBarShowMore, .sideBarYoutubePremium,
+  .sideBarGaming, .sideBarLive{
+    display: flex;
+  }
+  
+  #sideUser{
+    display: flex;
+  }
+  
+  .videoPlayer {
+    flex: 1;
+  }
+  
+  .videoDescFramel {
+    display: flex;
+  }
+  
+  .secondaryVideo{
+    display: flex;
+  }
+  
+  
