@@ -1,280 +1,292 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/videos.css">
-  <link rel="stylesheet" type="text/css" href="videos.css"/>
-  <style>
-    .header {
-      display: flex;
-    }
-
-    .flexContainer {
-      display: flex;
-    }
-
-    .sideBarHome, .sideBarExplore,
-    .sideBarSubscription, .sideBarLibrary,
-    .sideBarHistory, .sideBarYourVideo,
-    .sideBarWatchLater, .sideBarLikedVideos,
-    .sideBarShowMore, .sideBarYoutubePremium,
-    .sideBarGaming, .sideBarLive{
-      display: flex;
-    }
-
-    #sideUser{
-      display: flex;
-    }
-
-    .videoPlayer {
-      flex: 1;
-    }
-
-    .videoDescFramel {
-      display: flex;
-    }
-
-    .secondaryVideo{
-      display: flex;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="css/video.css">
+  <title>video
+  </title>
 </head>
 <body>
-    <header>
-        <div class="header">
-          <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3iM_06QeZi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <a href="javascript:void(0);" onclick="openNav()">
-            <img src="./img/home/header/hamburger.svg" alt="hamburger" class="hamburger"/>
-          </a>
+  <header>
+    <div class="header">
+      <div class="header_lhamburger_logo">
+        <div class="icon">
+          <button id="hamburger" class="hambuger-btn">
+            <img src="./img/home/header/hamburger.svg" alt="hambuger-img" class="hambuger-img"/>
+          </button>
+        </div>
+        <div class="Logo">
           <a href="">
             <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
           </a>
-          <div id="search-box">
-            <input type="text" id="search" placeholder="Search" />
-            <button id="search-btn" onclick="searchVideos()">
-              <img src="./img/home/header/search.svg" alt="Search" class="icon" id="search-icon" />
-            </button>
-          </div>
-  
-          <div class="user-api">
-            <a href="mic">
-              <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
-            </a>
-            <a href="create">
-              <img src="./img/home/header/create.svg" alt="create" class="create" />
-            </a>
-            <a href="notifications">
-              <img src="./img/home/header/notifications.svg" alt="notifications" class="notifications" />
-            </a>
-            <a href="profile">
-              <img src="./img/home/header/User-Avatar.png" alt="User-Avatar" id="User-Avatar" />
-            </a>
-          </div>
         </div>
-    </header>
+      </div>
 
-    <navbar>
-        <div class="-navbar">
-          <div class="layover-navbarTop">
-            <div class="layover-menu">
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/navbar/home-fill.svg" alt="Home" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">Home</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="navIcon">
-                  <img src="./img/home/navbar/explore.svg" alt="Explore" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">Explore</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="navIcon">
-                  <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">Subscription</div>
-                </div>
-              </div>
+      <div class="header_search-box">
+        <input type="text" id="search" placeholder="Search" />
+        <button id="search-btn" onclick="searchVideos()">
+          <img src="./img/home/header/search.svg" alt="Search" class="icon" id="search-icon" />
+        </button>
+        <a href="mic">
+          <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
+        </a>          
+      </div>
+
+      <div class="header_user-api">
+
+        <a href="create">
+          <img src="./img/home/header/create.svg" alt="create" class="create" />
+        </a>
+        <a href="notifications">
+          <img src="./img/home/header/notifications.svg" alt="notifications" class="notifications" />
+        </a>
+        <a href="profile">
+          <img src="./img/home/header/User-Avatar.svg" alt="User-Avatar" id="User-Avatar" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <navbar>
+    <!-- 기본 버전 -->
+    <div id="navBarA" class="navBar active">
+      <div class="navbarTop">
+        <div class="Menu">
+          <div class="Menu-Item">
+            <div class="navIcon">
+              <img src="./img/home/navbar/home-fill.svg" alt="Small-Home" class="Menu-Item" />
+            </div>
+            <div class="Title">
+              <div class="typo">Home</div>
             </div>
           </div>
-  
-          <div class="border"></div>
-  
-          <div class="layover-navbarTop-2">
-            <div class="layover-menu">
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/navbar/library.svg" alt="Library" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">Library</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/navbar/history.svg" alt="History" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">History</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/navbar/yourVideos.svg" alt="Your Video" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">Your Video</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/navbar/watchLater.svg" alt="Watch Later" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">Watch Later</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/navbar/liked.svg" alt="Liked Videos" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">Liked Videos</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/navbar/arrowBottom.svg" alt="Show More" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">Show More</div>
-                </div>
-              </div>
+          <div class="Menu-Item">
+            <div class="navIcon">
+              <img src="./img/home/navbar/explore.svg" alt="Small-Explore" class="Menu-Item" />
+            </div>
+            <div class="Title">
+              <div class="typo">Explore</div>
             </div>
           </div>
-  
-          <div class="border"></div>
-          <div class="NavbarSubscriptions">
-            <div class="Menu-Title">
-              <div class="SUBSCRIPTIONS">
-                <div class="typo2">SUBSCRIPTION</div>
-              </div>
+          <div class="Menu-Item">
+            <div class="navIcon">
+              <img src="./img/home/navbar/subscriptions.svg" alt="Small-Subscription" class="Menu-Item" />
             </div>
-            <div class="layover-menu">
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/avatar/User-Avatar1.png" alt="USER1" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">USER1</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/avatar/User-Avatar2.png" alt="USER2" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">USER2</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/avatar/User-Avatar3.png" alt="USER3" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">USER3</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/avatar/User-Avatar3.png" alt="USER4" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">USER4</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/avatar/User-Avatar3.png" alt="USER5" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">USER5</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/avatar/User-Avatar3.png" alt="USER6" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">USER6</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/avatar/User-Avatar3.png" alt="USER7" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">USER7</div>
-                </div>
-              </div>
-              <div class="layover-menu-item">
-                <div class="layover-navIcon">
-                  <img src="./img/home/avatar/User-Avatar3.png" alt="USER8" class="Menu-Item" />
-                </div>
-                <div class="layover-title">
-                  <div class="typo">USER8</div>
-                </div>
-              </div>
+            <div class="Title">
+              <div class="typo">Subscription</div>
             </div>
           </div>
-  
-          <div class="border"></div>
-  
-          <div class="NavbarMoreform">
-            <div class="NavbarSubscriptions">
-              <div class="Menu-Title">
-                <div class="SUBSCRIPTIONS">
-                  <div class="typo2">MORE FROM YOUTUBE</div>
-                </div>
-              </div>
-              <div class="layover-menu">
-                <div class="layover-menu-item">
-                  <div class="layover-navIcon">
-                    <img src="./img/home/navbar/premium.svg" alt="Youtube Premium" class="Menu-Item" />
-                  </div>
-                  <div class="layover-title">
-                    <div class="typo">Youtube Premium</div>
-                  </div>
-                </div>
-                <div class="layover-menu-item">
-                  <div class="layover-navIcon">
-                    <img src="./img/home/navbar/gaming.svg" alt="Gaming" class="Menu-Item" />
-                  </div>
-                  <div class="layover-title">
-                    <div class="typo">Gaming</div>
-                  </div>
-                </div>
-                <div class="layover-menu-item">
-                  <div class="layover-navIcon">
-                    <img src="./img/home/navbar/live.svg" alt="Live" class="Menu-Item" />
-                  </div>
-                  <div class="layover-title">
-                    <div class="typo">Live</div>
-                  </div>
-                </div>
-              </div>
+          <div class="Menu-Item">
+            <div class="navIcon">
+              <img src="./img/home/navbar/library.svg" alt="Small-Library" class="Menu-Item" />
+            </div>
+            <div class="Title">
+              <div class="typo">Library</div>
             </div>
           </div>
         </div>
-    </navbar>
+      </div>
+    </div>
 
+    <!-- 확장 버전 -->
+    <div id="navBarB" class="navBar">
+      <div class="expand-navbarTop">
+        <div class="expand-menu">
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/navbar/home-fill.svg" alt="Home" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">Home</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="navIcon">
+              <img src="./img/home/navbar/explore.svg" alt="Explore" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">Explore</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="navIcon">
+              <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">Subscription</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border"></div>
+
+      <div class="expand-navbarTop-2">
+        <div class="expand-menu">
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/navbar/library.svg" alt="Library" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">Library</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/navbar/history.svg" alt="History" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">History</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/navbar/yourVideos.svg" alt="Your Video" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">Your Video</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/navbar/watchLater.svg" alt="Watch Later" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">Watch Later</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/navbar/liked.svg" alt="Liked Videos" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">Liked Videos</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/navbar/arrowBottom.svg" alt="Show More" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">Show More</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border"></div>
+      <div class="NavbarSubscriptions">
+        <div class="Menu-Title">
+          <div class="SUBSCRIPTIONS">
+            <div class="typo2">SUBSCRIPTION</div>
+          </div>
+        </div>
+        <div class="expand-menu">
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/avatar/User-Avatar1.png" alt="USER1" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">USER1</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/avatar/User-Avatar2.png" alt="USER2" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">USER2</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/avatar/User-Avatar3.png" alt="USER3" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">USER3</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/avatar/User-Avatar3.png" alt="USER4" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">USER4</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/avatar/User-Avatar3.png" alt="USER5" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">USER5</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/avatar/User-Avatar3.png" alt="USER6" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">USER6</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/avatar/User-Avatar3.png" alt="USER7" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">USER7</div>
+            </div>
+          </div>
+          <div class="expand-menu-item">
+            <div class="expand-navIcon">
+              <img src="./img/home/avatar/User-Avatar3.png" alt="USER8" class="Menu-Item" />
+            </div>
+            <div class="expand-title">
+              <div class="typo">USER8</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border"></div>
+
+      <div class="NavbarMoreform">
+        <div class="NavbarSubscriptions">
+          <div class="Menu-Title">
+            <div class="SUBSCRIPTIONS">
+              <div class="typo2">MORE FROM YOUTUBE</div>
+            </div>
+          </div>
+          <div class="expand-menu">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/premium.svg" alt="Youtube Premium" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Youtube Premium</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/gaming.svg" alt="Gaming" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Gaming</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/live.svg" alt="Live" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Live</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </navbar>
     <main>
         <section class="VideoPlayer">
             <div class="Youtube-player"></div>
