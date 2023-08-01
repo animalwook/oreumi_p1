@@ -1,312 +1,433 @@
+/* ------ modify-hamguger ------ */
+.hambuger-btn {
+  cursor: pointer;
+  background-color: #212121;
+  border: none;
+  background: none;
+}
+
+.hamburger-img {
+  width: 30px;
+  height: 30px;
+}
+
+.hambuger-btn:hover {
+  background: rgba(253, 249, 249, 0.493);
+  border-radius: 50%;
+}
+
+
 body {
-  width: 1920px;
-  height: 1080px;
   font-family: Roboto;
-  background-color: #000000;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.2;
-}
-/* 
-  main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  } */
-
-/* navbar 활성화 시 컨텐츠 옆으로 */
-.margin-add {
-  margin-left: 240px;
-}
-
-/* 채널 상단 */
-.channel-cover {
-  display: block;
-  width: 1920px;
-  height: 192px;
-  object-fit: cover;
-}
-
-/* navbar 활성화시 채널 상단 */
-
-/* .channel-cover-margin {
-  display: none;
-  width: 1680px;
-  height: 192px;
-  object-fit: cover;
-} */
-
-.channel-title {
-  width: auto;
-  height: 100px;
-  display: flex;
-  align-items: center;
   background-color: #212121;
-  color: #aaa;
+  font-size: 16px;
 }
 
-/* 구독 정보 */
+a {
+  text-decoration: none;
+}
 
-.channel-avatar {
-  margin: 16px 24px 4px 65px;
+
+/* ---------header------------- */
+.header {
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #212121;
+}
+
+.header_lhamburger_logo,
+.header_search-box,
+.header_user-api {
+display: flex;
+align-items: center;
+background-color: #212121;
+}
+
+.header_logo img {
+  margin-left:5px;
+}
+
+.header_logo svg {
+  height: 24px;
+}
+
+
+.header_search-box button{
+  border: 1px solid #303030;
+  background-color: #212121;
+  border-left: none;
+  height: 36px;
+  width: 50px;
+}
+
+.header_search-box #search-icon {
+  width: 32px; 
+  height: 32px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.header_search-box input {
+  width: 360px;
+  height: 32px;
+  border: 1px solid #303030;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  padding: 3px 8px;
   border-radius: 50px;
-  justify-content: flex-start;
+
 }
 
-.channel-title-info {
-  display: flex;
-  flex-direction: column;
-  margin-right: auto;
+.header_search-box input::placeholder {
+  color:#303030
 }
 
-.channel-title-name {
-  font-size: 24px;
-  color: #ffffff;
-  margin-left: 24px;
-}
-
-.channel-title-subscribers {
-  font-size: 14px;
-  color: #aaaaaa;
-  margin-left: 24px;
-}
-
-.subscribes-btn {
-  width: 116px;
-  height: 36px;
-  background-color: #cc0000;
-  color: #ffffff;
-  border: 0;
-  border-radius: 2px;
-  font-weight: 700;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: 65px;
-}
-
-/* 구독중 버튼 전환 임시코드 */
-
-.subscribes-btn:hover {
-  width: 116px;
-  height: 36px;
-  background-color: #aaaaaa;
-  color: #ffffff;
-  border: 0;
-  border-radius: 2px;
-  font-weight: 700;
-  line-height: normal;
-}
-
-/* 툴바 */
-
-.channel-toolbar {
-  background-color: #212121;
-  width: auto;
-  height: 48px;
-  display: flex;
-  padding-left: 65px;
-}
-
-.toolbar-btn {
-  border: 0;
-  background-color: #212121;
-  color: #aaa;
-}
-
-.toolbar-btn:hover {
-  border: 0;
-  background-color: #aaa;
-  color: #fff;
-}
-
-#channel-toolbar-home {
-  width: 104px;
-  height: 47px;
-}
-
-#channel-toolbar-videos {
-  width: 113px;
-  height: 47px;
-}
-
-#channel-toolbar-playlists {
-  width: 136px;
-  height: 47px;
-}
-
-#channel-toolbar-community {
-  width: 148px;
-  height: 47px;
-}
-
-#channel-toolbar-channels {
-  width: 137px;
-  height: 47px;
-}
-
-#channel-toolbar-about {
-  width: 110px;
-  height: 47px;
-}
-
-/* 우측 search-box 부분 */
-
-.channel-toolbar-search {
-  background-color: #212121;
-  width: 296px;
-  height: 48px;
+.header_user-api {
   display: flex;
 }
 
-.toolbar-search-btn {
-  border: 0;
-  background-color: #212121;
-  color: #aaaaaa;
-  padding-right: 24px;
+
+
+.header_user-api img {
+  width: 24px;
+  height: 24px;
 }
 
-.toolbar-search:hover {
-  border: 0;
-  background-color: #aaaaaa;
-  color: #212121;
+.header_user-api User-Avatar{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: grey;
 }
-
-#channel-toolbar-search-icon {
-  border: 0;
-  width: 48px;
-  height: 47px;
+/* ---------------NAVBAR CSS--------------- */
+/* -------------- overlay -------------*/
+.overlay {
+  display: none;
+  position: fixed;
+  width: calc(100% - 240px);
+  height: 100%;
+  background: rgba(61, 61, 63, 0.5);
+  top: 0;
+  left: 240px;
 }
-
-#channel-toolbar-search-box {
-  border: 0;
-  background-color: #212121;
-  color: #fff;
-  outline: none;
-  width: 210px;
-  height: 45px;
-  font-size: 17px;
-}
-
-#channel-toolbar-left-arrow {
-  border: 0;
-  background-color: #212121;
-  width: 47px;
-  height: 47px;
-}
-
-/* 큰 영상 */
-
-.youtube-player {
-  width: 800px;
-  height: 286px;
-  margin: 24px 0px 24px 0px;
-  padding-left: 65px;
-  /* padding-bottom: 16px; */
-  display: flex;
-  justify-content: center;
-}
-
-.youtube-player-info {
-  flex-direction: column;
-  margin: 16px 0px 24px 0px;
-  width: 400px;
-  height: 238px;
-}
-
-.youtube-player-title {
-  display: flex;
-  font-size: 14px;
-  font-weight: 700;
-  padding-bottom: 20px;
-  /* word-break: break-word; */
-}
-
-.youtube-player-views {
+.overlay.visible {
   display: block;
-  font-size: 13px;
-  font-weight: 700;
-  color: #aaa;
-  padding-bottom: 19px;
 }
 
-.youtube-player-desc {
-  display: block;
-  font-size: 14px;
-  word-break: break-word;
+@media (min-width: 900px) {
+  #navBarA {
+    display: block;
+  }
+
+  #navBarB.active {
+    display: block;
+  }
 }
 
-/* 구분선 */
+@media (max-width: 899px) {
+  #navBarA.active {
+    display: none;
+  }
 
-.division-line {
-  /* display: flex;
-  box-sizing: border-box;
-  justify-content: flex-start; */
-  width: 1070px;
-  border-top: 1px solid #303030;
-  margin-left: 65px;
+  #navBarC.active {
+    display: block;
+  }
 }
 
-/* 작은 영상 */
+/* ---------------navbar-hover--------------- */
+.Menu-Item:hover {
+  background-color: #494848;
+}
 
-.play-btn {
-  width: 1070px;
-  height: 44px;
-  padding-left: 65px;
-  display: flex;
-  align-items: center;
+/* ---------------navbar-On/Off------------- */
+#navBarA.active,
+#navBarC.active {
+display: flex;
+}
+
+/* ---------------navbar------------- */
+.navBar {
+  display: none;
+  position: fixed;
+  top: 58px;
+  width: 72px;
+  height: 968px;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  flex-shrink: 0;
+  background: #212121;
 }
 
-.play-info {
-  font-size: 16px;
-  font-weight: 700;
+.navbarTop {
+  display: flex;
+  padding: 12px 0px;
+  flex-direction: column;
 }
 
-.play-arrow-btn {
+.Menu {
+  display: flex;
+  padding: 8px 8px 8px 0px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Menu-Item {    
+  display: block;
+  width: 72px;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 8px 8px 8px;
+}
+
+.Menu-Item-img {
+  width: 20px;
+  height: 20px;
+}
+
+.navIcon{
+  display: flex;
   width: 24px;
   height: 24px;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  padding-left: 24px;
 }
 
-.play-all {
-  font-size: 16px;
-  font-weight: 700;
-  color: #aaa;
-}
-
-.play-list {
-  width: 1070px;
-  height: 194px;
+.Title {
   display: flex;
-  margin: 16px 0px 24px 0px;
-  padding-left: 65px;
-  padding-bottom: 24px;
+  width: 72px;
+  padding: 4px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
-.Video-image1.Video-image2.Video-image3.Video-image4.Video-image5 {
-  width: 210px;
-  height: 118px;
+/* ---------------expand navbar--------------- */
+.expand-navbar.display {
+  display: flex;
 }
 
-.video-title {
-  display: block;
+.navbar.displayNone {
+  display: none;
+}
+.expand-navbar {
+  display: none;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 240px;
+  height: 968px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  background: #212121;
+}
+
+.expand-navbarTop, .expand-navbarTop-2 {
+  display: flex;
+  padding: 12px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.expand-menu {
+  display: flex;
+  padding: 8px 8px 8px 0px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.expand-menu-item {    
+  display: flex;
+  width: 192px;
+  align-items: center;
+  gap: 24px;
+}
+
+.expand-navIcon{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 24px;
+}
+
+.expand-title {
+  display: flex;
+  width: 144px;
+  padding: 4px 0px;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.expand-menuItemImg {
+  width: 24px;
+  height: 24px;
+}
+
+.border {
+  width: 224px;
+  height: 1px;
+  background: var(--border-color, #303030);
+}
+
+.Menu-Title{
+  display: flex;
+  width: 224px;
+  height: 32px;
+  padding-right: 0px;
+  align-items: center;
+}
+
+.typo {
+  color: var(--white-color, #FFF);
+  font-family: Roboto;
   font-size: 14px;
-  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.typo2 {
+  color: var(--gray-color, #AAA);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
   font-weight: 700;
-  margin-bottom: 8px;
+  line-height: normal;
 }
 
-.video-uploader {
-  display: block;
-  font-size: 12px;
-  color: #aaa;
+.NavbarMoreform {
+  display: flex;
+  padding-top: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-.video-views {
-  display: block;
-  font-size: 12px;
-  color: #aaa;
+.SUBSCRIPTIONS {
+  display: flex;
+  padding: 8px 24px;
+  align-items: flex-start;
+  gap: 10px;
 }
+
+.NavbarSubscriptions{
+  display: flex;
+  padding-top: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* ---------------nav------------- */
+nav {
+  display: flex;
+  position: fixed;
+  height:30px;
+  margin-top: 56px;
+  padding-left: auto;
+}
+
+
+
+nav .button {
+background-color:rgba(0, 0, 0, 0.2);
+  width: 62vw;
+  height: 32px;
+  font-family: Roboto;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.buttonAll+.buttonItem, .buttonItem+.buttonItem {
+margin-left: 5px; 
+}
+
+.buttonAll {
+  width: 40px;
+  height: 32px;
+  gap: 10px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.buttonItem {
+  width: 53px;
+  height: 32px;
+  gap: 10px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.buttonAll, .buttonItem {
+  background-color: #303030;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.buttonAll:hover, .buttonItem:hover {
+    color: #303030;
+    background-color: #FFFFFF;
+
+}
+
+.buttonAll:active, .buttonItem:active {
+    color: #FFFFFF;
+    background-color: #303030;
+}
+
+
+
+.flexContainer {
+  display: flex;
+}
+
+.sideBarHome, .sideBarExplore,
+.sideBarSubscription, .sideBarLibrary,
+.sideBarHistory, .sideBarYourVideo,
+.sideBarWatchLater, .sideBarLikedVideos,
+.sideBarShowMore, .sideBarYoutubePremium,
+.sideBarGaming, .sideBarLive{
+  display: flex;
+}
+
+#sideUser{
+  display: flex;
+}
+
+.videoPlayer {
+  flex: 1;
+}
+
+.videoDescFramel {
+  display: flex;
+}
+
+.secondaryVideo{
+  display: flex;
+}
+
