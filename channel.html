@@ -3,51 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/css_1.css" />
-    <link rel="stylesheet" type="text/css" href="css/css_2.css" />
     <link rel="stylesheet" href="css/channel.css" />
-    <title>Document</title>
+    <title>channel</title>
   </head>
   <body>
     <header>
       <div class="header">
-        <a href="javascript:void(0);">
-          <img src="./img/home/header/hamburger.svg" alt="hamburger" class="hamburger" onclick="menuFunction()" />
-        </a>
-        <a href="">
-          <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
-        </a>
-        <div id="search-box">
-          <input type="text" id="search" placeholder="Search" />
-          <button id="search-btn">
-            <img src="./img/home/header/search.svg" alt="Search" class="icon" id="search-icon" />
-          </button>
+        <div class="header_lhamburger_logo">
+          <div class="icon">
+            <button id="hamburger" class="hambuger-btn">
+              <img src="./img/home/header/hamburger.svg" alt="hambuger-img" class="hambuger-img"/>
+            </button>
+          </div>
+          <div class="Logo">
+            <a href="">
+              <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
+            </a>
+          </div>
         </div>
 
-        <!-- <div class="user-api"> -->
-        <a href="mic">
-          <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
-        </a>
-        <a href="create">
-          <img src="./img/home/header/create.svg" alt="create" class="create" />
-        </a>
-        <a href="notifications">
-          <img src="./img/home/header/notifications.svg" alt="notifications" class="notifications" />
-        </a>
-        <a href="profile">
-          <img src="./img/home/header/User-Avatar.png" alt="User-Avatar" id="User-Avatar" />
-        </a>
+        <div class="header_search-box">
+          <input type="text" id="search" placeholder="Search" />
+          <button id="search-btn" onclick="searchVideos()">
+            <img src="./img/home/header/search.svg" alt="Search" class="icon" id="search-icon" />
+          </button>
+          <a href="mic">
+            <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
+          </a>          
+        </div>
+
+        <div class="header_user-api">
+
+          <a href="create">
+            <img src="./img/home/header/create.svg" alt="create" class="create" />
+          </a>
+          <a href="notifications">
+            <img src="./img/home/header/notifications.svg" alt="notifications" class="notifications" />
+          </a>
+          <a href="profile">
+            <img src="./img/home/header/User-Avatar.svg" alt="User-Avatar" id="User-Avatar" />
+          </a>
+        </div>
       </div>
-      <!-- </div> -->
     </header>
 
     <navbar>
-      <div class="navbar" style="float: left">
+      <!-- 기본 버전 -->
+      <div id="navBarA" class="navBar active">
         <div class="navbarTop">
           <div class="Menu">
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/navbar/home-fill.svg" alt="Home" class="Menu-Item" />
+                <img src="./img/home/navbar/home-fill.svg" alt="Small-Home" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">Home</div>
@@ -55,7 +62,7 @@
             </div>
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/navbar/explore.svg" alt="Explore" class="Menu-Item" />
+                <img src="./img/home/navbar/explore.svg" alt="Small-Explore" class="Menu-Item" />
               </div>
               <div class="Title">
                 <div class="typo">Explore</div>
@@ -63,9 +70,49 @@
             </div>
             <div class="Menu-Item">
               <div class="navIcon">
-                <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="Menu-Item" />
+                <img src="./img/home/navbar/subscriptions.svg" alt="Small-Subscription" class="Menu-Item" />
               </div>
               <div class="Title">
+                <div class="typo">Subscription</div>
+              </div>
+            </div>
+            <div class="Menu-Item">
+              <div class="navIcon">
+                <img src="./img/home/navbar/library.svg" alt="Small-Library" class="Menu-Item" />
+              </div>
+              <div class="Title">
+                <div class="typo">Library</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 확장 버전 -->
+      <div id="navBarB" class="navBar">
+        <div class="expand-navbarTop">
+          <div class="expand-menu">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/home-fill.svg" alt="Home" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Home</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="navIcon">
+                <img src="./img/home/navbar/explore.svg" alt="Explore" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Explore</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="navIcon">
+                <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
                 <div class="typo">Subscription</div>
               </div>
             </div>
@@ -74,53 +121,53 @@
 
         <div class="border"></div>
 
-        <div class="navbarTop-2">
-          <div class="Menu">
-            <div class="Menu-Item">
-              <div class="navIcon">
+        <div class="expand-navbarTop-2">
+          <div class="expand-menu">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/navbar/library.svg" alt="Library" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">Library</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/navbar/history.svg" alt="History" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">History</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/navbar/yourVideos.svg" alt="Your Video" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">Your Video</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/navbar/watchLater.svg" alt="Watch Later" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">Watch Later</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/navbar/liked.svg" alt="Liked Videos" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">Liked Videos</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/navbar/arrowBottom.svg" alt="Show More" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">Show More</div>
               </div>
             </div>
@@ -128,75 +175,74 @@
         </div>
 
         <div class="border"></div>
-        <!-- menu on/off -->
         <div class="NavbarSubscriptions">
           <div class="Menu-Title">
             <div class="SUBSCRIPTIONS">
               <div class="typo2">SUBSCRIPTION</div>
             </div>
           </div>
-          <div class="Menu">
-            <div class="Menu-Item">
-              <div class="navIcon">
+          <div class="expand-menu">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/avatar/User-Avatar1.png" alt="USER1" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">USER1</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/avatar/User-Avatar2.png" alt="USER2" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">USER2</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/avatar/User-Avatar3.png" alt="USER3" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">USER3</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/avatar/User-Avatar3.png" alt="USER4" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">USER4</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/avatar/User-Avatar3.png" alt="USER5" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">USER5</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/avatar/User-Avatar3.png" alt="USER6" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">USER6</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/avatar/User-Avatar3.png" alt="USER7" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">USER7</div>
               </div>
             </div>
-            <div class="Menu-Item">
-              <div class="navIcon">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
                 <img src="./img/home/avatar/User-Avatar3.png" alt="USER8" class="Menu-Item" />
               </div>
-              <div class="Title">
+              <div class="expand-title">
                 <div class="typo">USER8</div>
               </div>
             </div>
@@ -212,28 +258,28 @@
                 <div class="typo2">MORE FROM YOUTUBE</div>
               </div>
             </div>
-            <div class="Menu">
-              <div class="Menu-Item">
-                <div class="navIcon">
+            <div class="expand-menu">
+              <div class="expand-menu-item">
+                <div class="expand-navIcon">
                   <img src="./img/home/navbar/premium.svg" alt="Youtube Premium" class="Menu-Item" />
                 </div>
-                <div class="Title">
+                <div class="expand-title">
                   <div class="typo">Youtube Premium</div>
                 </div>
               </div>
-              <div class="Menu-Item">
-                <div class="navIcon">
+              <div class="expand-menu-item">
+                <div class="expand-navIcon">
                   <img src="./img/home/navbar/gaming.svg" alt="Gaming" class="Menu-Item" />
                 </div>
-                <div class="Title">
+                <div class="expand-title">
                   <div class="typo">Gaming</div>
                 </div>
               </div>
-              <div class="Menu-Item">
-                <div class="navIcon">
+              <div class="expand-menu-item">
+                <div class="expand-navIcon">
                   <img src="./img/home/navbar/live.svg" alt="Live" class="Menu-Item" />
                 </div>
-                <div class="Title">
+                <div class="expand-title">
                   <div class="typo">Live</div>
                 </div>
               </div>
@@ -241,7 +287,6 @@
           </div>
         </div>
       </div>
-
     </navbar>
 
     <!-- 가운데 큰 영상 -->
