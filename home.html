@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/home.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
-    <title>Document</title>
+    <title>home</title>
   </head>
   <body>
     <header>
       <div class="header">
-        <a href="javascript:void(0);" onclick="toggleNavbar()">
-          <img src="./img/home/header/hamburger.svg" alt="hamburger" class="hamburger"/>
-        </a>
-        <a href="">
-          <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
-        </a>
-        <div id="search-box">
+        <div class="header_lhamburger_logo">
+          <div class="icon">
+            <button id="hamburger" class="hambuger-btn">
+              <img src="./img/home/header/hamburger.svg" alt="hambuger-img" class="hambuger-img"/>
+            </button>
+          </div>
+          <div class="Logo">
+            <a href="">
+              <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
+            </a>
+          </div>
+        </div>
+
+        <div class="header_search-box">
           <input type="text" id="search" placeholder="Search" />
           <button id="search-btn" onclick="searchVideos()">
             <img src="./img/home/header/search.svg" alt="Search" class="icon" id="search-icon" />
           </button>
-        </div>
-
-        <div class="user-api">
           <a href="mic">
             <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
-          </a>
+          </a>          
+        </div>
+
+        <div class="header_user-api">
+
           <a href="create">
             <img src="./img/home/header/create.svg" alt="create" class="create" />
           </a>
@@ -34,42 +42,15 @@
             <img src="./img/home/header/notifications.svg" alt="notifications" class="notifications" />
           </a>
           <a href="profile">
-            <img src="./img/home/header/User-Avatar.png" alt="User-Avatar" id="User-Avatar" />
+            <img src="./img/home/header/User-Avatar.svg" alt="User-Avatar" id="User-Avatar" />
           </a>
         </div>
       </div>
     </header>
 
-    <nav>
-      <button id="slide-left" type="button"><</button>
-      <div class="button">
-        <button class="buttonAll" id="" onclick="">All</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-        <button class="buttonItem" id="" onclick="">Item</button>
-      </div>
-      <button id="slide-right" type="button">></button>
-      <div class="Top-Menu">
-        <img src="./img/home/nav/Top-Menu.svg" alt="top-Menu" id="top-Menu" />
-      </div>
-    </nav>
-
     <navbar>
-      <div class="navbar">
+      <!-- 기본 버전 -->
+      <div id="navBarA" class="navBar active">
         <div class="navbarTop">
           <div class="Menu">
             <div class="Menu-Item">
@@ -108,7 +89,8 @@
         </div>
       </div>
 
-      <!-- <div class="expand-navbar">
+      <!-- 확장 버전 -->
+      <div id="navBarB" class="navBar">
         <div class="expand-navbarTop">
           <div class="expand-menu">
             <div class="expand-menu-item">
@@ -306,19 +288,47 @@
           </div>
         </div>
       </div>
-    </navbar> -->
+    </navbar>
 
     <section>
-      <div id="mainContainer">
-        <div id="videoList"></div>
+      <div class="section">
+        <nav>
+          <div class="top_menu">
+            <button id="slide-left" type="button"><</button>
+            <div class="button">
+              <button class="buttonAll" id="" onclick="">All</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+              <button class="buttonItem" id="" onclick="">Item</button>
+            </div>
+            <button id="slide-right" type="button">></button>
+          </div>
+        </nav>
+
+        <div id="mainContainer">
+          <div id="videoList"></div>
+        </div>
+        <div id="mainContainer2">
+          <div id="searchResults"></div>
+        </div>
       </div>
-      <div id="mainContainer2">
-        <div id="searchResults"></div>
-      </div>
+
     </section>
   </body>
   <script src="js/js_1.js"></script>
   <script src="js/js_2.js"></script>
 </html>
-
-<!-- nav 밑에 navbar 깔리는 현상 해결해야함 -->

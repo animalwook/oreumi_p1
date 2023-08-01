@@ -60,13 +60,54 @@
 
 
 /* ---------------navbar on/off------------- */
-function toggleNavbar() {
-  var navbar = document.querySelector(".navbar");
-  var expandNavbar = document.querySelector(".expand-navbar");
+window.addEventListener('resize', function() {
+  if (window.innerWidth < 900) {
+      const navBarA = document.getElementById('navBarA');
+      if (navBarA) navBarA.style.display = 'none';
 
-  navbar.classList.toggle("displayNone");
-  expandNavbar.classList.toggle("display");
-}
+      const navBarB = document.getElementById('navBarB');
+      if (navBarB) navBarB.style.display = 'none';
+  }
+  else {
+      const navBarA = document.getElementById('navBarA');
+      if (navBarA) navBarA.style.display = '';
+
+      const navBarB = document.getElementById('navBarB');
+      if (navBarB) navBarB.style.display = '';
+  }
+});
+
+document.getElementById('hamburger').addEventListener('click', function() {
+  const navBarA = document.getElementById('navBarA');
+  const navBarB = document.getElementById('navBarB');
+
+  if(window.innerWidth >= 900){
+    if (navBarA.classList.contains('active')) {
+      navBarA.classList.remove('active');
+      navBarB.classList.add('active');
+    } else {
+      navBarB.classList.remove('active');
+      navBarA.classList.add('active');
+    }
+  }
+});
+
+document.getElementById('navBarHamburger').addEventListener('click', function() {
+  const navBarC = document.getElementById('navBarC');
+  const overlay = document.getElementById('overlay');
+
+  navBarC.classList.remove('active');
+  overlay.classList.remove('visible');
+});
+
+document.getElementById('overlay').addEventListener('click', function() {
+  const navBarC = document.getElementById('navBarC');
+  const overlay = document.getElementById('overlay');
+
+  navBarC.classList.remove('active');
+  overlay.classList.remove('visible');
+});
+
 
 
 function isMiddlePage() {
@@ -118,8 +159,3 @@ const slideRight = document.getElementById("slide-right");
 slideRight.onclick = () => {
   document.getElementsByClassName("button")[0].scrollLeft += 300;
 };
-
-
-
-
-

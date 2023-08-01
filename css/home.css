@@ -41,7 +41,7 @@ a {
     background-color: #212121;
 }
 
-.header_logo,
+.header_lhamburger_logo,
 .header_search-box,
 .header_user-api {
   display: flex;
@@ -58,19 +58,17 @@ a {
   }
 
 
-.header_search-box img{
+.header_search-box button{
     border: 1px solid #303030;
-    background-color: #303030;
+    background-color: #212121;
     border-left: none;
-    height: 32px;
-    width: 65px;
+    height: 36px;
+    width: 50px;
 }
 
 .header_search-box #search-icon {
     width: 32px; 
     height: 32px; 
-    border-radius: 50%; 
-    background-color: black; 
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -79,9 +77,11 @@ a {
     width: 360px;
     height: 32px;
     border: 1px solid #303030;
-    background-color: #121212;
+    background-color: #FFFFFF;
     font-size: 16px;
     padding: 3px 8px;
+    border-radius: 50px;
+
 }
 
 .header_search-box input::placeholder {
@@ -343,23 +343,23 @@ nav {
     margin-top: 56px;
     padding-left: auto;
 }
-/* -------------?곷떒 硫붾돱 諛?----------- */
+
 
 
 nav .button {
-	background-color:rgba(0, 0, 0, 0.2);/*源뚮쭔??0,0,0) 20% 遺덊닾紐낅룄*/
+	background-color:rgba(0, 0, 0, 0.2);
     width: 62vw;
     height: 32px;
     font-family: Roboto;
     display: flex;
-    align-items: center; /* ?몃줈 諛⑺뼢 媛?대뜲 ?뺣젹 */
-    justify-content: center; /* 媛濡?諛⑺뼢 媛?대뜲 ?뺣젹 */
+    align-items: center;
+    justify-content: center; 
     overflow-x: hidden;
     overflow-y: hidden;
   }
 
   .buttonAll+.buttonItem, .buttonItem+.buttonItem {
-  margin-left: 5px; /*踰꾪듉 媛?媛꾧꺽 議곗젅*/
+  margin-left: 5px; 
 }
   
   .buttonAll {
@@ -367,8 +367,8 @@ nav .button {
     height: 32px;
     gap: 10px;
     display: flex;
-    align-items: center; /* 媛濡?諛⑺뼢 媛?대뜲 ?뺣젹 */
-    justify-content: center; /* ?몃줈 諛⑺뼢 媛?대뜲 ?뺣젹 */
+    align-items: center; 
+    justify-content: center; 
   }
   
   .buttonItem {
@@ -376,8 +376,8 @@ nav .button {
     height: 32px;
     gap: 10px;
     display: flex;
-    align-items: center; /* 媛濡?諛⑺뼢 媛?대뜲 ?뺣젹 */
-    justify-content: center; /* ?몃줈 諛⑺뼢 媛?대뜲 ?뺣젹 */
+    align-items: center; 
+    justify-content: center; 
   }
   
   .buttonAll, .buttonItem {
@@ -392,7 +392,7 @@ nav .button {
   .buttonAll:hover, .buttonItem:hover {
       color: #303030;
       background-color: #FFFFFF;
-      /* ?몃쾭留곸떆 諛곌꼍?됱긽 */
+
   }
 
   .buttonAll:active, .buttonItem:active {
@@ -409,6 +409,9 @@ nav .button {
 
 /* -----------top-menu-------------- */
 
+.top_menu {
+    top: auto;
+}
 #slide-left {
     background-color: #303030;
     color: #FFFFFF;
@@ -490,47 +493,3 @@ nav .button {
 /* -----------thumbnail-------------- */
 /* -----------------section--------------- */
 
-
-
-/*----------- */
-
-
-/* ?붾㈃???ш쾶 ?ㅼ슱寃쎌슦 */
-/* @media screen and (min-width:768px) {
-    body {
-        padding: 16px 48px 0 240px;
-      }
-
-    .navbar {
-        left: 0;
-        padding: 19px 24px 0;
-        width: 88px;
-        float: left;
-
-    }
-
-    main {
-        padding-top: 20px;
-        padding-left: 0;
-      }
-
-    header {
-    }
-    
-    header .header {
-        height: 56px;
-    }
-
-
-
-    header .hamburger {
-        display: block;
-        width: 24px;
-        height: 24px;
-        padding: 5px 3px 6px 3px;
-        margin: 11px 0px 10px 21px;
-    }
-    header .Youtube-Logo {
-        
-    }
-} */

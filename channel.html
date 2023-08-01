@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/css_1.css" />
     <link rel="stylesheet" type="text/css" href="css/css_2.css" />
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/channel.css" />
     <title>Document</title>
   </head>
@@ -243,44 +242,6 @@
         </div>
       </div>
 
-      <!-- <div class="navbar-small">
-        <div class="navbarTop-small">
-          <div class="Menu-small">
-            <div class="Menu-Item-small">
-              <div class="navIcon-small">
-                <img src="./img/home/navbar/home-fill.svg" alt="Home" class="Menu-Item-small" />
-              </div>
-              <div class="Title-small">
-                <div class="typo">Home</div>
-              </div>
-            </div>
-            <div class="Menu-Item-small">
-              <div class="navIcon-small">
-                <img src="./img/home/navbar/explore.svg" alt="Explore" class="Menu-Item-small" />
-              </div>
-              <div class="Title-small">
-                <div class="typo">Explore</div>
-              </div>
-            </div>
-            <div class="Menu-Item-small">
-              <div class="navIcon-small">
-                <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="Menu-Item-small" />
-              </div>
-              <div class="Title-small">
-                <div class="typo">Subscription</div>
-              </div>
-            </div>
-            <div class="Menu-Item-small">
-              <div class="navIcon-small">
-                <img src="./img/home/navbar/library.svg" alt="Library" class="Menu-Item-small" />
-              </div>
-              <div class="Title-small">
-                <div class="typo">Library</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </navbar>
 
     <!-- 가운데 큰 영상 -->
@@ -299,23 +260,25 @@
         </div>
         <button class="subscribes-btn" onclick="">SUBSCRIBES</button>
       </div>
-      <div class="channel-toolbar">
-        <button id="channel-toolbar-home" class="toolbar-btn">HOME</button>
-        <button id="channel-toolbar-videos" class="toolbar-btn">VIDEOS</button>
-        <button id="channel-toolbar-playlists" class="toolbar-btn">PLAYLISTS</button>
-        <button id="channel-toolbar-community" class="toolbar-btn">COMMUNITY</button>
-        <button id="channel-toolbar-channels" class="toolbar-btn">CHANNELS</button>
-        <button id="channel-toolbar-about" class="toolbar-btn">ABOUT</button>
-        <div class="channel-toolbar-search">
-          <button id="channel-toolbar-search-icon" class="toolbar-search-btn">
-            <img src="img/home/header/search.svg" alt="search" class="toolbar-search-btn" />
-          </button>
-          <input type="text" id="channel-toolbar-search-box" />
-          <button id="channel-toolbar-left-arrow">
-            <img src="img/channel/leftArrow.svg" alt="leftArrow" class="toolbar-search-btn" />
-          </button>
+      <div class="channel-toolbar-wrapper">
+        <button id="channel-toolbar-left-arrow" class="toolbar-btn" type="button"><</button>
+        <div class="channel-toolbar">
+          <button id="channel-toolbar-home" class="toolbar-btn">HOME</button>
+          <button id="channel-toolbar-videos" class="toolbar-btn">VIDEOS</button>
+          <button id="channel-toolbar-playlists" class="toolbar-btn">PLAYLISTS</button>
+          <button id="channel-toolbar-community" class="toolbar-btn">COMMUNITY</button>
+          <button id="channel-toolbar-channels" class="toolbar-btn">CHANNELS</button>
+          <button id="channel-toolbar-about" class="toolbar-btn">ABOUT</button>
+          <div class="channel-toolbar-search">
+            <button id="channel-toolbar-search-icon" class="toolbar-search-btn">
+              <img src="img/home/header/search.svg" alt="search" class="toolbar-search-btn" />
+            </button>
+            <input type="text" id="channel-toolbar-search-box" />
+          </div>
         </div>
+        <button id="channel-toolbar-right-arrow" class="toolbar-btn" type="button">></button>
       </div>
+
       <div class="youtube-player">
         <img src="img/channel/Player.svg" alt="Player" class="youtube-player-image" />
         <div class="youtube-player-info">
@@ -388,4 +351,5 @@
   <script src="js/js_1.js"></script>
   <script src="js/js_2.js"></script>
   <script src="js/margin.js"></script>
+  <script src="js/arrow.js"></script>
 </html>
