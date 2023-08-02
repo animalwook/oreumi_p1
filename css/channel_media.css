@@ -12,6 +12,7 @@
   border-radius: 100px;
 }
 
+
 body {
   font-family: Roboto;
   background-color: #212121;
@@ -124,25 +125,17 @@ background-color: #212121;
   background: rgba(255, 255, 255, 1.0);
 }
 /* -------------- overlay -------------*/
-/* @media (min-width: 900px) {
-  #navBarA {
+@media (min-width: 1366px) {
+  #navBarB {
     display: flex;
   }
-
-  #navBarB.active {
+}
+@media (max-width: 540px) {
+  .navBar {
     display: flex;
   }
 }
 
-@media (max-width: 899px) {
-  #navBarA.active {
-    display: none;
-  }
-
-  #navBarB.active {
-    display: none;
-  }
-} */
 
 /* ---------------navBar-hover--------------- */
 .Menu-Item:hover {
@@ -337,110 +330,57 @@ padding: 8px 0px 8px 0px;
   gap: 12px;
 }
 
+/* ----------------------------navbar끝나는부분------------- */
 
-/* -------------------navbar끝나는부분------------- */
+/* ----------------------------채널섹션부분------------- */
 
-
-/* ----------------main 시작 ------------- */
-.main {
-  padding-top: 56px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* -------------section 비디오 시작-------------- */
 .section {
-  width: calc(100vw - 500px);
+  padding-top: 51px;
   padding-left: 80px;
-  height: auto;
-}
-
-
-.videoInfo {
-  padding: 20px 0px 20px 0px;
-
-}
-
-.videoInfoTitle {
-  color: var(--white-color, #FFF);
-  font-variant-numeric: stacked-fractions;
-  font-feature-settings: 'hlig' on, 'dlig' on;
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.18px;
-}
-
-.videoInfoDetails {
-  display: flex;
-  justify-content: space-between;
-}
-.videoInfoView, .videoInfoDate {
-  color: var(--gray-color, #AAA);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.videoInfoIcons {
-  float:right;}
-
-#videoInfoIconsLike,#videoInfoIconslike,#videoInfoIconsShare,#videoInfoIconsSave,#videoInfoIconsMore {
   background-color: #212121;
-  height: 36px;
-  border-radius: 40px;
 }
-
-.videoText {
-  color: var(--white-color, #FFF);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  line-height: normal;
-  text-transform: uppercase;
-  margin: 0 10px;
-  padding: 1px 0;
-  justify-content: center;
+/* 채널 상단 */
+.channel-cover {
+  width: 100%;
+  object-fit: cover;
+  height: 192px;
 }
-
-/* 채널 프로필부분 */
-
-
-
-.videoDesc {
-  margin: 20px 0;
-  display:flex;
-}
-.videoDec2 {
+.channel-title {
+  width: auto;
+  height: 100%;
   display: flex;
+  align-items: center;
+  background-color: #212121;
+  color: #aaa;
 }
-.videoDescChannel {
-  padding: 0 10px;
+
+/* 구독 정보 */
+
+.channel-avatar {
+  margin: 16px 24px 4px 65px;
+  border-radius: 50px;
+  justify-content: flex-start;
 }
-#videoDescChannelName {
-  color: var(--white-color, #FFF);
-  font-family: Roboto;
+
+.channel-title-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.channel-title-name {
+  font-size: 24px;
+  color: #ffffff;
+  margin-left: 24px;
+}
+
+.channel-title-subscribers {
   font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  color: #aaaaaa;
+  margin-left: 24px;
 }
 
-#videoDescChannelSubcsriber {
-  color: var(--gray-color, #AAA);
-  font-family: Roboto;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-#videoDescChannelSubscribeBtn {
-  float:right;
+.subscribes-btn {
   width: 116px;
   height: 36px;
   background-color: #cc0000;
@@ -455,7 +395,7 @@ padding: 8px 0px 8px 0px;
 
 /* 구독중 버튼 전환 임시코드 */
 
-#videoDescChannelSubscribeBtn:hover {
+.subscribes-btn:hover {
   width: 116px;
   height: 36px;
   background-color: #aaaaaa;
@@ -466,80 +406,197 @@ padding: 8px 0px 8px 0px;
   line-height: normal;
 }
 
-.videoDescChannelExplanation {
+/* 툴바 */
+.channel-toolbar-wrapper {
   display: flex;
-  padding: 20px 0;
-  width: 100%;
+  background-color: #212121;
+  padding: 0 50px; 
 }
 
-.videoComment {
-  padding: 10px 0;
+.channel-toolbar {
+  background-color: #212121;
+  height: 48px;
+  display: flex;
+  overflow: hidden; 
 }
 
-/* -------------section 비디오 끝-------------- */
-
-/* -------------aside 비디오부분 시작-------------- */
-.secondary {
-  margin-left: 10px;
-  float:right;
+.toolbar-btn {
+  border: 0;
+  background-color: #212121;
+  color: #aaa;
 }
 
-.secondaryVideos {
-  width: 350px;
-  height: auto;
+.toolbar-btn:hover {
+  border: 0;
+  background-color: #aaa;
+  color: #fff;
 }
 
-.topMenuTags {
-  padding: 8px 12px;
+
+
+/* 우측 search-box 부분 */
+
+.channel-toolbar-search {
+  background-color: #212121;
+  width: 296px;
+  height: 48px;
+  display: flex;
+}
+
+.toolbar-search-btn {
+  border: 0;
+  background-color: #212121;
+  color: #aaaaaa;
+  padding-right: 24px;
+}
+
+.toolbar-search:hover {
+  border: 0;
+  background-color: #aaaaaa;
+  color: #212121;
+}
+
+#channel-toolbar-search-icon {
+  border: 0;
+  width: 48px;
+  height: 47px;
+}
+
+#channel-toolbar-search-box{
+  border: 0;
+  background-color: #aaaaaa;
+  color: #fff;
+  width: 170px;
+  height: 36px;
+  font-size: 17px;
+  border-radius: 50px;
+}
+
+#channel-toolbar-search-box::placeholder {
+  color: #fff;
+}
+
+
+
+#channel-toolbar-left-arrow {
+  border: 0;
+  background-color: #212121;
+  width: 47px;
+  height: 47px;
+}
+
+/* 큰 영상 */
+
+.youtube-player {
+  width: 800px;
+  height: 286px;
+  margin: 24px 0px 24px 0px;
+  padding-left: 65px;
+  /* padding-bottom: 16px; */
+  display: flex;
+  justify-content: center;
+}
+
+.youtube-player-info {
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+  margin: 16px 0px 24px 0px;
+  width: 400px;
+  height: 238px;
 }
 
-.topMenuTag {
-  border-radius: 32px;
-  background: #FFF;
-}
-
-
-
-.secondaryVideo {
+.youtube-player-title {
   display: flex;
-  color: var(--white-color, #FFF);
-  font-family: Roboto;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 142.857% */
-  padding: 7px 0px;
-  align-items: flex-start;
+  font-weight: 700;
+  padding-bottom: 20px;
+  /* word-break: break-word; */
 }
 
-.secondaryVideoDetails {
-padding: 5px 8px;
-align-items: center;
+.youtube-player-views {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #aaa;
+  padding-bottom: 19px;
 }
 
+.youtube-player-desc {
+  display: block;
+  font-size: 14px;
+  word-break: break-word;
+}
 
-.secondaryVideoInfo {
-  color: var(--gray-color, #AAA);
-  font-family: Roboto;
+/* 구분선 */
+
+.division-line {
+  /* display: flex;
+  box-sizing: border-box;
+  justify-content: flex-start; */
+  width: 1070px;
+  border-top: 1px solid #303030;
+  margin-left: 65px;
+}
+
+/* 작은 영상 */
+
+.play-btn {
+  width: 1070px;
+  height: 44px;
+  padding-left: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.play-info {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.play-arrow-btn {
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-all {
+  font-size: 16px;
+  font-weight: 700;
+  color: #aaa;
+}
+
+.play-list {
+  width: 1070px;
+  height: 194px;
+  display: flex;
+  margin: 16px 0px 24px 0px;
+  padding-left: 65px;
+  padding-bottom: 24px;
+}
+
+.Video-image1.Video-image2.Video-image3.Video-image4.Video-image5 {
+  width: 210px;
+  height: 118px;
+}
+
+.video-title {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.video-uploader {
+  display: block;
   font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px; 
+  color: #aaa;
 }
-/* -------------aside 비디오부분 끝 -------------- */
 
-
-
-/* 반응현웹 */
-
-@media ONLY screen and (max-width: 1280PX){
-
-  
-  .secondary {
-    display: none;
-  }
-  
+.video-views {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
 }
