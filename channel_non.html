@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/channel.css" />
+    <title>channel</title>
+  </head>
+  <body>
+    <!------- 헤더 시작------->
+
+    <header>
+      <div class="header">
+        <div class="header_lhamburger_logo">
+          <button id="hamburger" class="hambuger-btn">
+            <img src="./img/home/header/hamburger.svg" alt="hamburger-img" class="hambuger-img" />
+          </button>
+          <a href="">
+            <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
+          </a>
+        </div>
+
+        <div class="header_search-box">
+          <input type="text" id="search" placeholder="Search" />
+          <button id="search-btn" onclick="searchVideos()">
+            <img src="./img/home/header/search.svg" alt="Search" class="icon" id="search-icon" />
+          </button>
+          <a href="mic">
+            <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
+          </a>
+        </div>
+
+        <div class="header_user-api">
+          <a href="create">
+            <img src="./img/home/header/create.svg" alt="create" class="create" />
+          </a>
+          <a href="notifications">
+            <img src="./img/home/header/notifications.svg" alt="notifications" class="notifications" />
+          </a>
+          <a href="profile">
+            <img src="./img/home/header/User-Avatar.svg" alt="User-Avatar" id="User-Avatar" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <!------- 헤더 끝------->
+
+    <!------- 네비게이션바 시작------->
+    <navbar>
+      <!-- 기본 버전 시작-->
+
+      <div id="navBarA" class="navBar active">
+        <div class="navbarTop">
+          <div class="Menu">
+            <div class="Menu-Item">
+              <div class="navIcon">
+                <img src="./img/home/navbar/home-fill.svg" alt="Small-Home" class="Menu-Item" />
+              </div>
+              <div class="Title">
+                <div class="typo">Home</div>
+              </div>
+            </div>
+            <div class="Menu-Item">
+              <div class="navIcon">
+                <img src="./img/home/navbar/explore.svg" alt="Small-Explore" class="Menu-Item" />
+              </div>
+              <div class="Title">
+                <div class="typo">Explore</div>
+              </div>
+            </div>
+            <div class="Menu-Item">
+              <div class="navIcon">
+                <img src="./img/home/navbar/subscriptions.svg" alt="Small-Subscription" class="Menu-Item" />
+              </div>
+              <div class="Title">
+                <div class="typo">Subs...</div>
+              </div>
+            </div>
+            <div class="Menu-Item">
+              <div class="navIcon">
+                <img src="./img/home/navbar/library.svg" alt="Small-Library" class="Menu-Item" />
+              </div>
+              <div class="Title">
+                <div class="typo">Library</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 기본 버전 끝 -->
+
+      <!-- 확장 버전 시작-->
+
+      <!-- 확장 버전 상단 -->
+
+      <div id="navBarB" class="navBar">
+        <div class="expand-navbarTop">
+          <div class="expand-menu">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/home-fill.svg" alt="Home" class="expandMenuItem" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Home</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="navIcon">
+                <img src="./img/home/navbar/explore.svg" alt="Explore" class="expandMenuItem" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Explore</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="navIcon">
+                <img src="./img/home/navbar/subscriptions.svg" alt="Subscription" class="expandMenuItem" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Subscription</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 확장 버전 중단 -->
+
+        <div class="expand-navbarTop-2">
+          <div class="expand-menu">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/library.svg" alt="Library" class="expandMenuItem" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Library</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/history.svg" alt="History" class="expandMenuItem" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">History</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/yourVideos.svg" alt="Your Video" class="expandMenuItem" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Your Video</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/watchLater.svg" alt="Watch Later" class="expandMenuItem" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Watch Later</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/liked.svg" alt="Liked Videos" class="expandMenuItem" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Liked Videos</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/navbar/arrowBottom.svg" alt="Show More" class="expandMenuItem" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">Show More</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 확장 버전 하단 -->
+
+        <div class="NavbarSubscriptions">
+          <div class="Menu-Title">
+            <div class="SUBSCRIPTIONS">
+              <div class="typo2">SUBSCRIPTION</div>
+            </div>
+          </div>
+          <div class="expand-menu">
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/avatar/User-Avatar1.png" alt="USER1" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">USER1</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/avatar/User-Avatar2.png" alt="USER2" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">USER2</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/avatar/User-Avatar3.png" alt="USER3" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">USER3</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/avatar/User-Avatar3.png" alt="USER4" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">USER4</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/avatar/User-Avatar3.png" alt="USER5" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">USER5</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/avatar/User-Avatar3.png" alt="USER6" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">USER6</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/avatar/User-Avatar3.png" alt="USER7" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">USER7</div>
+              </div>
+            </div>
+            <div class="expand-menu-item">
+              <div class="expand-navIcon">
+                <img src="./img/home/avatar/User-Avatar3.png" alt="USER8" class="Menu-Item" />
+              </div>
+              <div class="expand-title">
+                <div class="typo">USER8</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="NavbarMoreform">
+          <div class="NavbarSubscriptions">
+            <div class="Menu-Title">
+              <div class="SUBSCRIPTIONS">
+                <div class="typo2">MORE FROM YOUTUBE</div>
+              </div>
+            </div>
+            <div class="expand-menu">
+              <div class="expand-menu-item">
+                <div class="expand-navIcon">
+                  <img src="./img/home/navbar/premium.svg" alt="Youtube Premium" class="Menu-Item" />
+                </div>
+                <div class="expand-title">
+                  <div class="typo">Youtube Premium</div>
+                </div>
+              </div>
+              <div class="expand-menu-item">
+                <div class="expand-navIcon">
+                  <img src="./img/home/navbar/gaming.svg" alt="Gaming" class="Menu-Item" />
+                </div>
+                <div class="expand-title">
+                  <div class="typo">Gaming</div>
+                </div>
+              </div>
+              <div class="expand-menu-item">
+                <div class="expand-navIcon">
+                  <img src="./img/home/navbar/live.svg" alt="Live" class="Menu-Item" />
+                </div>
+                <div class="expand-title">
+                  <div class="typo">Live</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 확장 버전 끝 -->
+    </navbar>
+    <!------- 네비게이션바 끝------->
+
+    <!----------- 섹션 시작(탑메뉴+썸네일) ----------------->
+    <section>
+      <div class="section" id="section">
+        <!-- 가운데 큰 영상 -->
+        <div id="mainContent">
+          <div class="channel-cover">
+                      <!-- 커버이미지 -->
+
+          </div>
+          <div class="channel-title">
+            <!-- 채널 프로필 -->
+            <!-- <img src="img/channel/User-Avatar.svg" alt="User-Avatar" class="channel-avatar" id="channel-avatar" /> -->
+
+            <div class="channel-title-info">
+            <!-- 채널 정보1 -->
+              <!-- <span class="channel-title-name">Marcus Levin</span>
+              <span class="channel-title-subscribers">1.2M subscribers</span> -->
+            </div>
+            <button class="subscribes-btn" onclick="">SUBSCRIBES</button>
+          </div>
+
+          <div class="channel-toolbar-wrapper">
+            <button id="channel-toolbar-left-arrow" class="toolbar-btn" type="button"><</button>
+            <div class="channel-toolbar">
+              <button id="channel-toolbar-home" class="toolbar-btn">HOME</button>
+              <button id="channel-toolbar-videos" class="toolbar-btn">VIDEOS</button>
+              <button id="channel-toolbar-playlists" class="toolbar-btn">PLAYLISTS</button>
+              <button id="channel-toolbar-community" class="toolbar-btn">COMMUNITY</button>
+              <button id="channel-toolbar-channels" class="toolbar-btn">CHANNELS</button>
+              <button id="channel-toolbar-about" class="toolbar-btn">ABOUT</button>
+              <div class="channel-toolbar-search">
+                <button id="channel-toolbar-search-icon" class="toolbar-search-btn">
+                  <img src="img/home/header/search.svg" alt="search" class="toolbar-search-btn" />
+                </button>
+                <input type="text" id="channel-toolbar-search-box" />
+              </div>
+            </div>
+            <button id="channel-toolbar-right-arrow" class="toolbar-btn" type="button">></button>
+          </div>
+
+          <div class="youtube-player">
+            <!-- 채널 비디오 1 -->
+            <!-- <img src="img/channel/Player.svg" alt="Player" class="youtube-player-image" /> -->
+            <div class="youtube-player-info">
+              <!-- 채널 정보 2 -->
+              <!-- <span class="youtube-player-title">Blind Woodturner: Turning passion into fine art</span>
+              <span class="youtube-player-views">576,969 views . 3 weeks ago</span>
+              <span class="youtube-player-desc">
+                Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to hundreds of hours of YouTube videos and experimenting in his workshop. Now he’s a YouTube creator
+                himself, sells his products worldwide, and does demonstrations all around the country. -->
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 작은 영상 -->
+        <div id="sectionContent">
+          <div class="division-line" id="divLine"></div>
+          <div class="play-btn">
+            <span class="play-info">Search On ‘21</span>
+            <div class="play-arrow-btn">
+              <img src="img/channel/play.svg" alt="play" />
+            </div>
+            <span class="play-all">PLAY ALL</span>
+          </div>
+
+          <div class="play-list"></div>
+                <!-- 채널 비디오 리스트 -->
+          <div class="division-line" id="divLine"></div>
+          <div class="play-btn">
+            <span class="play-info">Search On ‘21</span>
+            <div class="play-arrow-btn">
+              <img src="img/channel/play.svg" alt="play" />
+            </div>
+            <span class="play-all">PLAY ALL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="js/js_2.js"></script>
+  <script src="js/arrow.js"></script>
+</html>
