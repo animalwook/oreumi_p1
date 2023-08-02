@@ -30,7 +30,7 @@ a {
   padding: 0 16px;
   display: flex;
   justify-content: space-between;
-  height: 56px;
+  height: 58px;
   position: fixed;
   top: 0;
   right: 0;
@@ -76,7 +76,7 @@ background-color: #212121;
   align-items: center;
 }
 .header_search-box input {
-  width: 360px;
+  width: 240px;
   height: 32px;
   border: 1px solid #303030;
   background-color: #FFFFFF;
@@ -338,93 +338,24 @@ padding: 8px 0px 8px 0px;
   gap: 12px;
 }
 
-/* ---------------nav------------- */
-nav {
-  display: flex;
-  position: fixed;
-  height:30px;
-  margin-top: 56px;
-  padding-left: auto;
-}
-
-
-
-nav .button {
-background-color:rgba(0, 0, 0, 0.2);
-  width: 62vw;
-  height: 32px;
-  font-family: Roboto;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.buttonAll+.buttonItem, .buttonItem+.buttonItem {
-margin-left: 5px; 
-}
-
-.buttonAll {
-  width: 40px;
-  height: 32px;
-  gap: 10px;
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-}
-
-.buttonItem {
-  width: 53px;
-  height: 32px;
-  gap: 10px;
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-}
-
-.buttonAll, .buttonItem {
-  background-color: #303030;
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border: 0;
-  border-radius: 32px;
-  cursor: pointer;
-}
-
-.buttonAll:hover, .buttonItem:hover {
-    color: #303030;
-    background-color: #FFFFFF;
-
-}
-
-.buttonAll:active, .buttonItem:active {
-    color: #FFFFFF;
-    background-color: #303030;
-}
 /* ----------------------------navbar끝나는부분------------- */
 
 /* ----------------------------채널섹션부분------------- */
+
+.section {
+  padding-top: 51px;
+  padding-left: 80px;
+  background-color: #212121;
+}
 /* 채널 상단 */
 .channel-cover {
-  display: block;
-  width: 1920px;
-  height: 192px;
+  width: 100%;
   object-fit: cover;
+  height: 192px;
 }
-
-/* navbar 활성화시 채널 상단 */
-
-/* .channel-cover-margin {
-  display: none;
-  width: 1680px;
-  height: 192px;
-  object-fit: cover;
-} */
-
 .channel-title {
   width: auto;
-  height: 100px;
+  height: 100%;
   display: flex;
   align-items: center;
   background-color: #212121;
@@ -484,13 +415,17 @@ margin-left: 5px;
 }
 
 /* 툴바 */
+.channel-toolbar-wrapper {
+  display: flex;
+  background-color: #212121;
+  padding: 0 50px; 
+}
 
 .channel-toolbar {
   background-color: #212121;
-  width: auto;
   height: 48px;
   display: flex;
-  padding-left: 65px;
+  overflow: hidden; 
 }
 
 .toolbar-btn {
@@ -505,35 +440,7 @@ margin-left: 5px;
   color: #fff;
 }
 
-#channel-toolbar-home {
-  width: 104px;
-  height: 47px;
-}
 
-#channel-toolbar-videos {
-  width: 113px;
-  height: 47px;
-}
-
-#channel-toolbar-playlists {
-  width: 136px;
-  height: 47px;
-}
-
-#channel-toolbar-community {
-  width: 148px;
-  height: 47px;
-}
-
-#channel-toolbar-channels {
-  width: 137px;
-  height: 47px;
-}
-
-#channel-toolbar-about {
-  width: 110px;
-  height: 47px;
-}
 
 /* 우측 search-box 부분 */
 
@@ -563,15 +470,21 @@ margin-left: 5px;
   height: 47px;
 }
 
-#channel-toolbar-search-box {
+#channel-toolbar-search-box{
   border: 0;
-  background-color: #212121;
+  background-color: #aaaaaa;
   color: #fff;
-  outline: none;
-  width: 210px;
-  height: 45px;
+  width: 170px;
+  height: 36px;
   font-size: 17px;
+  border-radius: 50px;
 }
+
+#channel-toolbar-search-box::placeholder {
+  color: #fff;
+}
+
+
 
 #channel-toolbar-left-arrow {
   border: 0;
