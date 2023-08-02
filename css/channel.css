@@ -1,0 +1,610 @@
+/* ------ modify-hamguger ------ */
+.hambuger-btn {
+  cursor: pointer;
+  background-color: #212121;
+  border: none;
+  background: none;
+  padding: 9px 9px 9px 9px;
+}
+
+.hambuger-btn:hover {
+  background: #494848;
+  border-radius: 100px;
+}
+
+
+body {
+  font-family: Roboto;
+  background-color: #212121;
+  color: white;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ---------header------------- */
+.header {
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #212121;
+}
+
+.header_hamburger_logo,
+.header_search-box,
+.header_user-api {
+display: flex;
+align-items: center;
+background-color: #212121;
+}
+
+.header_hamburger_logo {
+  gap:15px;
+  padding-left: 9px
+}
+
+.header_logo img {
+  margin-left:5px;
+}
+
+.header_logo svg {
+  height: 24px;
+}
+
+
+.header_search-box button{
+  border: 1px solid #303030;
+  background-color: #212121;
+  border-left: none;
+  height: 36px;
+  width: 50px;
+}
+
+.header_search-box #search-icon {
+  width: 32px; 
+  height: 32px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.header_search-box input {
+  width: 240px;
+  height: 32px;
+  border: 1px solid #303030;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  padding: 3px 8px;
+  border-radius: 50px;
+
+}
+
+.header_search-box input::placeholder {
+  color:#303030
+}
+
+.header_user-api {
+  display: flex;
+}
+
+
+
+.header_user-api img {
+  width: 24px;
+  height: 24px;
+}
+
+.header_user-api User-Avatar{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: grey;
+}
+/* ---------------NAVBAR CSS--------------- */
+.navBar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.navBar::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.navBar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6); 
+  border-radius: 4px;
+}
+
+.navBar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 1.0);
+}
+/* -------------- overlay -------------*/
+/* @media (min-width: 900px) {
+  #navBarA {
+    display: flex;
+  }
+
+  #navBarB.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 899px) {
+  #navBarA.active {
+    display: none;
+  }
+
+  #navBarB.active {
+    display: none;
+  }
+} */
+
+/* ---------------navBar-hover--------------- */
+.Menu-Item:hover {
+background-color: #494848;
+border-radius: 10px
+}
+
+.expand-menu-item:hover {
+background-color: #494848;
+border-radius: 10px
+}
+/* ---------------navBar-On/Off------------- */
+.navBar.active {
+  display: flex;
+}
+
+/* ---------------navBar------------- */
+.navBar {
+display: none;
+position: fixed;
+top: 58px;
+height: 100vh;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+background: #212121;
+overflow-y: auto;
+padding-right: 10;
+
+}
+
+.navBar-wide {
+width: 240px;
+}
+
+.navBar-narrow {
+width: 80px;
+}
+
+.navbarTop {
+display: flex;
+padding: 12px 4px;
+flex-direction: column;
+}
+
+.Menu {
+display: flex;
+padding: 8px 0px 8px 0px;
+flex-direction: column;
+gap: 10px;
+}
+
+.Menu-Item {    
+display: block;
+width: 72px;
+align-items: center;
+gap: 24px;
+padding: 8px 0px 8px 0px;
+}
+
+.Menu-Item-img {
+width: 20px;
+height: 20px;
+}
+
+.navIcon{
+display: flex;
+width: 24px;
+height: 24px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+padding-left: 24px;
+}
+
+.Title {
+display: flex;
+width: 72px;
+padding: 4px 0px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+}
+
+/* ---------------expand navBar--------------- */
+.expand-navbarTop, .expand-navbarTop-2 {
+  display: flex;
+  padding: 11px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.expand-menu {
+display: flex;
+padding: 8px 0px 8px 0px;
+flex-direction: column;
+align-items: flex-end;
+}
+
+.expand-menu-item {    
+display: flex;
+align-items: center;
+gap: 24px;
+padding: 8px 0px 8px 0px;
+}
+
+.expandMenuItem {
+  display: block;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 8px 8px 8px;
+}
+
+.expand-navIcon{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 24px;
+}
+
+.expand-title {
+  display: flex;
+  width: 144px;
+  padding: 4px 0px;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.expand-menuItemImg {
+  width: 24px;
+  height: 24px;
+}
+
+.border {
+  width: 224px;
+  height: 1px;
+  background: var(--border-color, #303030);
+}
+
+.Menu-Title{
+  display: flex;
+  width: 224px;
+  height: 32px;
+  padding-right: 0px;
+  align-items: center;
+}
+
+.typo {
+  color: var(--white-color, #FFF);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.typo2 {
+  color: var(--gray-color, #AAA);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.NavbarMoreform {
+  display: flex;
+  padding-top: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.SUBSCRIPTIONS {
+  display: flex;
+  padding: 8px 24px;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.NavbarSubscriptions{
+  display: flex;
+  padding-top: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* ----------------------------navbar끝나는부분------------- */
+
+/* ----------------------------채널섹션부분------------- */
+
+.section {
+  padding-top: 51px;
+  padding-left: 80px;
+  background-color: #212121;
+}
+/* 채널 상단 */
+.channel-cover {
+  width: 100%;
+  object-fit: cover;
+  height: 192px;
+}
+.channel-title {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #212121;
+  color: #aaa;
+}
+
+/* 구독 정보 */
+
+.channel-avatar {
+  margin: 16px 24px 4px 65px;
+  border-radius: 50px;
+  justify-content: flex-start;
+}
+
+.channel-title-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.channel-title-name {
+  font-size: 24px;
+  color: #ffffff;
+  margin-left: 24px;
+}
+
+.channel-title-subscribers {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-left: 24px;
+}
+
+.subscribes-btn {
+  width: 116px;
+  height: 36px;
+  background-color: #cc0000;
+  color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: 65px;
+}
+
+/* 구독중 버튼 전환 임시코드 */
+
+.subscribes-btn:hover {
+  width: 116px;
+  height: 36px;
+  background-color: #aaaaaa;
+  color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* 툴바 */
+.channel-toolbar-wrapper {
+  display: flex;
+  background-color: #212121;
+  padding: 0 50px; 
+}
+
+.channel-toolbar {
+  background-color: #212121;
+  height: 48px;
+  display: flex;
+  overflow: hidden; 
+}
+
+.toolbar-btn {
+  border: 0;
+  background-color: #212121;
+  color: #aaa;
+}
+
+.toolbar-btn:hover {
+  border: 0;
+  background-color: #aaa;
+  color: #fff;
+}
+
+
+
+/* 우측 search-box 부분 */
+
+.channel-toolbar-search {
+  background-color: #212121;
+  width: 296px;
+  height: 48px;
+  display: flex;
+}
+
+.toolbar-search-btn {
+  border: 0;
+  background-color: #212121;
+  color: #aaaaaa;
+  padding-right: 24px;
+}
+
+.toolbar-search:hover {
+  border: 0;
+  background-color: #aaaaaa;
+  color: #212121;
+}
+
+#channel-toolbar-search-icon {
+  border: 0;
+  width: 48px;
+  height: 47px;
+}
+
+#channel-toolbar-search-box{
+  border: 0;
+  background-color: #aaaaaa;
+  color: #fff;
+  width: 170px;
+  height: 36px;
+  font-size: 17px;
+  border-radius: 50px;
+}
+
+#channel-toolbar-search-box::placeholder {
+  color: #fff;
+}
+
+
+
+#channel-toolbar-left-arrow {
+  border: 0;
+  background-color: #212121;
+  width: 47px;
+  height: 47px;
+}
+
+/* 큰 영상 */
+
+.youtube-player {
+  width: 800px;
+  height: 286px;
+  margin: 24px 0px 24px 0px;
+  padding-left: 65px;
+  /* padding-bottom: 16px; */
+  display: flex;
+  justify-content: center;
+}
+
+.youtube-player-info {
+  flex-direction: column;
+  margin: 16px 0px 24px 0px;
+  width: 400px;
+  height: 238px;
+}
+
+.youtube-player-title {
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  /* word-break: break-word; */
+}
+
+.youtube-player-views {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #aaa;
+  padding-bottom: 19px;
+}
+
+.youtube-player-desc {
+  display: block;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+/* 구분선 */
+
+.division-line {
+  /* display: flex;
+  box-sizing: border-box;
+  justify-content: flex-start; */
+  width: 1070px;
+  border-top: 1px solid #303030;
+  margin-left: 65px;
+}
+
+/* 작은 영상 */
+
+.play-btn {
+  width: 1070px;
+  height: 44px;
+  padding-left: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.play-info {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.play-arrow-btn {
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-all {
+  font-size: 16px;
+  font-weight: 700;
+  color: #aaa;
+}
+
+.play-list {
+  width: 1070px;
+  height: 194px;
+  display: flex;
+  margin: 16px 0px 24px 0px;
+  padding-left: 65px;
+  padding-bottom: 24px;
+}
+
+.Video-image1.Video-image2.Video-image3.Video-image4.Video-image5 {
+  width: 210px;
+  height: 118px;
+}
+
+.video-title {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.video-uploader {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.video-views {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+}

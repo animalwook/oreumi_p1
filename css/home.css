@@ -12,6 +12,7 @@
   border-radius: 100px;
 }
 
+
 body {
   font-family: Roboto;
   background-color: #212121;
@@ -124,17 +125,25 @@ background-color: #212121;
   background: rgba(255, 255, 255, 1.0);
 }
 /* -------------- overlay -------------*/
-@media (min-width: 1366px) {
-  #navBarB {
+/* @media (min-width: 900px) {
+  #navBarA {
     display: flex;
   }
-}
-@media (max-width: 540px) {
-  .navBar {
+
+  #navBarB.active {
     display: flex;
   }
 }
 
+@media (max-width: 899px) {
+  #navBarA.active {
+    display: none;
+  }
+
+  #navBarB.active {
+    display: none;
+  }
+} */
 
 /* ---------------navBar-hover--------------- */
 .Menu-Item:hover {
@@ -328,210 +337,125 @@ padding: 8px 0px 8px 0px;
   align-items: flex-start;
   gap: 12px;
 }
-
-
-/* -------------------navbar끝나는부분------------- */
-
-
-/* ----------------main 시작 ------------- */
-.main {
-  padding-top: 56px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* -------------section 비디오 시작-------------- */
+/* ---------------nav------------- */
+/* -----------------section--------------- */
 .section {
-  width: calc(100vw - 500px);
-  padding-left: 80px;
-  height: auto;
+    padding-top: 56px;
+    padding-left: 80px;
+    margin-left: 20px
 }
+/* -----------top-menu-------------- */
+.section_top_tag {
+    display: flex;
+    width: 100%;    
+    background-color: #212121; 
+    justify-content: space-between;
+
+  }
 
 
-.videoInfo {
-  padding: 20px 0px 20px 0px;
-
-}
-
-.videoInfoTitle {
-  color: var(--white-color, #FFF);
-  font-variant-numeric: stacked-fractions;
-  font-feature-settings: 'hlig' on, 'dlig' on;
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.18px;
-}
-
-.videoInfoDetails {
-  display: flex;
-  justify-content: space-between;
-}
-.videoInfoView, .videoInfoDate {
-  color: var(--gray-color, #AAA);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.videoInfoIcons {
-  float:right;}
-
-#videoInfoIconsLike,#videoInfoIconslike,#videoInfoIconsShare,#videoInfoIconsSave,#videoInfoIconsMore {
+.tag_button {
   background-color: #212121;
-  height: 36px;
-  border-radius: 40px;
-}
-
-.videoText {
-  color: var(--white-color, #FFF);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  line-height: normal;
-  text-transform: uppercase;
-  margin: 0 10px;
-  padding: 1px 0;
-  justify-content: center;
-}
-
-/* 채널 프로필부분 */
-
-
-
-.videoDesc {
-  margin: 20px 0;
-  display:flex;
-}
-.videoDec2 {
   display: flex;
-}
-.videoDescChannel {
-  padding: 0 10px;
-}
-#videoDescChannelName {
-  color: var(--white-color, #FFF);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  overflow: hidden; 
 }
 
-#videoDescChannelSubcsriber {
-  color: var(--gray-color, #AAA);
-  font-family: Roboto;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-#videoDescChannelSubscribeBtn {
-  float:right;
-  width: 116px;
-  height: 36px;
-  background-color: #cc0000;
-  color: #ffffff;
+.tag_button_buttonAll, .tag_button_buttonItem {
+  background-color: #303030;
+  color: #FFFFFF;
+  padding: 10px 20px;
   border: 0;
-  border-radius: 2px;
-  font-weight: 700;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: 65px;
-}
-
-/* 구독중 버튼 전환 임시코드 */
-
-#videoDescChannelSubscribeBtn:hover {
-  width: 116px;
-  height: 36px;
-  background-color: #aaaaaa;
-  color: #ffffff;
-  border: 0;
-  border-radius: 2px;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.videoDescChannelExplanation {
-  display: flex;
-  padding: 20px 0;
-  width: 100%;
-}
-
-.videoComment {
-  padding: 10px 0;
-}
-
-/* -------------section 비디오 끝-------------- */
-
-/* -------------aside 비디오부분 시작-------------- */
-.secondary {
-  margin-left: 10px;
-  float:right;
-}
-
-.secondaryVideos {
-  width: 350px;
-  height: auto;
-}
-
-.topMenuTags {
-  padding: 8px 12px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.topMenuTag {
   border-radius: 32px;
-  background: #FFF;
-}
-
-
-
-.secondaryVideo {
+  cursor: pointer;
+  width: 53px;
+  height: 32px;
+  gap: 10px;
   display: flex;
-  color: var(--white-color, #FFF);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 142.857% */
-  padding: 7px 0px;
-  align-items: flex-start;
-}
-
-.secondaryVideoDetails {
-padding: 5px 8px;
-align-items: center;
+  align-items: center; 
+  justify-content: center; 
 }
 
 
-.secondaryVideoInfo {
-  color: var(--gray-color, #AAA);
-  font-family: Roboto;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px; 
+#slide-left {
+    background-color: #303030;
+    color: #FFFFFF;
+    border: none;
+    width: 24px;
+    height: 32px;
+    border-radius: 10px;
+    left: 0;
+    overflow-y: hidden;
+
 }
-/* -------------aside 비디오부분 끝 -------------- */
 
+#slide-right {
+    background-color: #303030;
+    color: #FFFFFF;
+    border: none;
+    width: 24px;
+    height: 32px;
+    border-radius: 10px;
+    right: 0;
+    overflow-y: hidden;
 
+}
 
-/* 반응현웹 */
+#slide-left:hover, #slide-right:hover {
+    background-color: #FFFFFF;
+    color: #303030;
+}
 
-@media ONLY screen and (max-width: 1280PX){
+#slide-left:active, #slide-right:active {
+    background-color: #303030;
+    color: #FFFFFF;
+}
 
-  
-  .secondary {
-    display: none;
+/* -----------top-menu-------------- */
+/* -----------thumbnail-------------- */
+
+.thumbnail {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: white;
+
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .video-card img {
+    width: 100%;
+  }
+  .video-card p {
+    margin: 5px 0;
+  }
+  .channel-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+    overflow: hidden;
+  }
+  .channel-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #videoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   
-}
+/* -----------thumbnail-------------- */
+/* -----------------section--------------- */
+
+
+
+/*----------- */
