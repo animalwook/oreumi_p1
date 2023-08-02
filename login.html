@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <style>
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      a {
+        text-decoration: none;
+        color: #1a73ec;
+        font-size: 15px;
+      }
+
+      .login_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 448px;
+        height: 500px;
+        border: 1px solid #d7d9dd;
+        border-radius: 10px;
+        padding: 48px 40px 36px 48px;
+      }
+
+      .google_logo {
+        width: 75px;
+      }
+
+      .login_box_title {
+        font-size: 24px;
+      }
+
+      .login_box_id {
+        font-size: 16px;
+      }
+
+      input {
+        width: 366px;
+        height: 54px;
+        border: 1px solid #d7d9dd;
+        border-radius: 5px;
+      }
+
+      input::placeholder {
+        font-size: 17px;
+        padding-left: 13px;
+      }
+
+      .login_box_forgetid {
+      }
+
+      .login_box_guestguide {
+        display: inline;
+      }
+
+      .login_box_guestinfo {
+        display: inline;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 박스와 하단부분 묶어주기 위해 사용 -->
+    <div class="main_container">
+      <!-- 박스 부분 -->
+      <main>
+        <div class="login_box">
+          <div class="login_box_logo">
+            <img src="./img/login/google_logo.svg" alt="google_logo" class="google_logo" />
+          </div>
+          <span class="login_box_title">로그인</span>
+          <span class="login_box_id">Gmail로 이동</span>
+          <div class="login_box_userid">
+            <input type="text" name="user_id" id="userId" placeholder="이메일 또는 휴대전화" />
+            <div class="login_box_forgetid">
+              <a href="#">이메일을 잊으셨나요?</a>
+            </div>
+            <div class="login_box_guestguide">
+              내 컴퓨터가 아닌가요? 게스트 모드를 사용하여 비공개로 로그인하세요.
+              <div class="login_box_guestinfo">
+                <a href="#">자세히 알아보기</a>
+              </div>
+            </div>
+            <div class="login_box_register">
+              <a href="#">계정 만들기</a>
+            </div>
+            <div class="login_box_next">
+              <a href="#">다음</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 부분 -->
+        <div class="footer">
+          <div class="language_select">
+            <select name="language_select" id="languageSelect">
+              <option value="korean">한국어</option>
+              <option value="english">english</option>
+              <option value="chinese">中文</option>
+              <option value="japanese">日本語</option>
+              <option value="french">français</option>
+            </select>
+          </div>
+          <div class="help_page">
+            <a href="#">도움말</a>
+          </div>
+          <div class="privacy_policy_page">
+            <a href="#">개인정보처리방침</a>
+          </div>
+          <div class="terms_page">
+            <a href="#">약관</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
