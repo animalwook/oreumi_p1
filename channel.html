@@ -8,15 +8,16 @@
   </head>
   <body>
     <!------- 헤더 시작------->
+
     <header>
       <div class="header">
         <div class="header_lhamburger_logo">
-            <button id="hamburger" class="hambuger-btn">
-              <img src="./img/home/header/hamburger.svg" alt="hambuger-img" class="hambuger-img"/>
-            </button>
-            <a href="">
-              <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
-            </a>
+          <button id="hamburger" class="hambuger-btn">
+            <img src="./img/home/header/hamburger.svg" alt="hamburger-img" class="hambuger-img" />
+          </button>
+          <a href="">
+            <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
+          </a>
         </div>
 
         <div class="header_search-box">
@@ -26,11 +27,10 @@
           </button>
           <a href="mic">
             <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
-          </a>          
+          </a>
         </div>
 
         <div class="header_user-api">
-
           <a href="create">
             <img src="./img/home/header/create.svg" alt="create" class="create" />
           </a>
@@ -47,7 +47,8 @@
 
     <!------- 네비게이션바 시작------->
     <navbar>
-      <!-- 기본 버전 -->
+      <!-- 기본 버전 시작-->
+
       <div id="navBarA" class="navBar active">
         <div class="navbarTop">
           <div class="Menu">
@@ -87,7 +88,12 @@
         </div>
       </div>
 
-      <!-- 확장 버전 -->
+      <!-- 기본 버전 끝 -->
+
+      <!-- 확장 버전 시작-->
+
+      <!-- 확장 버전 상단 -->
+
       <div id="navBarB" class="navBar">
         <div class="expand-navbarTop">
           <div class="expand-menu">
@@ -118,7 +124,7 @@
           </div>
         </div>
 
-        <div class="border"></div>
+        <!-- 확장 버전 중단 -->
 
         <div class="expand-navbarTop-2">
           <div class="expand-menu">
@@ -173,7 +179,8 @@
           </div>
         </div>
 
-        <div class="border"></div>
+        <!-- 확장 버전 하단 -->
+
         <div class="NavbarSubscriptions">
           <div class="Menu-Title">
             <div class="SUBSCRIPTIONS">
@@ -248,8 +255,6 @@
           </div>
         </div>
 
-        <div class="border"></div>
-
         <div class="NavbarMoreform">
           <div class="NavbarSubscriptions">
             <div class="Menu-Title">
@@ -286,84 +291,85 @@
           </div>
         </div>
       </div>
+      <!-- 확장 버전 끝 -->
     </navbar>
-<!------- 네비게이션바 끝------->
-<!----------- 섹션 시작(탑메뉴+썸네일) ----------------->
-   <section>
-    <div class="section">
-      <!-- 가운데 큰 영상 -->
-      <div id="mainContent">
-        <div class="channel-cover">
-          <img src="img/channel/Channel-Cover.svg" alt="Channel-Cover" class="channel-cover" id="channel-cover"/>
-        </div>
-        <div class="channel-title">
-          <img src="img/channel/User-Avatar.svg" alt="User-Avatar" class="channel-avatar" id="channel-avatar"/>
-         <div class="channel-title-info">
-           <span class="channel-title-name">Marcus Levin</span>
-           <span class="channel-title-subscribers">1.2M subscribers</span>
-         </div>
-         <button class="subscribes-btn" onclick="">SUBSCRIBES</button>
-        </div>
+    <!------- 네비게이션바 끝------->
 
-        <div class="channel-toolbar-wrapper">
-          <button id="channel-toolbar-left-arrow" class="toolbar-btn" type="button"><</button>
-          <div class="channel-toolbar">
-            <button id="channel-toolbar-home" class="toolbar-btn">HOME</button>
-            <button id="channel-toolbar-videos" class="toolbar-btn">VIDEOS</button>
-            <button id="channel-toolbar-playlists" class="toolbar-btn">PLAYLISTS</button>
-            <button id="channel-toolbar-community" class="toolbar-btn">COMMUNITY</button>
-            <button id="channel-toolbar-channels" class="toolbar-btn">CHANNELS</button>
-            <button id="channel-toolbar-about" class="toolbar-btn">ABOUT</button>
-            <div class="channel-toolbar-search">
-              <button id="channel-toolbar-search-icon" class="toolbar-search-btn">
-                <img src="img/home/header/search.svg" alt="search" class="toolbar-search-btn" />
-              </button>
-              <input type="text" id="channel-toolbar-search-box" />
+    <!----------- 섹션 시작(탑메뉴+썸네일) ----------------->
+    <section>
+      <div class="section">
+        <!-- 가운데 큰 영상 -->
+        <div id="mainContent">
+          <div class="channel-cover">
+            <img src="img/channel/Channel-Cover.svg" alt="Channel-Cover" class="channel-cover" id="channel-cover" />
+          </div>
+          <div class="channel-title">
+            <img src="img/channel/User-Avatar.svg" alt="User-Avatar" class="channel-avatar" id="channel-avatar" />
+            <div class="channel-title-info">
+              <span class="channel-title-name">Marcus Levin</span>
+              <span class="channel-title-subscribers">1.2M subscribers</span>
             </div>
-        </div>
-        <button id="channel-toolbar-right-arrow" class="toolbar-btn" type="button">></button>
-      </div>
+            <button class="subscribes-btn" onclick="">SUBSCRIBES</button>
+          </div>
 
-      <div class="youtube-player">
-        <img src="img/channel/Player.svg" alt="Player" class="youtube-player-image" />
-        <div class="youtube-player-info">
-          <span class="youtube-player-title">Blind Woodturner: Turning passion into fine art</span>
-          <span class="youtube-player-views">576,969 views . 3 weeks ago</span>
-          <span class="youtube-player-desc">
-            Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to hundreds of hours of YouTube videos and experimenting in his workshop. Now he’s a YouTube creator
-            himself, sells his products worldwide, and does demonstrations all around the country.
-          </span>
-        </div>
-      </div>
-    </div>
+          <div class="channel-toolbar-wrapper">
+            <button id="channel-toolbar-left-arrow" class="toolbar-btn" type="button"><</button>
+            <div class="channel-toolbar">
+              <button id="channel-toolbar-home" class="toolbar-btn">HOME</button>
+              <button id="channel-toolbar-videos" class="toolbar-btn">VIDEOS</button>
+              <button id="channel-toolbar-playlists" class="toolbar-btn">PLAYLISTS</button>
+              <button id="channel-toolbar-community" class="toolbar-btn">COMMUNITY</button>
+              <button id="channel-toolbar-channels" class="toolbar-btn">CHANNELS</button>
+              <button id="channel-toolbar-about" class="toolbar-btn">ABOUT</button>
+              <div class="channel-toolbar-search">
+                <button id="channel-toolbar-search-icon" class="toolbar-search-btn">
+                  <img src="img/home/header/search.svg" alt="search" class="toolbar-search-btn" />
+                </button>
+                <input type="text" id="channel-toolbar-search-box" />
+              </div>
+            </div>
+            <button id="channel-toolbar-right-arrow" class="toolbar-btn" type="button">></button>
+          </div>
 
-    <!-- 작은 영상 -->
-     <div id="sectionContent">
-      <div class="division-line" id="divLine"></div>
-      <div class="play-btn">
-        <span class="play-info">Search On ‘21</span>
-        <div class="play-arrow-btn">
-          <img src="img/channel/play.svg" alt="play" />
+          <div class="youtube-player">
+            <img src="img/channel/Player.svg" alt="Player" class="youtube-player-image" />
+            <div class="youtube-player-info">
+              <span class="youtube-player-title">Blind Woodturner: Turning passion into fine art</span>
+              <span class="youtube-player-views">576,969 views . 3 weeks ago</span>
+              <span class="youtube-player-desc">
+                Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to hundreds of hours of YouTube videos and experimenting in his workshop. Now he’s a YouTube creator
+                himself, sells his products worldwide, and does demonstrations all around the country.
+              </span>
+            </div>
+          </div>
         </div>
-        <span class="play-all">PLAY ALL</span>
-      </div>
-      
-      <div class="play-list">
-      </div>
 
-      <div class="division-line" id="divLine"></div>
-      <div class="play-btn">
-        <span class="play-info">Search On ‘21</span>
-        <div class="play-arrow-btn">
-          <img src="img/channel/play.svg" alt="play" />
+        <!-- 작은 영상 -->
+        <div id="sectionContent">
+          <div class="division-line" id="divLine"></div>
+          <div class="play-btn">
+            <span class="play-info">Search On ‘21</span>
+            <div class="play-arrow-btn">
+              <img src="img/channel/play.svg" alt="play" />
+            </div>
+            <span class="play-all">PLAY ALL</span>
+          </div>
+
+          <div class="play-list"></div>
+
+          <div class="division-line" id="divLine"></div>
+          <div class="play-btn">
+            <span class="play-info">Search On ‘21</span>
+            <div class="play-arrow-btn">
+              <img src="img/channel/play.svg" alt="play" />
+            </div>
+            <span class="play-all">PLAY ALL</span>
+          </div>
         </div>
-        <span class="play-all">PLAY ALL</span>
       </div>
-    </div>
     </section>
   </body>
   <script src="js/js_1.js"></script>
   <script src="js/js_2.js"></script>
-  <script src="js/margin.js"></script>
   <script src="js/arrow.js"></script>
 </html>

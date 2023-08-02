@@ -9,15 +9,16 @@
   </head>
   <body>
     <!------- 헤더 시작------->
+
     <header>
       <div class="header">
         <div class="header_lhamburger_logo">
-            <button id="hamburger" class="hambuger-btn">
-              <img src="./img/home/header/hamburger.svg" alt="hambuger-img" class="hambuger-img"/>
-            </button>
-            <a href="">
-              <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
-            </a>
+          <button id="hamburger" class="hambuger-btn">
+            <img src="./img/home/header/hamburger.svg" alt="hamburger-img" class="hambuger-img" />
+          </button>
+          <a href="">
+            <img src="./img/home/header/Youtube-Logo.svg" alt="Youtube-Logo" class="Youtube-Logo" />
+          </a>
         </div>
 
         <div class="header_search-box">
@@ -27,11 +28,10 @@
           </button>
           <a href="mic">
             <img src="./img/home/header/mic.svg" alt="mic" class="mic" />
-          </a>          
+          </a>
         </div>
 
         <div class="header_user-api">
-
           <a href="create">
             <img src="./img/home/header/create.svg" alt="create" class="create" />
           </a>
@@ -44,11 +44,14 @@
         </div>
       </div>
     </header>
+
     <!------- 헤더 끝------->
 
     <!------- 네비게이션바 시작------->
+
     <navbar>
       <!-- 기본 버전 -->
+
       <div id="navBarA" class="navBar active">
         <div class="navbarTop">
           <div class="Menu">
@@ -88,7 +91,12 @@
         </div>
       </div>
 
-      <!-- 확장 버전 -->
+      <!-- 기본 버전 끝 -->
+
+      <!-- 확장 버전 시작 -->
+
+      <!-- 확장 버전 상단-->
+
       <div id="navBarB" class="navBar">
         <div class="expand-navbarTop">
           <div class="expand-menu">
@@ -119,7 +127,7 @@
           </div>
         </div>
 
-        <div class="border"></div>
+        <!-- 확장 버전 중단-->
 
         <div class="expand-navbarTop-2">
           <div class="expand-menu">
@@ -174,7 +182,8 @@
           </div>
         </div>
 
-        <div class="border"></div>
+        <!-- 확장 버전 하단-->
+
         <div class="NavbarSubscriptions">
           <div class="Menu-Title">
             <div class="SUBSCRIPTIONS">
@@ -249,8 +258,6 @@
           </div>
         </div>
 
-        <div class="border"></div>
-
         <div class="NavbarMoreform">
           <div class="NavbarSubscriptions">
             <div class="Menu-Title">
@@ -287,41 +294,44 @@
           </div>
         </div>
       </div>
+      <!-- 확장 버전 끝 -->
     </navbar>
-<!------- 네비게이션바 끝------->
-<!----------- 섹션 시작(탑메뉴+썸네일) ----------------->
+    <!------- 네비게이션바 끝------->
+
+    <!----------- 섹션 시작(탑메뉴+썸네일) ----------------->
     <section>
       <!-- js : class로 가져오면 배열형식으로 가져와서 id로 가져옴 -->
-      <div id="section" class="section"> 
-        <!-------탑메뉴 시작------->  
+      <div id="section" class="section">
+        <!-------탑메뉴 시작------->
         <topMenu>
-          <div class="top_menu">
+          <div class="section_top_tag">
             <button id="slide-left" type="button"><</button>
-            <div class="button">
-              <button class="buttonAll" id="" onclick="">All</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
-              <button class="buttonItem" id="" onclick="">Item</button>
+            <div class="tag_button">
+              <button class="tag_button_buttonAll" id="" onclick="">All</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
+              <button class="tag_button_buttonItem" id="" onclick="">Item</button>
             </div>
             <button id="slide-right" type="button">></button>
           </div>
         </topMenu>
-      <!-------탑메뉴 끝------->  
-      <!-------썸네일 시작------->
+        <!-------탑메뉴 끝------->
+
+        <!-------썸네일 시작------->
+
         <div id="mainContainer">
           <div id="videoList"></div>
         </div>
@@ -329,8 +339,10 @@
           <div id="searchResults"></div>
         </div>
       </div>
+
       <!-------썸네일 끝------->
     </section>
+
     <!----------- 섹션 끝(탑메뉴+썸네일) ----------------->
   </body>
   <script src="js/js_1.js"></script>
