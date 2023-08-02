@@ -125,25 +125,17 @@ background-color: #212121;
   background: rgba(255, 255, 255, 1.0);
 }
 /* -------------- overlay -------------*/
-/* @media (min-width: 900px) {
-  #navBarA {
+@media (min-width: 1366px) {
+  #navBarB {
     display: flex;
   }
-
-  #navBarB.active {
+}
+@media (max-width: 540px) {
+  .navBar {
     display: flex;
   }
 }
 
-@media (max-width: 899px) {
-  #navBarA.active {
-    display: none;
-  }
-
-  #navBarB.active {
-    display: none;
-  }
-} */
 
 /* ---------------navBar-hover--------------- */
 .Menu-Item:hover {
