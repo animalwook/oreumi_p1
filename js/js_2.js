@@ -80,14 +80,17 @@ window.addEventListener('resize', function() {
 document.getElementById('hamburger').addEventListener('click', function() {
   const navBarA = document.getElementById('navBarA');
   const navBarB = document.getElementById('navBarB');
+  const section = document.getElementById('section');
 
   if(window.innerWidth >= 900){
     if (navBarA.classList.contains('active')) {
       navBarA.classList.remove('active');
       navBarB.classList.add('active');
+      section.style.paddingLeft = "240px";
     } else {
       navBarB.classList.remove('active');
       navBarA.classList.add('active');
+      section.style.paddingLeft = "80px";
     }
   }
 });
