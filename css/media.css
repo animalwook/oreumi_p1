@@ -1,0 +1,85 @@
+/* 중간화면 */
+/* @media ONLY screen and (max-width: 1280PX){ */
+
+    .navBarC::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      .navBarC::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      
+      .navBarC::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.6); 
+        border-radius: 4px;
+      }
+      
+      .navBarC::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 1.0);
+      }
+
+
+      
+      /* ---------------navBar------------- */
+      .navBarC {
+      display: flex;
+      position: fixed;
+      top: 58px;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background: #212121;
+      overflow-y: auto;
+      padding-right: 10;
+      visibility: hidden;
+      transition: all 0.3s;
+      transform: translateX(-240px);
+      }
+
+      .navBarC.active {
+        visibility: visible;
+        transform: translateX(0px);
+
+    }
+
+@media ONLY screen and (min-width:601px) and (max-width: 1366px){ 
+
+    #navBarA {
+        display: flex;
+        
+    }
+    #navBarB {
+        display: none;
+    }
+
+
+
+
+    .section {
+        padding-left: 80px;
+    }
+    .secondary {
+        display: none;
+    }
+    
+    
+  }
+
+/* 모바일환경 */
+@media only screen and (max-width: 600px ) {
+
+    .Youtube-Logo {
+        display: none;
+    }
+
+    #navBarA, #navBarB {
+        display: none;
+    }
+
+    .section {
+        padding-left: 2px;
+    }
+}
+
+
