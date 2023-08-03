@@ -1,5 +1,5 @@
-/* ------ modify-hamguger ------ */
-.hambuger-btn {
+/* ------ modify-hamburger ------ */
+.hamburger-btn {
   cursor: pointer;
   background-color: #212121;
   border: none;
@@ -7,7 +7,7 @@
   padding: 9px 9px 9px 9px;
 }
 
-.hambuger-btn:hover {
+.hamburger-btn:hover {
   background: #494848;
   border-radius: 100px;
 }
@@ -23,7 +23,6 @@ a {
   text-decoration: none;
 }
 
-
 /* ---------header------------- */
 .header {
   padding: 0 16px;
@@ -38,73 +37,86 @@ a {
 }
 
 .header_hamburger_logo,
-.header_search-box,
+.header_search-box {
+  display: flex;
+  align-items: center;
+  background-color: #212121;
+}
+
 .header_user-api {
-display: flex;
-align-items: center;
-background-color: #212121;
+  width: 190px;
+  height: 40px;
+  padding: 9px 0px 9px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #212121;
 }
 
 .header_hamburger_logo {
-  gap:15px;
-  padding-left: 9px
+  gap: 15px;
+  padding-left: 9px;
 }
 
 .header_logo img {
-  margin-left:5px;
+  margin-left: 5px;
 }
 
 .header_logo svg {
   height: 24px;
 }
 
-
-.header_search-box button{
+.header_search-box button {
   border: 1px solid #303030;
-  background-color: #212121;
+  background-color: #282828;
   border-left: none;
-  height: 36px;
-  width: 50px;
+  height: 40px;
+  width: 60px;
+  border-radius: 0px 50px 50px 0px;
+  cursor: pointer;
 }
 
 .header_search-box #search-icon {
-  width: 32px; 
-  height: 32px; 
-  display: flex; 
-  justify-content: center; 
+  width: 32px;
+  height: 32px;
+  /* display: flex; */
+  justify-content: center;
   align-items: center;
 }
 .header_search-box input {
   width: 240px;
   height: 32px;
   border: 1px solid #303030;
-  background-color: #FFFFFF;
+  background-color: #212121;
   font-size: 16px;
   padding: 3px 8px;
-  border-radius: 50px;
+  border-radius: 50px 0px 0px 50px;
+}
 
+.header_search-box input:focus {
+  outline: none;
+  border-color: #19529a;
+  color: #fff;
 }
 
 .header_search-box input::placeholder {
-  color:#303030
+  color: #888888;
 }
 
 .header_user-api {
   display: flex;
 }
 
-
-
 .header_user-api img {
   width: 24px;
   height: 24px;
 }
 
-.header_user-api User-Avatar{
+.header_user-api #User-Avatar {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: grey;
+  background-color: #aaa;
 }
 /* ---------------NAVBAR CSS--------------- */
 .navBar::-webkit-scrollbar {
@@ -112,16 +124,16 @@ background-color: #212121;
 }
 
 .navBar::-webkit-scrollbar-track {
-  background: transparent; 
+  background: transparent;
 }
 
 .navBar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.6); 
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 4px;
 }
 
 .navBar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 1.0);
+  background: rgba(255, 255, 255, 1);
 }
 /* -------------- overlay -------------*/
 /* @media (min-width: 900px) {
@@ -146,13 +158,13 @@ background-color: #212121;
 
 /* ---------------navBar-hover--------------- */
 .Menu-Item:hover {
-background-color: #494848;
-border-radius: 10px
+  background-color: #494848;
+  border-radius: 10px;
 }
 
 .expand-menu-item:hover {
-background-color: #494848;
-border-radius: 10px
+  background-color: #494848;
+  border-radius: 10px;
 }
 /* ---------------navBar-On/Off------------- */
 .navBar.active {
@@ -161,75 +173,75 @@ border-radius: 10px
 
 /* ---------------navBar------------- */
 .navBar {
-display: none;
-position: fixed;
-top: 58px;
-height: 100vh;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-background: #212121;
-overflow-y: auto;
-padding-right: 10;
-
+  display: none;
+  position: fixed;
+  top: 58px;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #212121;
+  overflow-y: auto;
+  padding-right: 10;
 }
 
 .navBar-wide {
-width: 240px;
+  width: 240px;
 }
 
 .navBar-narrow {
-width: 80px;
+  width: 80px;
 }
 
 .navbarTop {
-display: flex;
-padding: 12px 4px;
-flex-direction: column;
+  display: flex;
+  padding: 12px 4px;
+  flex-direction: column;
 }
 
 .Menu {
-display: flex;
-padding: 8px 0px 8px 0px;
-flex-direction: column;
-gap: 10px;
+  display: flex;
+  padding: 8px 0px 8px 0px;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.Menu-Item {    
-display: block;
-width: 72px;
-align-items: center;
-gap: 24px;
-padding: 8px 0px 8px 0px;
+.Menu-Item {
+  display: block;
+  width: 72px;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 0px 8px 0px;
 }
 
 .Menu-Item-img {
-width: 20px;
-height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
-.navIcon{
-display: flex;
-width: 24px;
-height: 24px;
-justify-content: center;
-align-items: center;
-flex-shrink: 0;
-padding-left: 24px;
+.navIcon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 24px;
 }
 
 .Title {
-display: flex;
-width: 72px;
-padding: 4px 0px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-flex-shrink: 0;
+  display: flex;
+  width: 72px;
+  padding: 4px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 /* ---------------expand navBar--------------- */
-.expand-navbarTop, .expand-navbarTop-2 {
+.expand-navbarTop,
+.expand-navbarTop-2 {
   display: flex;
   padding: 11px 0px;
   flex-direction: column;
@@ -237,17 +249,17 @@ flex-shrink: 0;
 }
 
 .expand-menu {
-display: flex;
-padding: 8px 0px 8px 0px;
-flex-direction: column;
-align-items: flex-end;
+  display: flex;
+  padding: 8px 0px 8px 0px;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.expand-menu-item {    
-display: flex;
-align-items: center;
-gap: 24px;
-padding: 8px 0px 8px 0px;
+.expand-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 0px 8px 0px;
 }
 
 .expandMenuItem {
@@ -257,7 +269,7 @@ padding: 8px 0px 8px 0px;
   padding: 8px 8px 8px 8px;
 }
 
-.expand-navIcon{
+.expand-navIcon {
   display: flex;
   width: 24px;
   height: 24px;
@@ -287,7 +299,7 @@ padding: 8px 0px 8px 0px;
   background: var(--border-color, #303030);
 }
 
-.Menu-Title{
+.Menu-Title {
   display: flex;
   width: 224px;
   height: 32px;
@@ -296,7 +308,7 @@ padding: 8px 0px 8px 0px;
 }
 
 .typo {
-  color: var(--white-color, #FFF);
+  color: var(--white-color, #fff);
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -306,7 +318,7 @@ padding: 8px 0px 8px 0px;
 }
 
 .typo2 {
-  color: var(--gray-color, #AAA);
+  color: var(--gray-color, #aaa);
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -329,7 +341,7 @@ padding: 8px 0px 8px 0px;
   gap: 10px;
 }
 
-.NavbarSubscriptions{
+.NavbarSubscriptions {
   display: flex;
   padding-top: 12px;
   flex-direction: column;
@@ -337,9 +349,7 @@ padding: 8px 0px 8px 0px;
   gap: 12px;
 }
 
-
 /* -------------------navbar끝나는부분------------- */
-
 
 /* ----------------main 시작 ------------- */
 .main {
@@ -355,16 +365,14 @@ padding: 8px 0px 8px 0px;
   height: auto;
 }
 
-
 .videoInfo {
   padding: 20px 0px 20px 0px;
-
 }
 
 .videoInfoTitle {
-  color: var(--white-color, #FFF);
+  color: var(--white-color, #fff);
   font-variant-numeric: stacked-fractions;
-  font-feature-settings: 'hlig' on, 'dlig' on;
+  font-feature-settings: "hlig" on, "dlig" on;
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
@@ -377,8 +385,9 @@ padding: 8px 0px 8px 0px;
   display: flex;
   justify-content: space-between;
 }
-.videoInfoView, .videoInfoDate {
-  color: var(--gray-color, #AAA);
+.videoInfoView,
+.videoInfoDate {
+  color: var(--gray-color, #aaa);
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -387,16 +396,21 @@ padding: 8px 0px 8px 0px;
 }
 
 .videoInfoIcons {
-  float:right;}
+  float: right;
+}
 
-#videoInfoIconsLike,#videoInfoIconslike,#videoInfoIconsShare,#videoInfoIconsSave,#videoInfoIconsMore {
+#videoInfoIconsLike,
+#videoInfoIconslike,
+#videoInfoIconsShare,
+#videoInfoIconsSave,
+#videoInfoIconsMore {
   background-color: #212121;
   height: 36px;
   border-radius: 40px;
 }
 
 .videoText {
-  color: var(--white-color, #FFF);
+  color: var(--white-color, #fff);
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -409,11 +423,9 @@ padding: 8px 0px 8px 0px;
 
 /* 채널 프로필부분 */
 
-
-
 .videoDesc {
   margin: 20px 0;
-  display:flex;
+  display: flex;
 }
 .videoDec2 {
   display: flex;
@@ -422,7 +434,7 @@ padding: 8px 0px 8px 0px;
   padding: 0 10px;
 }
 #videoDescChannelName {
-  color: var(--white-color, #FFF);
+  color: var(--white-color, #fff);
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -431,7 +443,7 @@ padding: 8px 0px 8px 0px;
 }
 
 #videoDescChannelSubcsriber {
-  color: var(--gray-color, #AAA);
+  color: var(--gray-color, #aaa);
   font-family: Roboto;
   font-size: 12px;
   font-style: normal;
@@ -440,7 +452,7 @@ padding: 8px 0px 8px 0px;
 }
 
 #videoDescChannelSubscribeBtn {
-  float:right;
+  float: right;
   width: 116px;
   height: 36px;
   background-color: #cc0000;
@@ -481,7 +493,7 @@ padding: 8px 0px 8px 0px;
 /* -------------aside 비디오부분 시작-------------- */
 .secondary {
   margin-left: 10px;
-  float:right;
+  float: right;
 }
 
 .secondaryVideos {
@@ -498,14 +510,12 @@ padding: 8px 0px 8px 0px;
 
 .topMenuTag {
   border-radius: 32px;
-  background: #FFF;
+  background: #fff;
 }
-
-
 
 .secondaryVideo {
   display: flex;
-  color: var(--white-color, #FFF);
+  color: var(--white-color, #fff);
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -516,30 +526,24 @@ padding: 8px 0px 8px 0px;
 }
 
 .secondaryVideoDetails {
-padding: 5px 8px;
-align-items: center;
+  padding: 5px 8px;
+  align-items: center;
 }
 
-
 .secondaryVideoInfo {
-  color: var(--gray-color, #AAA);
+  color: var(--gray-color, #aaa);
   font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; 
+  line-height: 18px;
 }
 /* -------------aside 비디오부분 끝 -------------- */
 
-
-
 /* 반응현웹 */
 
-@media ONLY screen and (max-width: 1280PX){
-
-  
+@media ONLY screen and (max-width: 1280px) {
   .secondary {
     display: none;
   }
-  
 }
