@@ -43,6 +43,20 @@ a {
   background-color: #212121;
 }
 
+.mic {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #282828;
+  border-radius: 60px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.mic:hover {
+  background-color: #3d3d3d;
+}
+
 .header_user-api {
   width: 190px;
   height: 40px;
