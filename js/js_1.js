@@ -77,20 +77,20 @@ function generateVideoHTML(videoInfo) {
   return `
           <div class="thumbnail">
               <a href="javascript:;" id="goToVideo" onclick="goToVideo('${videoInfo.video_id}')">
-              <img src="${videoInfo.image_link}" style="width:320px;cursor:pointer;"/>
+              <img src="${videoInfo.image_link}" style="width: 320px; cursor: pointer; border-radius:5px;"/>
               </a>
               <div style="display:flex;">
-                  <div style="width:30px; height: 30px; border-radius: 50%; overflow:hidden;">
+                  <div style="width: 30px; height: 30px; border-radius: 50%; overflow: hidden;">
                   </div>
-                  <div style="margin-left: 10px;">
+                  <div style="margin-left: 20px; margin-bottom: 20px;">
                       <a href="javascript:;" id="goToVideo" onclick="goToVideo('${videoInfo.video_id}')">
-                      <p>${videoInfo.video_title}</p>
+                      <div style="color:#fff;font-size:16px;">${videoInfo.video_title}</div>
                       </a>
                       <a href="javascript:;" id="goToChannel" onclick="goToChannel('${videoInfo.video_channel}')">
-                      <p>${videoInfo.video_channel}</p>
+                      <div style="color:#aaa;">${videoInfo.video_channel}</div>
                       </a>
-                      <p>${videoInfo.views} views</p>
-                      <p>${videoInfo.upload_date}</p>
+                      <span style="color:#aaa;">${videoInfo.views} views</span>
+                      <span style="color:#aaa;">· ${videoInfo.upload_date}</span>
                   </div>
               </div>
           </div>
