@@ -127,10 +127,8 @@ a {
 }
 
 .header_user-api #User-Avatar {
-  width: 32px;
+  width: 80px;
   height: 32px;
-  border-radius: 50%;
-  background-color: #aaa;
 }
 /* ---------------NAVBAR CSS--------------- */
 .navBar::-webkit-scrollbar {
