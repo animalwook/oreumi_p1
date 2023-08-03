@@ -34,7 +34,9 @@
       padding-right: 10;
       visibility: hidden;
       transition: all 0.3s;
+      z-index: 100;
       transform: translateX(-240px);
+      
       }
 
       .navBarC.active {
