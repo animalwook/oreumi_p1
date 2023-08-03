@@ -517,6 +517,8 @@ a {
   justify-content: center;
 }
 
+
+
 .youtube-player-info {
   flex-direction: column;
   margin: 16px 0px 24px 0px;
@@ -607,7 +609,6 @@ a {
   color: #fff;
   font-weight: 700;
 }
-
 
 .video-uploader {
   display: block;
