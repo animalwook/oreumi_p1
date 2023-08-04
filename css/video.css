@@ -19,9 +19,6 @@ body {
   font-size: 16px;
 }
 
-a {
-  text-decoration: none;
-}
 
 /* ---------header------------- */
 .header {
@@ -370,7 +367,7 @@ a {
   justify-content: space-between; */
 
   margin-top: 80px;
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
   color: #fff;
 }
@@ -378,8 +375,8 @@ a {
 /* -------------section 비디오 시작-------------- */
 /* 비디오 플레이어 시작 */
 .section {
-  width: calc(100vw - 500px);
-  /* padding-left: 80px; */
+  width: 90%
+  padding-left: 80px;
   /* height: auto; */ 
   /* width: 50%; */
   color: #fff;
@@ -392,6 +389,8 @@ a {
   width: 100%;
   background-color: #aaa;
   overflow: hidden;
+  padding-top: 56.25%; /* 9/16 * 100% = 56.25% */
+
 }
 
 #videoPlayer video{
@@ -400,15 +399,14 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+
 }
 /* 비디오 플레이어 끝 */
 .videoInfo {
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0 8px 0;
+
 }
 
-.videoInfo {
-  padding: 20px 0px 20px 0px;
-}
 
 .videoInfoTitle {
   color: var(--white-color, #fff);
@@ -425,19 +423,22 @@ a {
 .videoInfoDetails {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #4b4b4b;
+  flex-wrap: wrap;
 }
-.videoInfoView,
-.videoInfoDate {
-  color: var(--gray-color, #aaa);
-  font-family: Roboto;
+
+.videoInfoViewDate {
+  display: flex;
+  padding: 12px 0px;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  color: #aaa
 }
 
 .videoInfoIcons {
-  float: right;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
 }
 
 #videoInfoIconsLike,
@@ -467,20 +468,45 @@ a {
 .videoDesc {
   margin: 20px 0;
   display: flex;
+  align-items: center;
+
 }
-.videoDec2 {
+
+
+/* CHANNEL INFO */
+.channel__info{
+  padding: 16px 0;
+  border-bottom: 1px solid #4b4b4b;
+}
+
+.channel__info__upside{
   display: flex;
+  justify-content: space-between;
 }
-.videoDescChannel {
-  padding: 0 10px;
+
+.channel__info__box{
+  align-items: center;
 }
-#videoDescChannelName {
-  color: var(--white-color, #fff);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+
+
+.channel__profile{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 16px;
+}
+
+.channel__profile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.channel__info__text p{
+  color: #aaa;
+  font-size: 13px;
 }
 
 #videoDescChannelSubcsriber {
@@ -493,30 +519,20 @@ a {
 }
 
 #videoDescChannelSubscribeBtn {
-  float: right;
+  
   width: 116px;
   height: 36px;
   background-color: #cc0000;
   color: #ffffff;
   border: 0;
   border-radius: 2px;
-  font-weight: 700;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: 65px;
+
 }
 
 /* 구독중 버튼 전환 임시코드 */
 
 #videoDescChannelSubscribeBtn:hover {
-  width: 116px;
-  height: 36px;
   background-color: #aaaaaa;
-  color: #ffffff;
-  border: 0;
-  border-radius: 2px;
-  font-weight: 700;
-  line-height: normal;
 }
 
 .videoDescChannelExplanation {

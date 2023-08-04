@@ -501,159 +501,83 @@
 <!------- 네비게이션바 끝------->
 
 <!----------- 메인 시작(섹션+어사이드) ----------------->
-  <main>
-    <!----------- 섹션 시작 ----------------->
-    <div class="main">
-     <section>
-      <div class="section" id="section">
-          <div class="videoPlayer">
-            <iframe width="760" height="315" src="https://www.youtube.com/embed/3iM_06QeZi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="videoInfo">
-              <div class="videoInfoTitle">
-                Blind Woodturner: Turning passion into fine art
+<main>
+  <!----------- 섹션 시작 ----------------->
+  <div class="main">
+   <section>
+    <div class="section" id="section">
+        <div id="videoPlayer">
+
+        </div>
+        <div class="videoInfo">
+            <div id="videoInfoTitle">
+
+            </div>
+            <div class="videoInfoDetails">
+              <div id="videoInfoViewDate" class="videoInfoViewDate">
+
               </div>
-              <div class="videoInfoDetails">
-                <div class="videoInfoViewDate">
-                  <span class="videoInfoView">777 views</span>
-                  <span class="videoInfoDate">Jul 31, 2023</span>
-                </div>
-                <div class="videoInfoIcons">
-                  <button id="videoInfoIconsLike"><img src="img/Video/like.svg" alt="videoLike"><span class="videoText">1.7K</span></button>
-                  <button id="videoInfoIconslike"><img src="img/Video/dislike.svg" alt="videoDislike"><span class="videoText">632</span></button>
-                  <button id="videoInfoIconsShare"><img src="img/Video/share.svg" alt="videoShare"><span class="videoText">SHARE</span></button>
-                  <button id="videoInfoIconsSave"><img src="img/Video/save.svg" alt="videoSave"><span class="videoText">SAVE</span></button>
-                  <button id="videoInfoIconsMore"><img src="img/Video/more.svg" alt="videoMore"></button>
-                </div>
+              <div class="videoInfoIcons">
+                <button id="videoInfoIconsLike"><img src="img/Video/like.svg" alt="videoLike"><span class="videoText">1.7K</span></button>
+                <button id="videoInfoIconslike"><img src="img/Video/dislike.svg" alt="videoDislike"><span class="videoText">632</span></button>
+                <button id="videoInfoIconsShare"><img src="img/Video/share.svg" alt="videoShare"><span class="videoText">SHARE</span></button>
+                <button id="videoInfoIconsSave"><img src="img/Video/save.svg" alt="videoSave"><span class="videoText">SAVE</span></button>
+                <button id="videoInfoIconsMore"><img src="img/Video/more.svg" alt="videoMore"></button>
               </div>
-          </div>
+            </div>
 
 
-          <div class="videoDesc">
-              <div><img src="./img/home/avatar/User-Avatar1.svg" alt="channelUserIcon"></div>
-              <div class="videoDescChannel">
-                <div id="videoDescChannelName">videoDescChannelName</div>
-                <div id="videoDescChannelSubcsriber">1.2M subscribers</div>
-              </div>
+          <div class="channel__info">
+            <div class="channel__info__upside">
+                <div id="channel__info__box" class="channel__info__box flexbox">
+                    <div class="channel__profile">
+                    </div>
+                    <div id="channel__info__text" class="channel__info__text">
+                    </div>
+                </div>
               <button id="videoDescChannelSubscribeBtn">SUBSCRIBES</button>
+            </div>
+            <div id="videoDescChannelExplanation" class="videoDescChannelExplanation">
+
+            </div>
           </div>
-          <div id="videoDescChannelExplanation">
-            Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to hundreds of hours of YouTube videos and experimenting in his workshop. Now he’s a YouTube creator himself, sells his products worldwide, and does demonstrations all around the country.
-          </div>
-          
+        </div>
+
+        <div class="videoComment">
           <div class="videoComment">
-            <div class="videoComment">
-              <span class="videoTotalComentCount">286 Comments</span>
-              <img src="img/Video/Dropdown.svg" alt="videoSortBy">
-              <span class="videoSortByTypo">SORT BY</span>
-            </div>
-            <!------------댓글------------>
-            <form onsubmit="addComment(event)">
-              <div class="form-group">
-                <span class="videoCommentUserCommnetIcon"><img src="./img/home/header/User-Avatar.svg" alt="videoCommentUserAvatar"></span>
-                <span class="videoCommentUserComment"><input type="text" class="form-control" placeholder="Add a public comment..." required></span>
-                <button style="cursor:pointer" type="submit" class="btn btn-primary">작성</button>
-              </div>
-            </form>
-            <div class="commentsList">
-            </div>
+            <span class="videoTotalComentCount">286 Comments</span>
+            <img src="img/Video/Dropdown.svg" alt="videoSortBy">
+            <span class="videoSortByTypo">SORT BY</span>
           </div>
-      </div>
-     </section>
-
-    <!----------- 섹션 끝 ----------------->
-    
-    <!----------- 어사이드 시작 ----------------->
-    
-     <aside>
-      <div class="secondary">
-        <div class="topMenuTags">
-            <button class="topMenuTag">All</button>
-            <button class="topMenuTag">From Marcus Levin</button>
-            <button class="topMenuTag">Frontend</button>
-            <button class="topMenuTag">Backend</button>
+          <!------------댓글------------>
+          <form onsubmit="addComment(event)">
+            <div class="form-group">
+              <span class="videoCommentUserCommnetIcon"><img src="./img/home/header/User-Avatar.svg" alt="videoCommentUserAvatar"></span>
+              <span class="videoCommentUserComment"><input type="text" class="form-control" placeholder="Add a public comment..." required></span>
+              <button style="cursor:pointer" type="submit" class="btn btn-primary">작성</button>
+            </div>
+          </form>
+          <div class="commentsList">
+          </div>
         </div>
-        <div class="secondaryVideos">
-            <div class="secondaryVideo">
-              <a href="#">
-                <img src="img/Video/v1.png" alt="secondaryVideoImg">
-              </a>
-              <div class="secondaryVideoDetails">
-                <div>Title 1</div>
-                <div class="secondaryVideoInfo">
-                  <div>Channel 1</div>
-                  <div>Views, Date</div>
-                </div>
-              </div>
-            </div>
+    </div>
+   </section>
 
-            <div class="secondaryVideo">
-              <span><img src="img/Video/v2.png" alt="secondaryVideoImg"></span>
-              <span>
-                <div>Title 2</div>
-                <div>Channel 2</div>
-                <div>Views, Date</div>
-              <span>
-            </div>
-            <div class="secondaryVideo">
-              <span><img src="img/Video/v3.png" alt="secondaryVideoImg"></span>
-              <span>
-                <div>Title 3</div>
-                <div>Channel 3</div>
-                <div>Views, Date</div>
-              <span>
-            </div>
-            <div class="secondaryVideo">
-              <span><img src="img/Video/v1.png" alt="secondaryVideoImg"></span>
-              <span>
-                <div>Title 4</div>
-                <div>Channel 4</div>
-                <div>Views, Date</div>
-              <span>
-            </div>
-            <div class="secondaryVideo">
-              <span><img src="img/Video/v2.png" alt="secondaryVideoImg"></span>
-              <span>
-                <div>Title 5</div>
-                <div>Channel 5</div>
-                <div>Views, Date</div>
-              <span>
-            </div>
-            <div class="secondaryVideo">
-              <span><img src="img/Video/v3.png" alt="secondaryVideoImg"></span>
-              <span>
-                <div>Title 6</div>
-                <div>Channel 2</div>
-                <div>Views, Date</div>
-              <span>
-            </div>
-            <div class="secondaryVideo">
-              <span><img src="img/Video/v1.png" alt="secondaryVideoImg"></span>
-              <span>
-                <div>Title 7</div>
-                <div>Channel 7</div>
-                <div>Views, Date</div>
-              <span>
-            </div>
-            <div class="secondaryVideo">
-              <span><img src="img/Video/v2.png" alt="secondaryVideoImg"></span>
-              <span>
-                <div>Title 8</div>
-                <div>Channel 8</div>
-                <div>Views, Date</div>
-              <span>
-            </div>
-            <div class="secondaryVideo">
-              <span><img src="img/Video/v3.png" alt="secondaryVideoImg"></span>
-              <span>
-                <div>Title 9</div>
-                <div>Channel 9</div>
-                <div>Views, Date</div>
-              <span>
-            </div>
-        </div>
+  <!----------- 섹션 끝 ----------------->
+  
+  <!----------- 어사이드 시작 ----------------->
+  
+   <aside>
+    <div class="secondary">
+      <div id="topMenuTags" class="topMenuTags">
+
+
       </div>
-     </aside>
+      <div id="secondaryVideos" class="secondaryVideos">
+
+      </div>
+    </div>
+   </aside>
     <!----------- 어사이드 끝 ----------------->
    </div>
   <!----------- 메인 끝(섹션+어사이드) ----------------->

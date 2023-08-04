@@ -80,15 +80,15 @@ async function createVideoItem(videoList) {
 
   let currentChannelInfo = await getChannelInfo(channelName);
   let currentChannelURL = `./channel.html?channelName=${channelName}`;
-  let channelInfoBox = document.getElementById("videoDesc");
+  let channelInfoBox = document.getElementById("channel__info__box");
   channelInfoBox.innerHTML = `
-    <div class="videoDescChannel">
+    <div class="channel__profile">
         <img src=${currentChannelInfo.channel_profile} alt="">
     </div>
     <a href ="${currentChannelURL}">
-      <div id="videoDescChannelName" class="videoDescChannelName">
+      <div id="channel__info__text" class="channel__info__text">
           <h5>${currentChannelInfo.channel_name}</h5>
-          <p class="videoDescChannelSubcsriber">구독자 ${convertViews(currentChannelInfo.subscribers)}명</p>
+          <p>구독자 ${convertViews(currentChannelInfo.subscribers)}명</p>
       </div>
     </a>
     `;
@@ -97,7 +97,6 @@ async function createVideoItem(videoList) {
   channelInfoDownSide.innerHTML = `
     <p>${currentVideoInfo.video_detail}
     </p>
-    <button>SHOW MORE</button>
     `;
 
 

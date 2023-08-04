@@ -1,6 +1,11 @@
 /* 중간화면 */
 /* @media ONLY screen and (max-width: 1280PX){ */
 
+    a{
+        text-decoration: none; /* 밑줄 제거 */
+        color: inherit; /* 링크 컬러를 부모 요소의 컬러로 상속 */
+    }
+    
     .navBarC::-webkit-scrollbar {
         width: 8px;
       }
