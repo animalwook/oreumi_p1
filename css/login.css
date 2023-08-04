@@ -16,7 +16,7 @@ main {
 .footer a {
   text-decoration: none;
   color: #000;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .login_box {
@@ -119,13 +119,18 @@ input::placeholder {
 }
 
 .footer {
+  width: 490px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 select {
-  
+  width: 200px;
+  height: 48px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 /* .footer_a {
