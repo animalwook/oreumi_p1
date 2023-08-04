@@ -553,15 +553,17 @@ body {
   float: right;
   display: flex;
   flex-direction: column;
+  
 }
 .secondaryVideos {
   gap: 8px;
   flex-wrap: wrap;
 }
 .secondaryVideo {
-  width: 200px;
+  width: 340px;
   height: auto;
 }
+
 
 .secondaryVideo img{
   width: 100%;
@@ -580,7 +582,15 @@ body {
   border-radius: 32px;
   background: #fff;
 }
-
+.topMenuTags button{
+  padding: 8px 12px;
+  border-radius: 32px;
+  border: 0.3px solid #aaa;
+  color: #fff;
+  background-color: #303030;
+  font-size: 14px;
+  margin: 0 4px 18px 0;
+}
 .secondaryVideo {
   display: flex;
   color: var(--white-color, #fff);
