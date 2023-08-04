@@ -88,7 +88,7 @@ async function createVideoItem(videoList) {
                 </div>
             </div>
             <div class="subscribes__box">
-                <button class="subscribes__button">SUBSCRIBES</button>
+            <button id="videoDescChannelSubscribeBtn">SUBSCRIBES</button>
             </div>
         </div>
     `;
