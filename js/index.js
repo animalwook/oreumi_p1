@@ -259,4 +259,97 @@ document.getElementById("search").addEventListener("keydown", function (event) {
   }
   // fetchAuthorName(1).then((name) => console.log("name:", name));
   
- 
+ function generateVideoHTML(videoInfo) {
+  
+  let channelURL = `./channel.html?channelName=${videoInfo.video_channel}`;
+  let videoURL = `./video.html?id=${videoInfo.video_id}`;
+  let channelInfo = getChannelInfo(videoInfo.video_channel);
+
+  return `
+          <div class="thumbnail">
+              <a href="${videoURL}">
+              <img src="${videoInfo.image_link}" style="width: 320px; cursor: pointer; border-radius:5px;"/>
+              </a>
+              <div style="display:flex;">
+                  <div style="width: 30px; height: 30px; border-radius: 50%; overflow: hidden;">
+                    <a href="${channelURL}">
+                    <img class="feed__item__info__avatar" src=''>
+                  </div>
+                  <div style="margin-left: 20px; margin-bottom: 20px;">
+                      <a href="${videoURL}">
+                      <div style="color:#fff;font-size:16px;">${videoInfo.video_title}</div>
+                      </a>
+                      <a href="${channelURL}">
+                      <div style="color:#aaa;">${videoInfo.video_channel}</div>
+                      </a>
+                      <span style="color:#aaa;">${videoInfo.views} views</span>
+                      <span style="color:#aaa;">· ${videoInfo.upload_date}</span>
+                  </div>
+              </div>
+          </div>
+      `;
+}
+
+// tagList에 맞는 HTML 구조 구성 함수
+function generateTagHTML(tagName) {
+  return `
+          <button class="tag_button_buttonItem" id="" onclick="displayTaggedVideo('${tagName}')">${tagName}</button>
+      `;
+}
+
+// 화면에 띄워주는 함수
+// list 형식으로 하나씩 띄우기 -> promise.all을 이용해서 한번에 띄우기
+async function displayHome() {
+  // video 정보 추출
+  const videoList = await getVideoList();
+  const infoContainer = document.getElementById("videoList");
+  const videoInfoPromises = videoList.map(video => getVideoInfo(video.video_id));
+  const allVideoInfo = await Promise.all(videoInfoPromises);
+
+  // tag 추출
+  const tagSet = new Set();
+  const topTagContainer = document.getElementById("tag_button");
+  videoList.map(video => video.video_tag.map(tag => tagSet.add(tag)));
+  const allTagList = Array.from(tagSet);
+
+  // video HTML 및 tag HTML 생성
+  const allVideoHTML = allVideoInfo.map(videoInfo => generateVideoHTML(videoInfo)).join('');
+  const tagAllHTML = `<button class="tag_button_buttonAll" id="" onclick="displayAllVideo()">All</button>`
+  const allTagHTML = tagAllHTML + allTagList.map(tag => generateTagHTML(tag)).join('');
+
+  // HTML 적용
+  infoContainer.innerHTML = allVideoHTML;
+  topTagContainer.innerHTML = allTagHTML;
+}
+
+async function displayAllVideo() {
+  // video 정보 추출
+  const videoList = await getVideoList();
+  const infoContainer = document.getElementById("videoList");
+  const videoInfoPromises = videoList.map(video => getVideoInfo(video.video_id));
+  const allVideoInfo = await Promise.all(videoInfoPromises);
+
+  // video HTML 생성
+  const allVideoHTML = allVideoInfo.map(videoInfo => generateVideoHTML(videoInfo)).join('');
+
+  // HTML 적용
+  infoContainer.innerHTML = allVideoHTML;
+}
+
+async function displayTaggedVideo(tag) {
+  // video 목록 가져오기
+  const videoList = await getVideoList();
+  const infoContainer = document.getElementById("videoList");
+  
+  // tag에 맞는 video 정보 추출
+  const tagFilterPromises = videoList.filter(video => video.video_tag.includes(tag))
+  const tagVideoList = await Promise.all(tagFilterPromises);
+  const videoInfoPromises = tagVideoList.map(video => getVideoInfo(video.video_id));
+  const allVideoInfo = await Promise.all(videoInfoPromises);
+
+  // video HTML 생성
+  const allVideoHTML = allVideoInfo.map(videoInfo => generateVideoHTML(videoInfo)).join('');
+
+  // HTML 적용
+  infoContainer.innerHTML = allVideoHTML;
+}
