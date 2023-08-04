@@ -4,77 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="./css/login.css" />
     <title>login</title>
-    <style>
-      main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-      }
-
-      a {
-        text-decoration: none;
-        color: #1a73ec;
-        font-size: 15px;
-      }
-
-      .login_box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 448px;
-        height: 500px;
-        border: 1px solid #d7d9dd;
-        border-radius: 10px;
-        padding: 48px 40px 36px 48px;
-      }
-
-      .google_logo {
-        width: 75px;
-      }
-
-      .login_box_title {
-        font-size: 24px;
-      }
-
-      .login_box_id {
-        font-size: 16px;
-      }
-
-      input {
-        width: 366px;
-        height: 54px;
-        border: 1px solid #d7d9dd;
-        border-radius: 5px;
-      }
-
-      input::placeholder {
-        font-size: 17px;
-        padding-left: 13px;
-      }
-
-      .login_box_forgetid {
-      }
-
-      .login_box_guestguide {
-        display: inline;
-      }
-
-      .login_box_guestinfo {
-        display: inline;
-      }
-
-      .footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    </style>
   </head>
   <body>
     <!-- 박스와 하단부분 묶어주기 위해 사용 -->
@@ -98,11 +29,11 @@
                 <a href="#">자세히 알아보기</a>
               </div>
             </div>
-            <div class="login_box_register">
-              <a href="#">계정 만들기</a>
-            </div>
-            <div class="login_box_next">
-              <a href="#">다음</a>
+            <div class="register_next_container">
+              <div class="login_box_register">
+                <a href="#">계정 만들기</a>
+              </div>
+              <button class="login_box_next">다음</button>
             </div>
           </div>
         </div>
@@ -119,13 +50,13 @@
             </select>
           </div>
           <div class="help_page">
-            <a href="#">도움말</a>
+            <a href="#" class="footer_a">도움말</a>
           </div>
           <div class="privacy_policy_page">
-            <a href="#">개인정보처리방침</a>
+            <a href="#" class="footer_a">개인정보처리방침</a>
           </div>
           <div class="terms_page">
-            <a href="#">약관</a>
+            <a href="#" class="footer_a">약관</a>
           </div>
         </div>
       </main>
