@@ -7,9 +7,15 @@ main {
   flex-direction: column;
 }
 
-a {
+.login_box a {
   text-decoration: none;
   color: #1a73ec;
+  font-size: 15px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000;
   font-size: 15px;
 }
 
@@ -18,23 +24,37 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 448px;
-  height: 500px;
+  width: 400px;
+  height: 440px;
   border: 1px solid #d7d9dd;
   border-radius: 10px;
-  padding: 48px 40px 36px 48px;
+  padding: 40px 28px 36px 28px;
 }
 
 .google_logo {
-  width: 75px;
+  width: 87px;
 }
 
 .login_box_title {
   font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .login_box_id {
   font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.login_box_userid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 370px;
+  height: 298px;
+}
+
+.login_box_userid input {
+  margin: 0 auto;
 }
 
 input {
@@ -50,18 +70,66 @@ input::placeholder {
 }
 
 .login_box_forgetid {
+  margin-top: 10px;
+  margin-bottom: 60px;
 }
 
 .login_box_guestguide {
+  font-size: 15px;
   display: inline;
+  color: #5f6368;
 }
 
 .login_box_guestinfo {
   display: inline;
 }
 
+.register_next_container {
+  display: flex;
+  width: 100%;
+  height: 34px;
+}
+
+.login_box_register {
+  margin-top: 50px;
+  margin-right: auto; /* 오른쪽으로 떨어뜨립니다. */
+}
+
+.login_box_next {
+  margin-top: 45px;
+  width: 75px;
+  height: 34px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  margin-left: auto;
+}
+
+.login_box_next:hover {
+  margin-top: 50px;
+  width: 75px;
+  height: 34px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #1b66cb;
+  color: #fff;
+  border: none;
+}
+
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
+
+select {
+  
+}
+
+/* .footer_a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+} */
