@@ -503,76 +503,56 @@
 
     <!----------- 섹션 시작(탑메뉴+썸네일) ----------------->
     <section>
-      <div class="section" id="section">
-        <!-- 가운데 큰 영상 -->
-        <div id="mainContent">
-          <div class="channel-cover">
-            <img src="img/channel/Channel-Cover.svg" alt="Channel-Cover" class="channel-cover" id="channel-cover" />
-          </div>
-          <div class="channel-title">
-            <img src="img/channel/User-Avatar.svg" alt="User-Avatar" class="channel-avatar" id="channel-avatar" />
-            <div class="channel-title-info">
-              <span class="channel-title-name">Marcus Levin</span>
-              <span class="channel-title-subscribers">1.2M subscribers</span>
-            </div>
-            <button class="subscribes-btn" onclick="">SUBSCRIBES</button>
-          </div>
+      <main id="channel__feed" class="channel__feed">
+        <div id="channel__info__container" class="channel__info__container">
+            
+        </div>
 
-          <div class="channel-toolbar-wrapper">
-            <button id="channel-toolbar-left-arrow" class="toolbar-btn" type="button"><</button>
-            <div class="channel-toolbar">
-              <button id="channel-toolbar-home" class="toolbar-btn">HOME</button>
-              <button id="channel-toolbar-videos" class="toolbar-btn">VIDEOS</button>
-              <button id="channel-toolbar-playlists" class="toolbar-btn">PLAYLISTS</button>
-              <button id="channel-toolbar-community" class="toolbar-btn">COMMUNITY</button>
-              <button id="channel-toolbar-channels" class="toolbar-btn">CHANNELS</button>
-              <button id="channel-toolbar-about" class="toolbar-btn">ABOUT</button>
-              <div class="channel-toolbar-search">
-                <button id="channel-toolbar-search-icon" class="toolbar-search-btn">
-                  <img src="img/home/header/search.svg" alt="search" class="toolbar-search-btn" />
-                </button>
-                <input type="text" id="channel-toolbar-search-box" />
+        <div class="channel-toolbar-wrapper">
+          <button id="channel-toolbar-left-arrow" class="toolbar-btn" type="button"><</button>
+              <div class="channel-toolbar">
+                <button id="channel-toolbar-home" class="toolbar-btn">HOME</button>
+                <button id="channel-toolbar-videos" class="toolbar-btn">VIDEOS</button>
+                <button id="channel-toolbar-playlists" class="toolbar-btn">PLAYLISTS</button>
+                <button id="channel-toolbar-community" class="toolbar-btn">COMMUNITY</button>
+                <button id="channel-toolbar-channels" class="toolbar-btn">CHANNELS</button>
+                <button id="channel-toolbar-about" class="toolbar-btn">ABOUT</button>
+                <div class="channel-toolbar-search">
+                  <button id="channel-toolbar-search-icon" class="toolbar-search-btn">
+                    <img src="img/home/header/search.svg" alt="search" class="toolbar-search-btn" />
+                  </button>
+                  <input type="text" id="channel-toolbar-search-box" placeholder="검색" />
+                </div>
               </div>
-            </div>
-            <button id="channel-toolbar-right-arrow" class="toolbar-btn" type="button">></button>
-          </div>
-
-          <div class="youtube-player">
-            <img src="img/channel/Player.svg" alt="Player" class="youtube-player-image" />
-            <div class="youtube-player-info">
-              <span class="youtube-player-title">Blind Woodturner: Turning passion into fine art</span>
-              <span class="youtube-player-views">576,969 views . 3 weeks ago</span>
-              <span class="youtube-player-desc">
-                Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to hundreds of hours of YouTube videos and experimenting in his workshop. Now he’s a YouTube creator
-                himself, sells his products worldwide, and does demonstrations all around the country.
-              </span>
-            </div>
-          </div>
+              <button id="channel-toolbar-right-arrow" class="toolbar-btn" type="button">></button>
         </div>
 
-        <!-- 작은 영상 -->
-        <div id="sectionContent">
-          <div class="division-line" id="divLine"></div>
-          <div class="play-btn">
-            <span class="play-info">Search On ‘21</span>
-            <div class="play-arrow-btn">
-              <img src="img/channel/play.svg" alt="play" />
-            </div>
-            <span class="play-all">PLAY ALL</span>
-          </div>
 
-          <div class="play-list"></div>
-
-          <div class="division-line" id="divLine"></div>
-          <div class="play-btn">
-            <span class="play-info">Search On ‘21</span>
-            <div class="play-arrow-btn">
-              <img src="img/channel/play.svg" alt="play" />
+        <!-- VIDEOs -->
+        <div class="video__container">
+            <div id="channel__big__video__box" class="channel__big__video__box">
+                
             </div>
-            <span class="play-all">PLAY ALL</span>
-          </div>
+
+            <div id="playlist__box" class="playlist__box">
+                <div id="playlist__info" class="playlist__info">
+                    <div class="playlist__title">재생목록</div>
+                    <a id="playlist__play">
+                        <button>
+                                <div>
+                                    <img src="./img/icon/play.svg" alt="">
+                                </div>
+                                <div>PLAY ALL</div>
+                        </button>
+                    </a>
+                </div>
+                <div id="playlist" class="playlist">
+                    
+                </div>
+
+            </div>
         </div>
-      </div>
+    </main>
     </section>
   </body>
   <script src="js/channel.js"></script>

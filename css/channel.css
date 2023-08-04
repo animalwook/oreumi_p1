@@ -371,79 +371,206 @@ body {
   background-color: #212121;
 }
 /* 채널 상단 */
-.channel-cover {
+.channel__feed {
+  margin-top: 56px;
+  margin-left: 240px;
+  padding-bottom: 200px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+}
+
+.channel__info__container{
   width: 100%;
-  object-fit: cover;
+}
+.banner {
+  width: 100%;
   height: 192px;
 }
-.channel-title {
-  width: auto;
-  height: 100%;
+
+.banner img {
+  height: 192px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.channel__info {
+  display: flex;
+  padding: 16px 65px 4px 65px;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.channel__profile {
   display: flex;
   align-items: center;
-  background-color: #212121;
-  color: #aaa;
 }
 
-/* 구독 정보 */
 
-.channel-avatar {
-  margin: 16px 24px 4px 65px;
-  border-radius: 50px;
-  justify-content: flex-start;
+.channel__avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-right: 24px;
+}
+
+.channel__profile__text {
+  padding: 19px
+}
+
+.channel__profile__text h2 {
+  font-size: 24px;
+}
+
+
+.subscribes__box {
+  display: flex;
+  padding: 22px 4px;
+  align-items: center;
+}
+
+.subscribes__button {
+  border-radius: 2px;
+  background: #C00;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
   cursor: pointer;
 }
 
-.channel-title-info {
+
+
+
+
+.selected {
+  color: #fff;
+  border-bottom: 1px solid #AAAAAA;
+}
+
+.video__container {
+  width: 100%;
+  padding: 0 65px;
+}
+
+.channel__big__video__box {
+  display: flex;
+  padding: 24px 0;
+  border-bottom: #343434 1px solid;
+}
+
+.channel__big__video {
+  background-color: #AAAAAA;
+  width: 424px;
+  height: 238px;
+  margin-right: 24px;
+  object-fit:cover ;
+}
+
+.channel__big__video video{
+  width: 100%;
+}
+
+.big__video__info {
   display: flex;
   flex-direction: column;
-  margin-right: auto;
+  gap: 20px;
+  width: 40%;
 }
 
-.channel-title-name {
-  font-size: 24px;
-  color: #ffffff;
-  margin-left: 24px;
+
+
+
+/* playlist */
+.playlist {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  padding: 24px 0;
+  border-bottom: #343434 1px solid;
 }
 
-.channel-title-subscribers {
+.playlist__info {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.playlist__title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.playlist__info button {
+  background-color: transparent;
+  color: #AAAAAA;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  gap: 8px;
+  border: none;
+}
+
+.channel__small__video__box {
+  width: 210px;
+  margin-bottom: 24px;
+}
+
+.video__thumbnail {
+  background-color: #AAAAAA;
+  height: 118px;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+.video__thumbnail img{
+  width: 100%;
+}
+
+.video__info h4 {
   font-size: 14px;
-  color: #aaaaaa;
-  margin-left: 24px;
-}
-
-.subscribes-btn {
-  width: 116px;
-  height: 36px;
-  background-color: #cc0000;
-  color: #ffffff;
-  border: 0;
-  border-radius: 2px;
   font-weight: 700;
   line-height: normal;
-  margin-left: auto;
-  margin-right: 65px;
+  margin-bottom: 8px;
 }
 
-/* 구독중 버튼 전환 임시코드 */
+.video__info p {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  color: #AAAAAA;
+}
 
-.subscribes-btn:hover {
-  width: 116px;
-  height: 36px;
-  background-color: #aaaaaa;
-  color: #ffffff;
-  border: 0;
-  border-radius: 2px;
+
+.channel__menu {
+  background-color: transparent;
+  color: #AAAAAA;
+  font-size: 14px;
+  font-style: normal;
   font-weight: 700;
-  line-height: normal;
-  cursor: pointer;
+  padding: 16px 32px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.channel__menu__bar button {
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+  background-color: transparent;
 }
 
 /* 툴바 */
 .channel-toolbar-wrapper {
   display: flex;
-  background-color: #212121;
+  background-color:red
   padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .channel-toolbar {
@@ -532,126 +659,3 @@ body {
 /* search-icon이 클릭되었을때
 search-box로 focus 옮김, 검색 placeholder 생성
 search-box 테두리 없애고 focus됐을 때 하얀색 밑줄 */
-
-/* 큰 영상 */
-
-.youtube-player {
-  width: 800px;
-  height: 286px;
-  margin: 24px 0px 24px 0px;
-  padding-left: 65px;
-  /* padding-bottom: 16px; */
-  display: flex;
-  justify-content: center;
-}
-
-.youtube-player-info {
-  flex-direction: column;
-  margin: 16px 0px 24px 0px;
-  width: 400px;
-  height: 238px;
-}
-
-.youtube-player-title {
-  display: flex;
-  font-size: 14px;
-  font-weight: 700;
-  padding-bottom: 20px;
-  /* word-break: break-word; */
-}
-
-.youtube-player-views {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  color: #aaa;
-  padding-bottom: 19px;
-}
-
-.youtube-player-desc {
-  display: block;
-  font-size: 14px;
-  word-break: break-word;
-}
-
-/* 구분선 */
-
-.division-line {
-  /* display: flex;
-  box-sizing: border-box;
-  justify-content: flex-start; */
-  width: 1070px;
-  border-top: 1px solid #303030;
-  margin-left: 65px;
-}
-
-/* 작은 영상 */
-
-.play-btn {
-  width: 1070px;
-  height: 44px;
-  padding-left: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.play-info {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.play-arrow-btn {
-  width: 24px;
-  height: 24px;
-  justify-content: center;
-  align-items: center;
-}
-
-.play-all {
-  font-size: 16px;
-  font-weight: 700;
-  color: #aaa;
-}
-
-.play-list {
-  width: 1920px;
-  height: 217px;
-  display: flex;
-  margin: 16px 0px 24px 0px;
-  padding-left: 65px;
-  padding-bottom: 24px;
-}
-
-.Video-image1.Video-image2.Video-image3.Video-image4.Video-image5 {
-  width: 210px;
-  height: 118px;
-}
-
-.video-title {
-  display: block;
-  font-size: 14px;
-  color: #fff;
-  font-weight: 700;
-}
-
-.video-uploader {
-  display: block;
-  font-size: 12px;
-  color: #aaa;
-  margin: 0px 0px 0px 20px;
-}
-
-.video-views {
-  display: block;
-  font-size: 12px;
-  color: #aaa;
-}
-
-.video_thumbnail {
-  width: 360px;
-  height: 210px;
-  margin: 0px 0px 0px 20px;
-  border-radius: 10px;
-}
