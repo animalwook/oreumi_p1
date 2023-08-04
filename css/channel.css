@@ -567,7 +567,7 @@ body {
 /* 툴바 */
 .channel-toolbar-wrapper {
   display: flex;
-  background-color:red
+  background-color:;
   padding: 0 50px;
   justify-content: space-between;
   align-items: center;

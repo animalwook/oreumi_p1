@@ -376,6 +376,7 @@ body {
   height: 5%;
   background-color: #212121;
   justify-content: center;
+  overflow: hidden;
 }
 
 .tag_button {
