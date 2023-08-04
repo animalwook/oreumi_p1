@@ -1,8 +1,6 @@
 // 처음 화면 로드 시 전체 비디오 리스트 가져오기
 getVideoList().then(createVideoItem);
 
-
-
 // 현재 주소에서 채널명 가져오기
 let currentURL = window.location.href;
 let url = new URL(currentURL);
