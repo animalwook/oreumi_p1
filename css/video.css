@@ -551,11 +551,22 @@ body {
 .secondary {
   margin-left: 10px;
   float: right;
+  display: flex;
+  flex-direction: column;
+}
+.secondaryVideos {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.secondaryVideo {
+  width: 200px;
+  height: auto;
 }
 
-.secondaryVideos {
-  width: 350px;
-  height: auto;
+.secondaryVideo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .topMenuTags {

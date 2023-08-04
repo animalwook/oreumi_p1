@@ -135,7 +135,7 @@ async function createVideoItem(videoList) {
     let channelURL = `./channel.html?channelName=${channelName}`;
 
     videoListItems += `
-        <div class="secondaryVideo">
+        <div class="secondaryVideos">
             <div class="secondaryVideo">
                 <img src="${video.image_link}" alt="">
             </div>
