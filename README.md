@@ -7,6 +7,9 @@ https://www.notion.so/Oruemi_2-Simple_RelayCoding-1d05c88cbcce461c843bc1598504c9
 황찬혁
 홍영욱
 
+![Alt](https://repobeats.axiom.co/api/embed/36bc483fafe3c4ab908d30396537d6fe5fb767c4.svg "Repobeats analytics image")
+
+
 # 브랜치 구성
 - html
     - html 코드 전체
