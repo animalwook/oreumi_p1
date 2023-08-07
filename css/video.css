@@ -375,7 +375,7 @@ body {
 /* -------------section 비디오 시작-------------- */
 /* 비디오 플레이어 시작 */
 .section {
-  width: 90%;
+  width: auto;
   padding-left: 80px;
   /* height: auto; */ 
   /* width: 50%; */
@@ -389,12 +389,11 @@ body {
   width: 100%;
   background-color: #aaa;
   overflow: hidden;
-  padding-top: 56.25%; /* 9/16 * 100% = 56.25% */
+  z-index: -10;
 
 }
 
 #videoPlayer video{
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -621,7 +620,7 @@ body {
 @media ONLY screen and (max-width: 1366px) {
   .secondary {
     float: none;
-    padding-left: 100px;
+    padding-left: 80px;
   }
   .section {
     display: block;
@@ -629,5 +628,11 @@ body {
   }
   .main {
     display: block;
+  }
+}
+
+@media ONLY screen and (max-width: 600px) {
+  .secondary {
+    padding-left: 20px;
   }
 }

@@ -133,7 +133,7 @@ async function createVideoItem(videoList) {
                     <a href="${masterVideoUrl}">
                       <h5>${masterVideo.video_title}</h5>
                     </a>
-                    <p>조회수 ${convertViews(
+                    <p style="color: #AAAAAA";>조회수 ${convertViews(
                       masterVideo.views
                     )}회 • ${convertDate(masterVideo.upload_date)}</p>
                     <p>${masterVideo.video_detail}</p>

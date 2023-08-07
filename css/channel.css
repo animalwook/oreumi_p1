@@ -373,15 +373,7 @@ body {
   background-color: #212121;
 }
 /* 채널 상단 */
-.channel__feed {
-  margin-top: 56px;
-  margin-left: 240px;
-  padding-bottom: 200px;
-  flex-wrap: wrap;
-  justify-content: center;
-  display: flex;
-  color: #fff;
-}
+
 
 .channel__info__container{
   width: 100%;
@@ -454,13 +446,13 @@ body {
 
 .video__container {
   width: 100%;
-  padding: 0 65px;
 }
 
 .channel__big__video__box {
-  display: flex;
   padding: 24px 0;
   border-bottom: #343434 1px solid;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .channel__big__video {
@@ -468,7 +460,7 @@ body {
   width: 424px;
   height: 238px;
   margin-right: 24px;
-  object-fit:cover ;
+  display: flex;
 }
 
 .channel__big__video video{
@@ -478,8 +470,8 @@ body {
 .big__video__info {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 40%;
+  gap: 10px;
+  width: auto;
 }
 
 
@@ -519,6 +511,7 @@ body {
 .channel__small__video__box {
   width: 210px;
   margin-bottom: 24px;
+  
 }
 
 .video__thumbnail {
@@ -568,11 +561,9 @@ body {
 
 /* 툴바 */
 .channel-toolbar-wrapper {
-  display: flex;
-  background-color:;
-  padding: 0 50px;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .channel-toolbar {
