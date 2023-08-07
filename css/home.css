@@ -457,10 +457,31 @@ body {
   color: white;
 }
 
+.thumnail_card {
+  width: 300px;
+  height: 155px;
+  position: relative;
+}
+
+.thumnail_profile {
+  width: 45px; 
+  height: 45px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+.thumnail_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .video-card {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 300px;
   margin: 10px;
   cursor: pointer;
 }
@@ -487,16 +508,3 @@ body {
   margin-top: 50px;
   justify-content: space-evenly;
 }
-
-/* .video_thumbnail {
-  width: 360px;
-  height: 210px;
-  margin: 0px 20px 0px 20px;
-  border-radius: 10px;
-} */
-
-/* -----------thumbnail-------------- */
-
-/* -----------------section--------------- */
-
-/*----------- */

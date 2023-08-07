@@ -57,6 +57,8 @@ async function createVideoItem(videoList) {
   let currentVideoInfo = await getVideoInfo(videoId);
   let tagList = currentVideoInfo.video_tag;
   let channelName = currentVideoInfo.video_channel;
+  let targetTagList = currentVideoInfo.video_tag; //현재 비디오 태그
+  let targetVideoId = currentVideoInfo.video_id;
 
   // 비디오 추가
   videoContainer.innerHTML = `
@@ -120,41 +122,139 @@ async function createVideoItem(videoList) {
     getVideoInfo(video.video_id)
   );
   let videoInfoList = await Promise.all(videoInfoPromises);
-  //채널명으로 필터링
-  let filteredVideoList = videoInfoList.filter(
-    (videoInfo) => videoInfo.video_channel === channelName
+
+
+  async function getSimilarity(firstWord, secondWord) {
+    const openApiURL = "http://aiopen.etri.re.kr:8000/WiseWWN/WordRel";
+    const access_key = "cb42d8aa-2c9e-4f07-82a1-2aa22113b528";
+
+    let requestJson = {
+      argument: {
+        first_word: firstWord,
+        second_word: secondWord,
+      },
+    };
+
+    let response = await fetch(openApiURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: access_key,
+      },
+      body: JSON.stringify(requestJson),
+    });
+    let data = await response.json();
+    return data.return_object["WWN WordRelInfo"].WordRelInfo.Distance;
+  }
+
+  async function calculateVideoSimilarities(videoList, targetTagList) {
+    let filteredVideoList = [];
+
+    for (let video of videoList) {
+      let totalDistance = 0;
+      let promises = [];
+
+      for (let videoTag of video.video_tag) {
+        for (let targetTag of targetTagList) {
+          if (videoTag == targetTag) {
+            promises.push(0);
+          } else {
+            promises.push(getSimilarity(videoTag, targetTag));
+          }
+        }
+      }
+
+      let distances = await Promise.all(promises);
+
+      for (let distance of distances) {
+        if (distance !== -1) {
+          totalDistance += distance;
+        }
+      }
+
+      if (totalDistance !== 0) {
+        if (targetVideoId !== video.video_id) {
+          filteredVideoList.push({ ...video, score: totalDistance });
+        }
+      }
+    }
+
+    filteredVideoList.sort((a, b) => a.score - b.score);
+
+    filteredVideoList = filteredVideoList.map((video) => ({
+      ...video,
+      score: 0,
+    }));
+    console.log(filteredVideoList);
+    return filteredVideoList;
+  }
+
+  let filteredVideoList = await calculateVideoSimilarities(
+    videoInfoList,
+    targetTagList
   );
 
-  // 비디오리스트에 추가
-  let videoListDiv = document.getElementById("secondaryVideos");
-  let videoListItems = "";
-  for (let i = 0; i < filteredVideoList.length; i++) {
-    let video = filteredVideoList[i];
-    let channelName = video.video_channel;
-    let videoURL = `./video.html?id=${i}"`;
-    let channelURL = `./channel.html?channelName=${channelName}`;
 
-    videoListItems += `
-        <div class="secondaryVideos">
-            <div class="secondaryVideo">
-                <img src="${video.image_link}" alt="">
-            </div>
-            <div class="secondaryVideoDetails">
-                <a href="${videoURL}">
-                <h4>${video.video_title}</h4>
-                </a>
-                <div class="secondaryVideoInfo">
-                    <a href = "${channelURL}">
+    // 비디오리스트에 추가
+    let videoListDiv = document.getElementById("secondaryVideos");
+    console.log(videoListDiv);
+    let videoListItems = "";
+    for (let i = 0; i < 5; i++) {
+      let video = filteredVideoList[i];
+      let channelName = video.video_channel;
+      let videoURL = `./video.html?id=${i}"`;
+      let channelURL = `./channel.html?channelName=${channelName}`;
+  
+      videoListItems += `
+          <div class="secondaryVideolist">
+              <div class="secondaryVideo">
+                  <img src="${video.image_link}" alt="">
+              </div>
+              <div class="secondaryVideoDetails">
+                  <a href="${videoURL}">
+                  <h4>${video.video_title}</h4>
+                  </a>
+                  <a href = "${channelURL}">
                     <p>${video.video_channel}</p>
-                    </a>
-                <p>조회수 ${convertViews(video.views)}  •  ${convertDate(
-      video.upload_date
-    )}</p>
-                  </div>
-            </div>
-        </div>
-        `;
-  }
+                  </a>
+                  <p>조회수 ${convertViews(video.views)}  •  ${convertDate(
+        video.upload_date
+      )}</p>
+              </div>
+          </div>
+          `;
+    }
+
+  // // 비디오리스트에 추가
+  // let videoListDiv = document.getElementById("secondaryVideos");
+  // let videoListItems = "";
+  // for (let i = 0; i < 5; i++) {
+  //   let video = filteredVideoList[i];
+  //   let channelName = video.video_channel;
+  //   let videoURL = `./video.html?id=${i}"`;
+  //   let channelURL = `./channel.html?channelName=${channelName}`;
+
+  //   videoListItems += `
+  //       <div>
+  //           <div class="secondaryVideo">
+  //               <img src="${video.image_link}" alt="">
+  //           </div>
+  //           <div class="secondaryVideoDetails">
+  //               <a href="${videoURL}">
+  //               <h4>${video.video_title}</h4>
+  //               </a>
+  //               <div class="secondaryVideoInfo">
+  //                   <a href = "${channelURL}">
+  //                   <p>${video.video_channel}</p>
+  //                   </a>
+  //               <p>조회수 ${convertViews(video.views)}  •  ${convertDate(
+  //     video.upload_date
+  //   )}</p>
+  //                 </div>
+  //           </div>
+  //       </div>
+  //       `;
+  // }
 
   videoListDiv.innerHTML = videoListItems;
 }
