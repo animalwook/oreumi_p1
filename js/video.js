@@ -125,7 +125,7 @@ async function createVideoItem(videoList) {
 
 
   async function getSimilarity(firstWord, secondWord) {
-    const openApiURL = "https://aiopen.etri.re.kr:8000/WiseWWN/WordRel";
+    const openApiURL = "http://aiopen.etri.re.kr:8000/WiseWWN/WordRel";
     const access_key = "cb42d8aa-2c9e-4f07-82a1-2aa22113b528";
 
     let requestJson = {
