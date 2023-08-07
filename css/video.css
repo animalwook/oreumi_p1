@@ -31,6 +31,7 @@ body {
   right: 0;
   left: 0;
   background-color: #212121;
+  z-index: 2;
 }
 
 .header_hamburger_logo,
@@ -389,7 +390,6 @@ body {
   width: 100%;
   background-color: #aaa;
   overflow: hidden;
-  z-index: -10;
 
 }
 
