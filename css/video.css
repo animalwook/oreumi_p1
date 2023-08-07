@@ -583,10 +583,11 @@ body {
 .secondaryVideolist{
   display: flex;
   gap: 8px;
+  width: 470px
 }
 
 .secondaryVideo {
-  width: 300px;
+  width: 320px;
   background-color: #4b4b4b;
 }
 .secondaryVideo img{
