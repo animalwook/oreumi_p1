@@ -100,6 +100,7 @@ body {
   height: 32px;
   border: 1px solid #303030;
   background-color: #212121;
+  color: #fff;
   font-size: 16px;
   padding: 3px 8px;
   border-radius: 50px 0px 0px 50px;
@@ -224,6 +225,7 @@ body {
   align-items: center;
   gap: 24px;
   padding: 8px 0px 8px 0px;
+  border-radius: 100%;
 }
 
 .Menu-Item-img {
